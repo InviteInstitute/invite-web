@@ -16,16 +16,16 @@ flowchart LR
 
 ## Quick Start
 
-There is no build step and nothing to install. The whole site is one self-contained
-`public/index.html` with all CSS inline and fonts and images pulled from CDNs. To preview
-it, open the file directly, or serve the folder so relative paths behave exactly as they
-do in production.
+There is no build step and nothing to install. The site is plain static files, the markup
+in `public/index.html` and the styles in `public/styles.css`, with fonts and images pulled
+from CDNs. To preview it, serve the folder so the stylesheet and relative paths behave
+exactly as they do in production.
 
 ```bash
 python3 -m http.server 8080 --directory public   # then open http://localhost:8080
 ```
 
-Edit `public/index.html`, refresh, and you see the change.
+Edit `public/index.html` or `public/styles.css`, refresh, and you see the change.
 
 ## What You Get
 
@@ -44,7 +44,8 @@ Edit `public/index.html`, refresh, and you see the change.
 | Path | What |
 |---|---|
 | `public/` | the web root nginx serves, where everything public-facing lives |
-| `public/index.html` | the entire site, markup and inline styles in one file |
+| `public/index.html` | the page markup |
+| `public/styles.css` | the stylesheet |
 | `LICENSE` | project license |
 
 Anything outside `public/` (this README, `LICENSE`, the `.git` history) sits above the web
@@ -75,9 +76,9 @@ cache purge may be needed to see a change right away.
 
 ## Under the Hood
 
-Deliberately minimal, one static HTML file, no framework, no bundler, no runtime. The
-page is the source of truth, and keeping it a single self-contained file makes it trivial
-to read, edit, review in a diff, and deploy. The tools it links to each live in their own
+Deliberately minimal, static HTML and CSS, no framework, no bundler, no runtime. The
+markup lives in `index.html` and the styles in `styles.css`, and keeping them as plain
+files makes it trivial to read, edit, review in a diff, and deploy. The tools it links to each live in their own
 repository, [lm-dashboard](https://github.com/InviteInstitute/lm-dashboard),
 [vex-agent-integration](https://github.com/InviteInstitute/vex-agent-integration), and the
 PA Toolkit. This repo is only the front door.
