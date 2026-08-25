@@ -55,7 +55,7 @@
         </div>
       </section>
 
-      <a class="tool-card" href="https://patk.inviteai.org" target="_blank" rel="noopener">
+      <a class="tool-card" id="patk-link" href="https://patk.inviteai.org" target="_blank" rel="noopener">
         <div class="body"><div class="name">PA Toolkit</div><div class="desc">Tools for pedagogical agent design and testing.</div></div>
         <span class="tag live"><span class="dot"></span>Live</span>
         <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M17 7H8M17 7v9"/></svg>
@@ -63,6 +63,20 @@
     </div>
   </div>
 </main>
+
+<dialog class="gate-dialog" id="patk-gate" aria-labelledby="patk-gate-title">
+  <form method="dialog" id="patk-gate-form">
+    <h2 class="gate-title" id="patk-gate-title">PA Toolkit</h2>
+    <p class="gate-desc">Enter the access password to continue.</p>
+    <label class="gate-label" for="patk-password">Password</label>
+    <input class="gate-input" id="patk-password" type="password" name="password" autocomplete="current-password" required>
+    <p class="gate-error" id="patk-gate-error" hidden>Incorrect password. Try again.</p>
+    <div class="gate-actions">
+      <button type="button" class="gate-btn gate-btn-secondary" id="patk-gate-cancel">Cancel</button>
+      <button type="submit" class="gate-btn gate-btn-primary">Continue</button>
+    </div>
+  </form>
+</dialog>
 
 <footer class="site-footer">
   <div class="container">
@@ -82,5 +96,57 @@
     <div class="footer-bottom"><span>&copy; 2026 INVITE Institute &middot; inviteai.org</span><a href="https://invite.illinois.edu/">Visit the INVITE Institute</a></div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var PASSWORD = "conrad";
+  var SESSION_KEY = "patk-unlocked";
+  var link = document.getElementById("patk-link");
+  var dialog = document.getElementById("patk-gate");
+  var form = document.getElementById("patk-gate-form");
+  var input = document.getElementById("patk-password");
+  var error = document.getElementById("patk-gate-error");
+  var cancel = document.getElementById("patk-gate-cancel");
+  if (!link || !dialog || !form || !input) return;
+
+  function openPatk() {
+    window.open(link.href, "_blank", "noopener");
+  }
+
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (sessionStorage.getItem(SESSION_KEY) === "1") {
+      openPatk();
+      return;
+    }
+    error.hidden = true;
+    input.value = "";
+    dialog.showModal();
+    input.focus();
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (input.value === PASSWORD) {
+      sessionStorage.setItem(SESSION_KEY, "1");
+      error.hidden = true;
+      dialog.close();
+      openPatk();
+      return;
+    }
+    error.hidden = false;
+    input.select();
+  });
+
+  cancel.addEventListener("click", function () {
+    dialog.close();
+  });
+
+  dialog.addEventListener("close", function () {
+    error.hidden = true;
+    input.value = "";
+  });
+})();
+</script>
 </body>
 </html>
