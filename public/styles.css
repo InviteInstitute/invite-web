@@ -109,68 +109,6 @@ a.subtab:hover { text-decoration: none; box-shadow: 0 4px 16px rgba(28,57,71,.07
 .arrow { flex: none; color: var(--muted); transition: transform .2s ease; }
 .tool-card:hover .arrow, a.subtab:hover .arrow { transform: translate(3px, -3px); }
 
-/* Password gate */
-.gate-dialog {
-  width: min(100% - 2rem, 400px);
-  margin: auto;
-  padding: 1.75rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--fg);
-  background: var(--white);
-  box-shadow: 0 12px 40px rgba(28,57,71,.18);
-}
-.gate-dialog::backdrop { background: rgba(28,57,71,.45); }
-.gate-title {
-  margin-bottom: .35rem;
-  color: var(--navy);
-  font-family: "Montserrat", sans-serif;
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: .95px;
-  line-height: 30px;
-}
-.gate-desc { margin-bottom: 1.25rem; color: var(--muted); font-size: 15px; line-height: 1.5; }
-.gate-label {
-  display: block;
-  margin-bottom: .4rem;
-  color: var(--navy);
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-}
-.gate-input {
-  width: 100%;
-  padding: .7rem .85rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--fg);
-  font: inherit;
-  font-size: 15px;
-  outline: none;
-  transition: border-color .15s ease;
-}
-.gate-input:focus { border-color: var(--cyan); }
-.gate-error { margin-top: .65rem; color: #b42318; font-size: 14px; }
-.gate-actions { display: flex; justify-content: flex-end; gap: .6rem; margin-top: 1.25rem; }
-.gate-btn {
-  padding: .55rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.gate-btn-secondary { border-color: var(--border); color: var(--body); background: var(--white); }
-.gate-btn-secondary:hover { border-color: var(--muted); }
-.gate-btn-primary { color: var(--navy); background: var(--lime); }
-.gate-btn-primary:hover { filter: brightness(.97); }
-
 /* Footer */
 .site-footer { padding: 48px 0 28px; color: rgba(255,255,255,.75); background: var(--navy); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
