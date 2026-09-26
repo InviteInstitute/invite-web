@@ -17,8 +17,8 @@ flowchart LR
 ## Quick Start
 
 There is no build step and nothing to install. The site is plain static files, the markup
-in `public/index.html` and the styles in `public/styles.css`, with fonts and images pulled
-from CDNs. To preview it, serve the folder so the stylesheet and relative paths behave
+in `public/index.html` and the styles in `public/styles.css`, with fonts and images
+self-hosted under `public/assets/`. To preview it, serve the folder so the stylesheet and relative paths behave
 exactly as they do in production.
 
 ```bash
@@ -29,15 +29,15 @@ Edit `public/index.html` or `public/styles.css`, refresh, and you see the change
 
 ## What You Get
 
-- A branded header and page title that match the wider [INVITE Institute](https://invite.illinois.edu/)
-  site, so this page reads as part of it.
-- A **tool list** where each card carries a name, a one-line description, and a status
-  badge. **Live** tools link straight to their subdomain, **Coming Soon** ones are shown
-  but not yet linked.
-- The **Pedagogical AI Agent** card with its Chat and Character sub-tools grouped
-  underneath it.
-- A funding-and-disclaimer block (NSF-IES Grant #2229612) and a footer with the
-  Institute's social links.
+- The look of the wider [INVITE Institute](https://invite.illinois.edu/) site (its TheGem
+  theme's fonts, colors, lined title bar, and footer), so this page reads as part of it.
+- A **tool list** where each tool carries a name, a one-line description, a **Live**
+  badge, and a button that opens it on its own subdomain.
+- The **Pedagogical AI Agent** with its Chat tool grouped underneath it.
+- Each tool paired with a screenshot of it running, alternating sides.
+- A links band pointing to the tools' source code and the Institute's own pages.
+- The Institute footer: NSF and IES funding disclaimer (Grant #2229612), partner logos,
+  and social links.
 
 ## Layout
 
@@ -45,7 +45,9 @@ Edit `public/index.html` or `public/styles.css`, refresh, and you see the change
 |---|---|
 | `public/` | the web root nginx serves, where everything public-facing lives |
 | `public/index.html` | the page markup |
-| `public/styles.css` | the stylesheet |
+| `public/styles.css` | the stylesheet, with the design tokens at the top |
+| `public/assets/` | self-hosted fonts and images, copied from the invite.illinois.edu theme and uploads |
+| `PRODUCT.md` | who the page is for and the product facts design work must respect |
 | `LICENSE` | project license |
 
 Anything outside `public/` (this README, `LICENSE`, the `.git` history) sits above the web

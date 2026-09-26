@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-25T12:00:00Z",
+  "title": "Design System: INVITE Research Software",
+  "extensions": {
+    "colorMeta": {
+      "heading-ink": {
+        "role": "neutral",
+        "displayName": "Heading Ink",
+        "canonical": "#3c3950",
+        "tonalRamp": [
+          "#0b081a",
+          "#242136",
+          "#3f3c53",
+          "#5d5a73",
+          "#7d7a94",
+          "#9e9bb6",
+          "#c3c0dd",
+          "#eeecfe"
+        ]
+      },
+      "body-slate": {
+        "role": "neutral",
+        "displayName": "Body Slate",
+        "canonical": "#5f727f",
+        "tonalRamp": [
+          "#010d16",
+          "#152631",
+          "#31424e",
+          "#4e606d",
+          "#6d808e",
+          "#8ea2af",
+          "#b3c7d6",
+          "#dff2fe"
+        ]
+      },
+      "muted-mist": {
+        "role": "neutral",
+        "displayName": "Muted Mist",
+        "canonical": "#99a9b5",
+        "tonalRamp": [
+          "#030c15",
+          "#19262f",
+          "#34424c",
+          "#51606b",
+          "#70808b",
+          "#91a1ad",
+          "#b6c7d3",
+          "#e0f1fe"
+        ]
+      },
+      "signal-cyan": {
+        "role": "primary",
+        "displayName": "Signal Cyan",
+        "canonical": "#00bcd4",
+        "tonalRamp": [
+          "#000e11",
+          "#032930",
+          "#0b4851",
+          "#166976",
+          "#148d9e",
+          "#1eb1c7",
+          "#43daf2",
+          "#cff7ff"
+        ]
+      },
+      "live-lime": {
+        "role": "secondary",
+        "displayName": "Live Lime",
+        "canonical": "#e7ff89",
+        "tonalRamp": [
+          "#0a0d00",
+          "#212802",
+          "#3c4508",
+          "#586511",
+          "#76870e",
+          "#96aa2f",
+          "#bbd15b",
+          "#e4fc86"
+        ]
+      },
+      "rule-gray": {
+        "role": "neutral",
+        "displayName": "Rule Gray",
+        "canonical": "#dfe5e8",
+        "tonalRamp": [
+          "#080c0e",
+          "#202527",
+          "#3c4143",
+          "#595e61",
+          "#797e81",
+          "#9a9fa2",
+          "#bfc5c8",
+          "#e9f0f3"
+        ]
+      },
+      "subtle-wash": {
+        "role": "neutral",
+        "displayName": "Subtle Wash",
+        "canonical": "#f4f6f7",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#232425",
+          "#3e4041",
+          "#5c5e5f",
+          "#7c7d7e",
+          "#9d9fa0",
+          "#c2c4c5",
+          "#edeff0"
+        ]
+      },
+      "panel-gray": {
+        "role": "neutral",
+        "displayName": "Panel Gray",
+        "canonical": "#ededed",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "caption-slate": {
+        "role": "neutral",
+        "displayName": "Caption Slate",
+        "canonical": "#5a6c79",
+        "tonalRamp": [
+          "#010c15",
+          "#13232e",
+          "#2d3e4a",
+          "#4a5c69",
+          "#697c89",
+          "#8a9eab",
+          "#afc3d1",
+          "#dceffc"
+        ],
+        "note": "Body Slate darkened for Panel Gray: 4.65:1 on #ededed, where Body Slate gives 4.27:1."
+      },
+      "quiet-steel": {
+        "role": "neutral",
+        "displayName": "Quiet Steel",
+        "canonical": "#b6c6c9",
+        "tonalRamp": [
+          "#030d0f",
+          "#1a2729",
+          "#354245",
+          "#526163",
+          "#728083",
+          "#92a2a5",
+          "#b8c8cb",
+          "#e1f2f5"
+        ]
+      },
+      "title-bar-plum": {
+        "role": "neutral",
+        "displayName": "Title-Bar Plum",
+        "canonical": "#333144",
+        "tonalRamp": [
+          "#0b0818",
+          "#232133",
+          "#3f3d51",
+          "#5d5b70",
+          "#7c7a90",
+          "#9d9bb3",
+          "#c3c1d9",
+          "#edecfe"
+        ],
+        "note": "Base color under the lined title texture image; the rendered bar reads near #222431."
+      },
+      "footer-deep-teal": {
+        "role": "neutral",
+        "displayName": "Footer Deep Teal",
+        "canonical": "#1c3947",
+        "tonalRamp": [
+          "#000d16",
+          "#0a2835",
+          "#274452",
+          "#446272",
+          "#648292",
+          "#84a4b5",
+          "#a9cadb",
+          "#dcf2fe"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "error-red": {
+        "role": "error",
+        "displayName": "Error Red",
+        "canonical": "#c62828",
+        "tonalRamp": [
+          "#1f0001",
+          "#490406",
+          "#7d0009",
+          "#b10414",
+          "#d83c38",
+          "#fa6a60",
+          "#feaba2",
+          "#fee9e6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page title in the dark title bar, right-aligned, white, uppercase."
+      },
+      "display-phone": {
+        "displayName": "Display (phone)",
+        "purpose": "Title-bar title at 767px and below."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Top-level tool title in its row, uppercase, balanced wrapping."
+      },
+      "headline-tablet": {
+        "displayName": "Headline (tablet)",
+        "purpose": "Tool title at 1100px and below."
+      },
+      "headline-phone": {
+        "displayName": "Headline (phone)",
+        "purpose": "Tool title at 767px and below."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-item, links-band, and dialog headings, uppercase."
+      },
+      "title-phone": {
+        "displayName": "Title (phone)",
+        "purpose": "Sub-item headings at 767px and below."
+      },
+      "footer-title": {
+        "displayName": "Footer Title",
+        "purpose": "Footer section headings only, white, uppercase, Montserrat UltraLight."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The single light introductory paragraph, max 40em."
+      },
+      "lead-phone": {
+        "displayName": "Lead (phone)",
+        "purpose": "Lead paragraph at 767px and below."
+      },
+      "body-large": {
+        "displayName": "Body Large",
+        "purpose": "Tool descriptions, max 34em; 16/25 in sub-items and at phone."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default running text and links-band links."
+      },
+      "body-host": {
+        "displayName": "Host",
+        "purpose": "Hostname or lock line beside a launch button; inline form error."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Caption Slate line under each links-band link."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Footer disclaimer text, max 460px."
+      },
+      "legal": {
+        "displayName": "Legal",
+        "purpose": "Footer copyright line."
+      },
+      "label-nav": {
+        "displayName": "Nav Label",
+        "purpose": "Primary navigation, uppercase, untracked; 13px at phone."
+      },
+      "label-button": {
+        "displayName": "Button Label",
+        "purpose": "Launch button label, uppercase; dialog buttons use 13px."
+      },
+      "label-status": {
+        "displayName": "Status Label",
+        "purpose": "Live and Coming Soon labels, uppercase."
+      }
+    },
+    "shadows": [
+      {
+        "name": "modal-lift",
+        "value": "0 18px 50px rgba(24, 24, 40, .28)",
+        "purpose": "Password dialog only, over a rgba(28, 57, 71, .6) scrim."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Launch-button fill and arrow nudge, 0.45s."
+      },
+      {
+        "name": "color-fade",
+        "value": "0.2s ease",
+        "purpose": "Color-only hover changes on nav, social icons, dialog buttons."
+      },
+      {
+        "name": "field-fade",
+        "value": "0.15s ease",
+        "purpose": "Input focus border/fill and links-band link underline thickness."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition-duration: .01ms",
+        "purpose": "All transitions collapse under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1100px"
+      },
+      {
+        "name": "phone",
+        "value": "767px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Launch Button",
+      "kind": "button",
+      "refersTo": "button-launch",
+      "description": "Outlined cyan-bordered launch link; fills cyan from the left on hover and focus while the arrow nudges. The system's only authored motion.",
+      "html": "<a class=\"ds-btn-launch\" href=\"#\">Open Dashboard<svg class=\"ds-btn-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M17 7H8M17 7v9\"/></svg></a>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-launch{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 22px 0 24px;border:2px solid var(--accent);border-radius:0;color:var(--heading);background:linear-gradient(var(--accent),var(--accent)) left/0% 100% no-repeat;font-family:var(--font-heading);font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:background-size .45s var(--ease-out);} .ds-btn-launch:hover,.ds-btn-launch:focus-visible{background-size:100% 100%;} .ds-btn-launch:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-btn-arrow{flex:none;transition:transform .45s var(--ease-out);} .ds-btn-launch:hover .ds-btn-arrow,.ds-btn-launch:focus-visible .ds-btn-arrow{transform:translate(2px,-2px);}"
+    },
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Dialog confirm action: Heading Ink fill, turns cyan with ink text on hover.",
+      "html": "<button class=\"ds-btn-solid\" type=\"button\">Continue</button>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-solid{height:40px;padding:0 20px;border:2px solid transparent;border-radius:0;color:var(--white);background:var(--heading);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease;} .ds-btn-solid:hover{color:var(--heading);background:var(--accent);} .ds-btn-solid:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Dialog cancel action: white with a gray hairline border.",
+      "html": "<button class=\"ds-btn-quiet\" type=\"button\">Cancel</button>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-quiet{height:40px;padding:0 20px;border:2px solid var(--border);border-radius:0;color:var(--body);background:var(--white);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:border-color .2s ease,color .2s ease;} .ds-btn-quiet:hover{border-color:var(--button-quiet);color:var(--heading);} .ds-btn-quiet:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Status Labels",
+      "kind": "chip",
+      "refersTo": "status-live",
+      "description": "Square uppercase status labels with a leading dot; lime for Live, washed gray for Coming Soon.",
+      "html": "<span class=\"ds-status ds-status-live\">Live</span> <span class=\"ds-status ds-status-soon\">Coming Soon</span>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-status{display:inline-flex;align-items:center;gap:7px;padding:3px 10px;border:1px solid transparent;border-radius:0;font-family:var(--font-heading);font-size:11px;font-weight:700;line-height:18px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;} .ds-status::before{content:\"\";width:6px;height:6px;border-radius:50%;background:currentColor;} .ds-status-live{color:var(--heading);background:var(--lime);} .ds-status-soon{border-color:var(--border);color:var(--body);background:var(--subtle);} .ds-status-soon::before{background:var(--muted);}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Square washed field with an uppercase Montserrat label; cyan border and white fill on focus.",
+      "html": "<label class=\"ds-label\" for=\"ds-pw\">Password</label><input class=\"ds-input\" id=\"ds-pw\" type=\"password\">",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-label{display:block;margin-bottom:6px;color:var(--heading);font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;} .ds-input{width:100%;height:44px;padding:0 14px;border:1px solid var(--border);border-radius:0;color:var(--heading);background:var(--subtle);font-family:var(--font-body);font-size:16px;caret-color:var(--accent);transition:border-color .15s ease,background-color .15s ease;} .ds-input:focus{border-color:var(--accent);background:var(--white);outline:none;}"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Uppercase Montserrat menu; current page boxed in a 2px ink border, other links turn cyan on hover.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link is-current\" href=\"#\" aria-current=\"page\">Research Software</a><a class=\"ds-nav-link\" href=\"#\">INVITE Institute</a></nav>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-nav{display:flex;align-items:center;gap:6px;} .ds-nav-link{display:block;padding:0 15px;border:2px solid transparent;color:var(--heading);font-family:var(--font-heading);font-size:14px;font-weight:700;line-height:25px;text-transform:uppercase;text-decoration:none;transition:color .2s ease;} .ds-nav-link:hover{color:var(--accent);} .ds-nav-link.is-current{border-color:var(--heading);} .ds-nav-link.is-current:hover{color:var(--heading);} .ds-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Tool Row",
+      "kind": "custom",
+      "refersTo": "tool-row",
+      "description": "A photo-paired tool row: institute photo in one half, stacked headline and status, description, and launch action in the other. Rows alternate the photo side. The photo is a neutral stand-in here; the real raster carries the torn edge.",
+      "html": "<article class=\"ds-row\"><div class=\"ds-row-photo\" role=\"img\" aria-label=\"Institute photo\"></div><div class=\"ds-row-body\"><div class=\"ds-row-head\"><h2 class=\"ds-row-title\">PA Toolkit</h2><span class=\"ds-status\">Live</span></div><p class=\"ds-row-desc\">Tools for pedagogical agent design and testing.</p><div class=\"ds-row-foot\"><a class=\"ds-btn-launch\" href=\"#\">Open PA Toolkit<svg class=\"ds-btn-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M17 7H8M17 7v9\"/></svg></a><span class=\"ds-row-host\">patk.inviteai.org</span></div></div></article>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:60px;padding:26px 0;color:var(--body);font-family:var(--font-body);font-size:16px;line-height:25px;} .ds-row-photo{aspect-ratio:1200/577;background:var(--subtle);} .ds-row-head{display:flex;flex-direction:column;align-items:flex-start;gap:10px;} .ds-row-title{margin:0;color:var(--heading);font-family:var(--font-heading);font-size:28px;font-weight:700;line-height:42px;letter-spacing:1.4px;text-transform:uppercase;text-wrap:balance;} .ds-status{display:inline-flex;align-items:center;gap:7px;padding:3px 10px;color:var(--heading);background:var(--lime);font-family:var(--font-heading);font-size:11px;font-weight:700;line-height:18px;letter-spacing:.08em;text-transform:uppercase;} .ds-status::before{content:\"\";width:6px;height:6px;border-radius:50%;background:currentColor;} .ds-row-desc{max-width:34em;margin:8px 0 0;font-size:17px;line-height:27px;} .ds-row-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:22px;} .ds-row-host{font-size:15px;} .ds-btn-launch{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 22px 0 24px;border:2px solid var(--accent);color:var(--heading);background:linear-gradient(var(--accent),var(--accent)) left/0% 100% no-repeat;font-family:var(--font-heading);font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:background-size .45s var(--ease-out);} .ds-btn-launch:hover,.ds-btn-launch:focus-visible{background-size:100% 100%;} .ds-btn-launch:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-btn-arrow{flex:none;transition:transform .45s var(--ease-out);} .ds-btn-launch:hover .ds-btn-arrow,.ds-btn-launch:focus-visible .ds-btn-arrow{transform:translate(2px,-2px);}"
+    },
+    {
+      "name": "Links Band",
+      "kind": "custom",
+      "refersTo": "links-band",
+      "description": "Full-width Panel Gray band closing the content: two columns, tracked uppercase headings, marker-led ink links with a cyan underline, captioned or inline.",
+      "html": "<aside class=\"ds-band\"><div><h2 class=\"ds-band-heading\">Source Code</h2><ul class=\"ds-band-list\"><li><a href=\"#\">lm-dashboard</a><span>Learner Modeling Dashboard</span></li><li><a href=\"#\">vex-agent-integration</a><span>Pedagogical AI Agent</span></li></ul></div><div><h2 class=\"ds-band-heading\">The Institute</h2><ul class=\"ds-band-list ds-band-inline\"><li><a href=\"#\">About</a></li><li><a href=\"#\">People</a></li><li><a href=\"#\">Research</a></li></ul></div></aside>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-band{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:30px 60px;padding:32px 40px 36px;border-radius:0;background:var(--panel);font-family:var(--font-body);font-size:16px;line-height:25px;} .ds-band-heading{margin:0;color:var(--heading);font-family:var(--font-heading);font-size:19px;font-weight:700;line-height:30px;letter-spacing:.95px;text-transform:uppercase;} .ds-band-list{margin:12px 0 0;padding:0;list-style:none;} .ds-band-list li{position:relative;padding-left:18px;} .ds-band-list li+li{margin-top:10px;} .ds-band-list li::before{content:\"\\00BB\";position:absolute;left:0;top:-1px;color:var(--muted);} .ds-band-list a{color:var(--heading);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-thickness .15s ease;} .ds-band-list a:hover{text-decoration-thickness:2px;} .ds-band-list a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-band-list span{display:block;color:var(--caption);font-size:14px;line-height:21px;} .ds-band-inline{display:flex;flex-wrap:wrap;gap:10px 30px;} .ds-band-inline li+li{margin-top:0;}"
+    },
+    {
+      "name": "Title Bar",
+      "kind": "custom",
+      "description": "Full-bleed dark title strip, right-aligned tracked white title, 18px cyan tab at the right edge. The texture image is omitted here; the base color stands in.",
+      "html": "<div class=\"ds-title-bar\"><div class=\"ds-title-inner\"><h1 class=\"ds-title\">Research Software</h1></div></div>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-title-bar{position:relative;padding:15px 0;background:#222431;} .ds-title-inner{padding:0 62px 0 21px;text-align:right;} .ds-title-bar::after{content:\"\";position:absolute;top:28px;right:0;width:18px;height:calc(100% - 58px);background:var(--accent);} .ds-title{margin:0;color:var(--white);font-family:var(--font-heading);font-size:36px;font-weight:700;line-height:53px;letter-spacing:1.8px;text-transform:uppercase;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Page From the Institute's Own Site",
+    "overview": "This system is a faithful port of invite.illinois.edu, the INVITE Institute's WordPress site on the TheGem theme. Every surface should read as one more inner page of that site: a white header with the logo and a short uppercase menu, a dark lined title bar with a right-aligned title and a cyan tab, a white body of photo-paired rows closed by a full-width gray links band, and a deep teal footer carrying funding and partner logos. Trust transfers from the institute site because nothing here looks like a separate product.\n\nThe grammar is documentary, not app-like. Each top-level item sits in a two-column row beside one of the institute homepage's own carousel photos, whose torn paper edges and hex network overlay are baked into the raster; rows alternate the photo's side. Headings are uppercase Montserrat 700 with tracking, body is Source Sans Pro in slate gray, and the single lead paragraph is set light (300) and large. Corners are square everywhere, depth is flat, and color is sparse: cyan marks interaction and structure (button borders, the title tab, focus rings, link underlines), lime marks only what is live.\n\nMotion is nearly absent by design. The one authored movement is the launch button filling cyan from the left while its arrow nudges up and right; everything else changes color at most.",
+    "keyCharacteristics": [
+      "White ground, photo-paired rows that alternate sides, square corners, no cards.",
+      "Institute carousel photos with torn edges baked into the raster, never masked in CSS.",
+      "Uppercase Montserrat 700 headings, letter-spacing equal to 5% of the font size.",
+      "Cyan as the interaction and structure accent; lime reserved for \"live\" status and text selection.",
+      "Dark textured title bar with an 18px cyan tab at the right edge.",
+      "Full-width Panel Gray links band above a deep teal footer with Montserrat UltraLight headings and a square partner-logo wall.",
+      "One motion: the launch-button fill."
+    ],
+    "rules": [
+      {
+        "name": "The Lime Means Live Rule",
+        "body": "Lime fills only a status that is actually live (and text selection). It is never decoration and never a second accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cyan Is Structure Rule",
+        "body": "Cyan appears as borders, tabs, underlines, rings, and fills behind dark ink. Text on white stays Heading Ink or Body Slate; cyan text belongs only on the dark footer.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gray Ground Caption Rule",
+        "body": "Secondary text on Panel Gray is Caption Slate, never Body Slate. Every text color is checked against the ground it actually sits on.",
+        "section": "colors"
+      },
+      {
+        "name": "The Five-Percent Tracking Rule",
+        "body": "Every uppercase Montserrat heading tracks at exactly 5% of its font size (36px gets 1.8px, 28px gets 1.4px, 24px gets 1.2px, 22px gets 1.1px, 19px gets 0.95px). Labels use their own smaller em values; nav is untracked.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Light Paragraph Rule",
+        "body": "Weight 300 is reserved for the lead paragraph. Everything else in Source Sans Pro is 400 or 700.",
+        "section": "typography"
+      },
+      {
+        "name": "The Alternating Photo Rule",
+        "body": "Every top-level tool gets exactly one institute photo at half the row, and the photo's side alternates row by row. At phone the photo leads, full-bleed.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ruled Not Raised Rule",
+        "body": "Separate content with whitespace, 1px Rule Gray lines, and tonal grounds. A shadow is permitted only on a modal that sits above a scrim.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Edge Lives in the Raster Rule",
+        "body": "Photo edges and overlays come baked into the institute's own images (800w and 1200w WebP). CSS never masks, clips, rounds, frames, or shadows a photo.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** track every uppercase Montserrat heading at 5% of its font size.",
+      "**Do** pair each top-level tool with one institute photo at half the row, alternating sides, and lead with the photo full-bleed at phone.",
+      "**Do** use the institute's own photos with their torn edges and hex overlay baked into the raster.",
+      "**Do** separate sub-items with 1px Rule Gray hairlines and keep every corner square (0px).",
+      "**Do** reserve Live Lime for statuses that are actually live.",
+      "**Do** keep Signal Cyan to borders, tabs, underlines, focus rings, and fills behind Heading Ink; on white, text stays Heading Ink or Body Slate.",
+      "**Do** show focus with the 2px Signal Cyan outline at 3px offset.",
+      "**Do** open every page with the white header and the textured title bar with its cyan tab, and close it with the deep teal footer.",
+      "**Do** keep text at 4.5:1 contrast or better against its actual ground; on Panel Gray, secondary text is Caption Slate."
+    ],
+    "donts": [
+      "**Don't** use rounded tiles, pill badges, or shadowed cards; tools are photo-paired rows, not boxes.",
+      "**Don't** mask, clip, round, frame, or shadow a photo in CSS; the edge treatment belongs to the raster.",
+      "**Don't** add motion beyond the launch-button fill and arrow nudge; other state changes are color-only.",
+      "**Don't** set cyan text on white or light grounds.",
+      "**Don't** use weight 300 outside the lead paragraph.",
+      "**Don't** add shadows outside the modal dialog."
+    ]
+  }
+}
