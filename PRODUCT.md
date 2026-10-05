@@ -10,7 +10,7 @@ web
 
 Two audiences, weighted equally:
 
-- **Insiders launching a tool.** INVITE researchers and partner-school teachers who arrive to open the Learner Modeling Dashboard, the Pedagogical AI Agent, or the PA Toolkit and leave. Getting to the right link fast matters most.
+- **Insiders launching a tool.** INVITE researchers and partner-school teachers who arrive to open the Learner Modeling Dashboard, the Chat AI Agent, the Pedagogical AI Agent, or the Pedagogical Agent Toolkit and leave. Getting to the right link fast matters most.
 - **Outside evaluators.** NSF/IES reviewers, peer AI institutes, and the public checking what INVITE has built. A clear, credible account of each tool and its status matters most.
 
 ## Product Purpose
@@ -23,9 +23,9 @@ It is the software arm of an existing institute, not a separate product. It shou
 
 ## Operating Context
 
-- Tools run on their own subdomains: dashboard.inviteai.org, agent.inviteai.org, patk.inviteai.org.
+- Tools run on their own subdomains: dashboard.inviteai.org, chat.inviteai.org, agent.inviteai.org, patk.inviteai.org.
 - The dashboard and agent chat are used alongside VEXcode VR in classrooms.
-- The PA Toolkit link sits behind a client-side password prompt (session-remembered).
+- The Pedagogical Agent Toolkit link sits behind a client-side password prompt (session-remembered).
 
 ## Capabilities and Constraints
 

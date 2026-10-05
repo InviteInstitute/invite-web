@@ -3,15 +3,16 @@
 The public landing page at <https://inviteai.org> for the research software built and run
 by the **INVITE Institute** (the NSF-IES National AI Institute for Innovative Intelligent
 Technologies for Education). It is a single, hand-written static page that indexes each
-tool - the Learner Modeling Dashboard, the Pedagogical AI Agent, and the PA Toolkit - with
+tool - the Learner Modeling Dashboard, the Chat AI Agent, the Pedagogical AI Agent, and the Pedagogical Agent Toolkit - with
 a short description and a live or coming-soon badge, and links out to where each one runs.
 
 ```mermaid
 flowchart LR
     visitor["Visitor"] --> site[("inviteai.org<br/>nginx static site")]
     site --> dash["dashboard.inviteai.org<br/>Learner Modeling Dashboard"]
+    site --> chat["chat.inviteai.org<br/>Chat AI Agent"]
     site --> agent["agent.inviteai.org<br/>Pedagogical AI Agent"]
-    site --> patk["patk.inviteai.org<br/>PA Toolkit"]
+    site --> patk["patk.inviteai.org<br/>Pedagogical Agent Toolkit"]
 ```
 
 ## Quick Start
@@ -33,7 +34,6 @@ Edit `public/index.html` or `public/styles.css`, refresh, and you see the change
   theme's fonts, colors, lined title bar, and footer), so this page reads as part of it.
 - A **tool list** where each tool carries a name, a one-line description, a **Live**
   badge, and a button that opens it on its own subdomain.
-- The **Pedagogical AI Agent** with its Chat tool grouped underneath it.
 - Each tool paired with a screenshot of it running, alternating sides.
 - A links band pointing to the tools' source code and the Institute's own pages.
 - The Institute footer: NSF and IES funding disclaimer (Grant #2229612), partner logos,
@@ -83,4 +83,4 @@ markup lives in `index.html` and the styles in `styles.css`, and keeping them as
 files makes it trivial to read, edit, review in a diff, and deploy. The tools it links to each live in their own
 repository, [lm-dashboard](https://github.com/InviteInstitute/lm-dashboard),
 [vex-agent-integration](https://github.com/InviteInstitute/vex-agent-integration), and the
-PA Toolkit. This repo is only the front door.
+Pedagogical Agent Toolkit. This repo is only the front door.
