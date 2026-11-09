@@ -1,10 +1,17 @@
 # INVITE Research Software Website
 
-The public landing page at <https://inviteai.org> for the research software built and run
-by the **INVITE Institute** (the NSF-IES National AI Institute for Innovative Intelligent
-Technologies for Education). It is a single, hand-written static page that indexes each
-tool - the Learner Modeling Dashboard, the Chat AI Agent, the Pedagogical AI Agent, and the Pedagogical Agent Toolkit - with
-a short description and a live or coming-soon badge, and links out to where each one runs.
+This repository is the public landing page at <https://inviteai.org>. The page shows the research
+software that the **INVITE Institute** (the NSF-IES National AI Institute for Innovative
+Intelligent Technologies for Education) builds and runs. It is one hand-written static page. The
+page lists these tools:
+
+- The Learner Modeling Dashboard
+- The Chat AI Agent
+- The Pedagogical AI Agent
+- The Pedagogical Agent Toolkit
+
+Each tool has a short description and a live or coming-soon badge. Each tool links to where it
+runs.
 
 ```mermaid
 flowchart LR
@@ -17,46 +24,52 @@ flowchart LR
 
 ## Quick Start
 
-There is no build step and nothing to install. The site is plain static files, the markup
-in `public/index.html` and the styles in `public/styles.css`, with fonts and images
-self-hosted under `public/assets/`. To preview it, serve the folder so the stylesheet and relative paths behave
-exactly as they do in production.
+The site has no build step, and you do not need to install anything. The site is plain static
+files:
+
+- `public/index.html` holds the markup.
+- `public/styles.css` holds the styles.
+- `public/assets/` holds the self-hosted fonts and images.
+
+To preview the site, serve the folder. The stylesheet and relative paths then behave exactly as
+they do in production.
 
 ```bash
 python3 -m http.server 8080 --directory public   # then open http://localhost:8080
 ```
 
-Edit `public/index.html` or `public/styles.css`, refresh, and you see the change.
+Edit `public/index.html` or `public/styles.css`. Then refresh the page to see the change.
 
 ## What You Get
 
-- The look of the wider [INVITE Institute](https://invite.illinois.edu/) site (its TheGem
-  theme's fonts, colors, lined title bar, and footer), so this page reads as part of it.
-- A **tool list** where each tool carries a name, a one-line description, a **Live**
-  badge, and a button that opens it on its own subdomain.
-- Each tool paired with a screenshot of it running, alternating sides.
-- A links band pointing to the tools' source code and the Institute's own pages.
-- The Institute footer: NSF and IES funding disclaimer (Grant #2229612), partner logos,
-  and social links.
+- The look of the wider [INVITE Institute](https://invite.illinois.edu/) site. The page uses the
+  fonts, colors, lined title bar and footer of its TheGem theme, so the page reads as part of that
+  site.
+- A **tool list**. Each tool has a name, a one-line description, a **Live** badge, and a button
+  that opens the tool on its own subdomain.
+- A screenshot of each running tool, on alternating sides.
+- A links band that points to the source code of the tools and to the pages of the Institute.
+- The Institute footer, with the NSF and IES funding disclaimer (Grant #2229612), partner logos and
+  social links.
 
 ## Layout
 
 | Path | What |
 |---|---|
-| `public/` | the web root nginx serves, where everything public-facing lives |
+| `public/` | the web root that nginx serves, with everything public |
 | `public/index.html` | the page markup |
 | `public/styles.css` | the stylesheet, with the design tokens at the top |
 | `public/assets/` | self-hosted fonts and images, copied from the invite.illinois.edu theme and uploads |
-| `PRODUCT.md` | who the page is for and the product facts design work must respect |
+| `PRODUCT.md` | who the page is for, and the product facts that design work must respect |
 | `LICENSE` | project license |
 
-Anything outside `public/` (this README, `LICENSE`, the `.git` history) sits above the web
-root and is never served.
+Anything outside `public/` (this README, `LICENSE`, the `.git` history) is above the web root.
+Nginx never serves it.
 
 ## Serving It Remotely
 
-Production is plain nginx serving the static folder, with no application process. The site
-config points its root at `public/` and serves `index.html`.
+Production uses plain nginx to serve the static folder. There is no application process. The site
+config sets its root to `public/` and serves `index.html`.
 
 ```nginx
 server {
@@ -71,16 +84,18 @@ server {
 }
 ```
 
-Deploying is a `git pull` in `/var/www/invite-web`. Nginx picks up the new files
-immediately, so no reload is needed for content changes, and you only reload nginx if you
-touch the site config itself. The origin sits behind Cloudflare, so a hard refresh or a
-cache purge may be needed to see a change right away.
+A push to `main` deploys the site. The `invite-web-deploy` webhook resets `/var/www/invite-web` to
+`origin/main`. Nginx uses the new files immediately, so content changes need no reload. Reload nginx only if you change the site config. The origin is
+behind Cloudflare, so you may need a hard refresh or a cache purge to see a change right away.
 
 ## Under the Hood
 
-Deliberately minimal, static HTML and CSS, no framework, no bundler, no runtime. The
-markup lives in `index.html` and the styles in `styles.css`, and keeping them as plain
-files makes it trivial to read, edit, review in a diff, and deploy. The tools it links to each live in their own
-repository, [lm-dashboard](https://github.com/InviteInstitute/lm-dashboard),
-[vex-agent-integration](https://github.com/InviteInstitute/vex-agent-integration), and the
-Pedagogical Agent Toolkit. This repo is only the front door.
+The site is deliberately minimal: static HTML and CSS, with no framework, no bundler and no
+runtime. The markup is in `index.html`, and the styles are in `styles.css`. These plain files are
+easy to read, edit, review in a diff, and deploy.
+
+Each tool that the page links to has its own repository:
+[lm-dashboard](https://github.com/InviteInstitute/lm-dashboard),
+[vex-chat-agent](https://github.com/InviteInstitute/vex-chat-agent),
+[vex-pedagogical-agent](https://github.com/InviteInstitute/vex-pedagogical-agent), and the
+Pedagogical Agent Toolkit. This repository is only the front door.
