@@ -6,8 +6,7 @@ Intelligent Technologies for Education) builds and runs. It is one hand-written 
 page lists these tools:
 
 - The Learner Modeling Dashboard
-- The Chat AI Agent
-- The Pedagogical AI Agent
+- The INVITE Agent
 - The Pedagogical Agent Toolkit
 
 Each tool has a short description and a live or coming-soon badge. Each tool links to where it
@@ -17,8 +16,7 @@ runs.
 flowchart LR
     visitor["Visitor"] --> site[("inviteai.org<br/>nginx static site")]
     site --> dash["dashboard.inviteai.org<br/>Learner Modeling Dashboard"]
-    site --> chat["chat.inviteai.org<br/>Chat AI Agent"]
-    site --> agent["agent.inviteai.org<br/>Pedagogical AI Agent"]
+    site --> agent["agent.inviteai.org<br/>INVITE Agent"]
     site --> patk["patk.inviteai.org<br/>Pedagogical Agent Toolkit"]
 ```
 
@@ -96,6 +94,5 @@ easy to read, edit, review in a diff, and deploy.
 
 Each tool that the page links to has its own repository:
 [lm-dashboard](https://github.com/InviteInstitute/lm-dashboard),
-[vex-chat-agent](https://github.com/InviteInstitute/vex-chat-agent),
-[vex-pedagogical-agent](https://github.com/InviteInstitute/vex-pedagogical-agent), and the
+[agent](https://github.com/InviteInstitute/agent), and the
 Pedagogical Agent Toolkit. This repository is only the front door.
