@@ -6,93 +6,42 @@ Intelligent Technologies for Education) builds and runs. It is one hand-written 
 page lists these tools:
 
 - The Learner Modeling Dashboard
-- The INVITE Agent
+- The INVITE Pedagogical Agent
 - The Pedagogical Agent Toolkit
 
-Each tool has a short description and a live or coming-soon badge. Each tool links to where it
-runs.
+A sticky rail on the left holds each tool's Open button, and a large screenshot of each tool with a
+short description fills the right. The header and footer match the
+[INVITE Institute](https://invite.illinois.edu/) site.
 
 ```mermaid
 flowchart LR
     visitor["Visitor"] --> site[("inviteai.org<br/>nginx static site")]
     site --> dash["dashboard.inviteai.org<br/>Learner Modeling Dashboard"]
-    site --> agent["agent.inviteai.org<br/>INVITE Agent"]
+    site --> agent["agent.inviteai.org<br/>INVITE Pedagogical Agent"]
     site --> patk["patk.inviteai.org<br/>Pedagogical Agent Toolkit"]
 ```
 
-## Quick Start
-
-The site has no build step, and you do not need to install anything. The site is plain static
-files:
-
-- `public/index.html` holds the markup.
-- `public/styles.css` holds the styles.
-- `public/assets/` holds the self-hosted fonts and images.
-
-To preview the site, serve the folder. The stylesheet and relative paths then behave exactly as
-they do in production.
-
-```bash
-python3 -m http.server 8080 --directory public   # then open http://localhost:8080
-```
-
-Edit `public/index.html` or `public/styles.css`. Then refresh the page to see the change.
-
-## What You Get
-
-- The look of the [INVITE Institute](https://invite.illinois.edu/) site. The page keeps its header
-  menu, fonts, colors and footer, so the page reads as part of that site.
-- A **tool rail** on the left. It lists every tool with an **Open** button, and it stays on screen
-  as you scroll. A cyan tab marks the tool you are looking at.
-- A large **screenshot** of each tool on the right, with its name, a description and a link to its
-  subdomain.
-- Links to the source code of the tools, under the tool list.
-- The Institute footer, with the NSF and IES funding disclaimer (Grant #2229612), partner logos, a
-  search box for invite.illinois.edu and social links.
-
-## Layout
+## Files
 
 | Path | What |
 |---|---|
-| `public/` | the web root that nginx serves, with everything public |
-| `public/index.html` | the page markup |
+| `public/` | the web root that nginx serves, and the only folder it serves |
+| `public/index.html` | the page markup and its small script |
 | `public/styles.css` | the stylesheet, with the design tokens at the top |
 | `public/assets/` | self-hosted fonts and images, copied from the invite.illinois.edu theme and uploads |
+| `DESIGN.md` | the design tokens and components |
 | `PRODUCT.md` | who the page is for, and the product facts that design work must respect |
-| `LICENSE` | project license |
 
-Anything outside `public/` (this README, `LICENSE`, the `.git` history) is above the web root.
-Nginx never serves it.
+There is no build step. To preview the page, serve the folder and open <http://localhost:8080>.
 
-## Serving It Remotely
-
-Production uses plain nginx to serve the static folder. There is no application process. The site
-config sets its root to `public/` and serves `index.html`.
-
-```nginx
-server {
-    server_name inviteai.org www.inviteai.org;
-    root /var/www/invite-web/public;
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-    # TLS via Certbot, HTTP redirects to HTTPS
-}
+```bash
+python3 -m http.server 8080 --directory public
 ```
 
+## Deploy
+
 A push to `main` deploys the site. The `invite-web-deploy` webhook resets `/var/www/invite-web` to
-`origin/main`. Nginx uses the new files immediately, so content changes need no reload. Reload nginx only if you change the site config. The origin is
-behind Cloudflare, so you may need a hard refresh or a cache purge to see a change right away.
-
-## Under the Hood
-
-The site is deliberately minimal: static HTML and CSS, with no framework, no bundler and no
-runtime. The markup is in `index.html`, and the styles are in `styles.css`. These plain files are
-easy to read, edit, review in a diff, and deploy.
-
-Each tool that the page links to has its own repository:
-[lm-dashboard](https://github.com/InviteInstitute/lm-dashboard),
-[agent](https://github.com/InviteInstitute/agent), and the
-Pedagogical Agent Toolkit. This repository is only the front door.
+`origin/main`, and nginx serves the new files right away. The nginx site config lives in
+InviteInstitute/infra at `files/etc/nginx/sites-available/inviteai.org`. The origin is behind
+Cloudflare, so a hard refresh may be needed to see an image change, since `/assets/` is cached for
+an hour.
