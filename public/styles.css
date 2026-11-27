@@ -1,7 +1,6 @@
 /* Fonts: the exact faces TheGem ships on invite.illinois.edu, self-hosted */
 @font-face { font-family: "Montserrat"; src: url("/assets/fonts/montserrat-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Montserrat UltraLight"; src: url("/assets/fonts/montserrat-ultralight.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Source Sans Pro"; src: url("/assets/fonts/source-sans-pro-300.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
 @font-face { font-family: "Source Sans Pro"; src: url("/assets/fonts/source-sans-pro-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Source Sans Pro"; src: url("/assets/fonts/source-sans-pro-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 
@@ -16,19 +15,21 @@
   --lime: #e7ff89;
   --border: #dfe5e8;
   --subtle: #f4f6f7;
-  --caption: #5a6c79; /* body slate nudged to 4.65:1 on panel gray */
   --button-quiet: #b6c6c9;
   --footer: #1c3947;
+  --rail-name: #e6eaf0;
+  --rail-body: #c9d6dd;
+  --rail-caption: #9fb3bd;
+  --rail-scroll: #3d5f6e;
   --white: #ffffff;
   --font-heading: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   --font-thin: "Montserrat UltraLight", "Montserrat", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   --maxw: 1212px;
-  --gutter: 21px;
   --ease-out: cubic-bezier(.16, 1, .3, 1);
 }
 
-html { scrollbar-color: var(--button-quiet) var(--subtle); }
+html { scroll-behavior: smooth; scrollbar-color: var(--button-quiet) var(--subtle); }
 body {
   font-family: var(--font-body);
   font-size: 16px;
@@ -43,15 +44,14 @@ body {
 img { display: block; max-width: 100%; height: auto; }
 a { color: var(--accent); text-decoration: none; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
 .skip-link { position: absolute; left: 12px; top: -60px; z-index: 10; padding: 8px 14px; color: var(--heading); background: var(--lime); font-weight: 700; }
 .skip-link:focus { top: 12px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* Header: invite.illinois.edu's full-width bar, logo left, the institute menu right */
 .site-header { position: relative; z-index: 3; background: var(--white); }
 .header-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 91px; padding: 0 37px; }
-.site-logo img { width: 132px; height: auto; }
 .primary-nav ul { display: flex; align-items: center; list-style: none; }
 .primary-nav li { padding: 0 3px; }
 .primary-nav a {
@@ -72,8 +72,6 @@ a { color: var(--accent); text-decoration: none; }
 .menu-toggle svg { display: block; }
 
 /* Layout: a sticky tool rail beside the screenshots */
-html { scroll-behavior: smooth; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .layout {
   display: grid;
   grid-template-columns: 380px minmax(0, 1fr);
@@ -81,7 +79,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Rail: the footer's deep teal carried up the page, the cyan tab marks the tool in view */
-.rail { color: #c9d6dd; background: var(--footer); }
+.rail { color: var(--rail-body); background: var(--footer); }
 .rail-inner {
   position: sticky;
   top: 0;
@@ -91,9 +89,8 @@ html { scroll-behavior: smooth; }
   max-height: 100vh;
   overflow-y: auto;
   padding: 44px 0 32px;
-  background: var(--footer);
   scrollbar-width: thin;
-  scrollbar-color: #3d5f6e transparent;
+  scrollbar-color: var(--rail-scroll) transparent;
 }
 .rail-title {
   padding: 0 40px;
@@ -129,7 +126,7 @@ html { scroll-behavior: smooth; }
 .rail-tool.is-current::after { width: 8px; }
 .rail-name {
   display: block;
-  color: #e6eaf0;
+  color: var(--rail-name);
   font-family: var(--font-heading);
   font-size: 17px;
   font-weight: 700;
@@ -138,7 +135,7 @@ html { scroll-behavior: smooth; }
 }
 .rail-tool.is-current .rail-name, .rail-name:hover { color: var(--white); }
 .rail-launch { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; }
-.rail-host { color: #9fb3bd; font-size: 14px; }
+.rail-host { color: var(--rail-caption); font-size: 14px; }
 
 .btn {
   display: inline-flex;
@@ -156,17 +153,17 @@ html { scroll-behavior: smooth; }
 
 .rail-source { margin-top: 8px; padding: 32px 40px 0; }
 .rail-source-title {
-  color: #9fb3bd;
+  color: var(--rail-caption);
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
 .rail-source ul { margin-top: 6px; list-style: none; }
 .rail-source li + li { margin-top: 2px; }
-.rail-source a { color: #e6eaf0; font-size: 15px; line-height: 24px; overflow-wrap: anywhere; text-decoration: underline; text-decoration-color: rgba(0, 188, 212, .6); text-underline-offset: 3px; }
+.rail-source a { color: var(--rail-name); font-size: 15px; line-height: 24px; overflow-wrap: anywhere; text-decoration: underline; text-decoration-color: rgba(0, 188, 212, .6); text-underline-offset: 3px; }
 .rail-source a:hover { color: var(--white); text-decoration-color: var(--accent); }
 
-/* Screenshots: each tool at full column width, its name and job under it */
+/* Screenshots: each tool at full column width, name above, description below */
 .shots { padding: 56px 56px 110px; }
 .shot { max-width: 1100px; scroll-margin-top: 32px; }
 .shot + .shot { margin-top: 64px; padding-top: 64px; border-top: 1px solid var(--border); }
@@ -183,7 +180,7 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   text-wrap: balance;
 }
-.shot-desc { max-width: 66ch; font-size: 18px; line-height: 29px; }
+.shot-desc { font-size: 18px; line-height: 29px; text-wrap: pretty; }
 .shot-link { margin-top: 14px; font-size: 17px; }
 .shot-link a {
   color: var(--heading);
@@ -208,8 +205,6 @@ html { scroll-behavior: smooth; }
 }
 .footer-funding { padding: 0 78px 0 77px; }
 .funder-logos { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
-.funder-logos img[alt^="National"] { width: 90px; }
-.funder-logos img[alt^="Institute"] { width: 318px; }
 .footer-heading {
   color: var(--white);
   font-family: var(--font-thin);
@@ -220,7 +215,6 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
 }
 .footertext { margin-top: 2px; font-size: 12px; line-height: 25px; }
-.footertext a { color: var(--accent); }
 .footertext a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .partners { display: grid; grid-template-columns: repeat(4, 71px); gap: 10px; padding-left: 18px; list-style: none; }
@@ -252,7 +246,6 @@ html { scroll-behavior: smooth; }
 .socials svg { display: block; width: 20px; height: 20px; }
 
 .footer-bottom { padding: 70px 21px 80px; color: var(--white); font-size: 12px; line-height: 25px; text-align: center; }
-.footer-bottom a { color: var(--accent); }
 .footer-bottom a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Tablet */
@@ -288,7 +281,7 @@ html { scroll-behavior: smooth; }
   }
   .primary-nav ul.is-open { display: flex; }
   .primary-nav li { padding: 0; }
-  .primary-nav a, .primary-nav .menu-search a { height: auto; padding: 10px 21px; font-size: 14px; }
+  .primary-nav a { padding: 10px 21px; font-size: 14px; }
   .primary-nav .menu-search { display: none; }
 }
 
@@ -307,13 +300,12 @@ html { scroll-behavior: smooth; }
 
 @media (max-width: 767px) {
   .rail-title { font-size: 24px; line-height: 34px; letter-spacing: 1.2px; }
-  .rail-intro { font-size: 17px; line-height: 26px; }
   .shot-title { font-size: 21px; line-height: 30px; letter-spacing: 1.05px; }
   .shot-desc { font-size: 17px; line-height: 27px; }
   .footer-grid { grid-template-columns: 1fr; gap: 44px; padding-top: 44px; text-align: center; }
-  .funder-logos { flex-direction: column; gap: 22px; max-width: none; }
-  .funder-logos img[alt^="Institute"] { width: 260px; }
-  .partners { justify-content: center; grid-template-columns: repeat(4, 64px); padding-left: 0; }
+  .funder-logos { flex-direction: column; gap: 22px; }
+  .ies-logo { width: 260px; }
+  .partners { display: flex; flex-wrap: wrap; justify-content: center; max-width: 286px; margin: 0 auto; padding-left: 0; }
   .partners img { width: 64px; height: 64px; }
 }
 
