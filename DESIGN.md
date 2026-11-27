@@ -19,16 +19,16 @@ colors:
 typography:
   display:
     fontFamily: "Montserrat, Helvetica Neue, Arial, sans-serif"
-    fontSize: "36px"
-    fontWeight: 700
-    lineHeight: "53px"
-    letterSpacing: "1.8px"
-  headline:
-    fontFamily: "Montserrat, Helvetica Neue, Arial, sans-serif"
     fontSize: "28px"
     fontWeight: 700
     lineHeight: "42px"
     letterSpacing: "1.4px"
+  headline:
+    fontFamily: "Montserrat, Helvetica Neue, Arial, sans-serif"
+    fontSize: "24px"
+    fontWeight: 700
+    lineHeight: "36px"
+    letterSpacing: "1.2px"
   display-phone:
     fontFamily: "Montserrat, Helvetica Neue, Arial, sans-serif"
     fontSize: "24px"
@@ -74,7 +74,7 @@ typography:
     fontFamily: "Source Sans Pro, Helvetica Neue, Arial, sans-serif"
     fontSize: "20px"
     fontWeight: 300
-    lineHeight: "29px"
+    lineHeight: "31px"
   body-large:
     fontFamily: "Source Sans Pro, Helvetica Neue, Arial, sans-serif"
     fontSize: "17px"
@@ -123,25 +123,20 @@ typography:
     letterSpacing: "0.08em"
 rounded:
   none: "0px"
+  field: "3px"
 spacing:
   gutter: "21px"
+  edge: "40px"
   xs: "8px"
-  subtool: "18px"
-  sm: "22px"
-  row: "26px"
+  sm: "20px"
   md: "30px"
   lg: "40px"
-  xl: "60px"
+  xl: "50px"
 components:
-  button-launch:
-    backgroundColor: "{colors.paper-white}"
-    textColor: "{colors.heading-ink}"
-    typography: "{typography.label-button}"
-    rounded: "{rounded.none}"
-    padding: "0 22px 0 24px"
-    height: "44px"
-  button-launch-hover:
-    backgroundColor: "{colors.signal-cyan}"
+  link-arrow:
+    textColor: "{colors.signal-cyan}"
+    typography: "{typography.lead}"
+  link-arrow-hover:
     textColor: "{colors.heading-ink}"
   button-solid:
     backgroundColor: "{colors.heading-ink}"
@@ -164,20 +159,18 @@ components:
     typography: "{typography.label-status}"
     rounded: "{rounded.none}"
     padding: "3px 10px"
-  status-soon:
-    backgroundColor: "{colors.subtle-wash}"
-    textColor: "{colors.body-slate}"
-    typography: "{typography.label-status}"
-    rounded: "{rounded.none}"
-    padding: "3px 10px"
   input-text:
     backgroundColor: "{colors.subtle-wash}"
     textColor: "{colors.heading-ink}"
     rounded: "{rounded.none}"
     padding: "0 14px"
     height: "44px"
-  input-text-focus:
-    backgroundColor: "{colors.paper-white}"
+  input-search:
+    backgroundColor: "{colors.subtle-wash}"
+    textColor: "{colors.heading-ink}"
+    rounded: "{rounded.field}"
+    padding: "6px 44px 6px 10px"
+    height: "39px"
   nav-link:
     textColor: "{colors.heading-ink}"
     typography: "{typography.label-nav}"
@@ -187,67 +180,60 @@ components:
   tool-row:
     backgroundColor: "{colors.paper-white}"
     rounded: "{rounded.none}"
-    padding: "26px 0"
-  links-band:
+    padding: "40px 0 0"
+  sidebar:
     backgroundColor: "{colors.panel-gray}"
     rounded: "{rounded.none}"
-    padding: "32px 40px 36px"
-  links-band-caption:
-    textColor: "{colors.caption-slate}"
-    typography: "{typography.caption}"
+    padding: "20px 20px 30px"
 ---
 
 # Design System: INVITE Research Software
 
 ## Overview
 
-**Creative North Star: "A Page From the Institute's Own Site"**
+**Creative North Star: "The Institute Homepage, With the Tools in It"**
 
-This system is a faithful port of invite.illinois.edu, the INVITE Institute's WordPress site on the TheGem theme. Every surface should read as one more inner page of that site: a white header with the logo and a short uppercase menu, a dark lined title bar with a right-aligned title and a cyan tab, a white body of photo-paired rows closed by a full-width gray links band, and a deep teal footer carrying funding and partner logos. Trust transfers from the institute site because nothing here looks like a separate product.
+The page mirrors the homepage of invite.illinois.edu, the INVITE Institute's WordPress site on the TheGem theme. It keeps that page's header menu, its two-line title bar, its wide text column beside a gray sidebar, and its footer. The homepage's photo slider is left out on purpose, because the user asked for a light touch. Trust transfers from the institute site because the page looks like one more page of it.
 
-The grammar is documentary, not app-like. Each top-level item sits in a two-column row beside one of the institute homepage's own carousel photos, whose torn paper edges and hex network overlay are baked into the raster; rows alternate the photo's side. Headings are uppercase Montserrat 700 with tracking, body is Source Sans Pro in slate gray, and the single lead paragraph is set light (300) and large. Corners are square everywhere, depth is flat, and color is sparse: cyan marks interaction and structure (button borders, the title tab, focus rings, link underlines), lime marks only what is live.
+Headings are uppercase Montserrat 700 with tracking, body text is Source Sans Pro in slate gray, and the lead paragraph and launch links are set light (300) and large, the way the homepage sets its intro and its ► links. Corners are square, depth is flat, and color is sparse. Cyan is the link color, lime marks only what is live.
 
-Motion is nearly absent by design. The one authored movement is the launch button filling cyan from the left while its arrow nudges up and right; everything else changes color at most.
+There is no authored motion. Links and icons change color on hover, nothing moves.
 
 **Key Characteristics:**
-- White ground, photo-paired rows that alternate sides, square corners, no cards.
-- Institute carousel photos with torn edges baked into the raster, never masked in CSS.
-- Uppercase Montserrat 700 headings, letter-spacing equal to 5% of the font size.
-- Cyan as the interaction and structure accent; lime reserved for "live" status and text selection.
-- Dark textured title bar with an 18px cyan tab at the right edge.
-- Full-width Panel Gray links band above a deep teal footer with Montserrat UltraLight headings and a square partner-logo wall.
-- One motion: the launch-button fill.
+- The institute's own header menu, linked to invite.illinois.edu, with a search link.
+- A dark textured title bar with a light "INVITE Institute" line over the uppercase title, both left-aligned at 40px, and an 18px cyan tab at the right edge.
+- A 2/3 text column with the lead and the tools, beside a Panel Gray sidebar with » lists.
+- Each tool is a screenshot beside its name, Live label, description and ► launch link, with 1px rules between tools.
+- The deep teal footer, with funder logos, the disclaimer, the partner wall, a search box and social links.
 
 ## Colors
 
-A cool, low-saturation slate-and-plum palette with one saturated cyan accent and one acid lime signal.
+The homepage's palette. Slate and plum neutrals, one cyan accent, one lime signal.
 
 ### Primary
-- **Signal Cyan** (signal-cyan): TheGem's accent. Used as the 2px border of launch buttons and their hover/focus fill, the title-bar tab, the 2px focus ring, the input caret and focus border, links-band link underlines, and link text on the dark footer. Never used as text on white.
+- **Signal Cyan** (signal-cyan): TheGem's link color. Launch links, sidebar links, footer links, the search button icon, the title-bar tab, the focus ring and the input caret.
 
 ### Secondary
-- **Live Lime** (live-lime): TheGem's highlight. Fills the "Live" status label and the text selection background. It means "available now" and nothing else.
+- **Live Lime** (live-lime): fills the "Live" status label and the text selection background. It means "available now" and nothing else.
 
 ### Neutral
-- **Heading Ink** (heading-ink): all headings, nav links, launch-button text, links-band link text, bold spans in the lead, input text, and the solid dialog button fill.
-- **Body Slate** (body-slate): running text, descriptions, host lines, the Coming Soon label text. On white only; it falls to 4.27:1 on Panel Gray.
-- **Caption Slate** (caption-slate): Body Slate darkened for Panel Gray. Carries the captions under links-band links (4.65:1 on Panel Gray).
-- **Muted Mist** (muted-mist): footer body text, the lock glyph beside "Password required", links-band list markers, and the "Coming Soon" dot. Never running text on white.
-- **Rule Gray** (rule-gray): every 1px hairline (the rule between sub-items inside a row, the Coming Soon label border, input borders) and the 2px quiet button border.
-- **Subtle Wash** (subtle-wash): Coming Soon label fill, resting input fill, scrollbar track.
-- **Panel Gray** (panel-gray): the links band ground.
+- **Heading Ink** (heading-ink): headings, nav links, bold spans in the lead, input text, link hover color, and the solid dialog button fill.
+- **Body Slate** (body-slate): running text, descriptions and the ► marks. On white only.
+- **Caption Slate** (caption-slate): host lines and the notes under sidebar links (4.65:1 on Panel Gray).
+- **Muted Mist** (muted-mist): footer body text and the lock icon beside "Password required".
+- **Rule Gray** (rule-gray): the 1px rules between tools, screenshot borders and input borders.
+- **Subtle Wash** (subtle-wash): input fills and the scrollbar track.
+- **Panel Gray** (panel-gray): the sidebar ground.
 - **Quiet Steel** (quiet-steel): scrollbar thumb and the quiet button's hover border.
-- **Title-Bar Plum** (title-bar-plum): base under the lined title texture image; the rendered bar reads near #222431.
+- **Title-Bar Plum** (title-bar-plum): base under the lined title texture image.
 - **Footer Deep Teal** (footer-deep-teal): footer ground and the browser theme color.
-- **Paper White** (paper-white): page, header, and dialog ground; title and footer headings on dark.
+- **Paper White** (paper-white): page, header and dialog ground, title-bar and footer headings.
 - **Error Red** (error-red): inline form error text only.
 
 ### Named Rules
-**The Lime Means Live Rule.** Lime fills only a status that is actually live (and text selection). It is never decoration and never a second accent.
+**The Lime Means Live Rule.** Lime fills only a status that is actually live, and text selection. It is never decoration.
 
-**The Cyan Is Structure Rule.** Cyan appears as borders, tabs, underlines, rings, and fills behind dark ink. Text on white stays Heading Ink or Body Slate; cyan text belongs only on the dark footer.
-
-**The Gray Ground Caption Rule.** Secondary text on Panel Gray is Caption Slate, never Body Slate. Every text color is checked against the ground it actually sits on.
+**The Inherited Link Rule.** Cyan link text on white (2.3:1) and on Panel Gray (2.0:1) is below WCAG AA. The institute site sets its links this way, and this page mirrors it on purpose. Do not spread cyan text to anything that is not a link.
 
 ## Typography
 
@@ -255,124 +241,78 @@ A cool, low-saturation slate-and-plum palette with one saturated cyan accent and
 **Body Font:** Source Sans Pro 300/400/700 (with Helvetica Neue, Arial)
 **Footer Heading Font:** Montserrat UltraLight (with Montserrat, Helvetica Neue, Arial)
 
-**Character:** Geometric, tracked, all-caps Montserrat carries structure and names; humanist Source Sans Pro carries reading. All faces are self-hosted copies of the ones TheGem ships on the institute site.
+All faces are self-hosted copies of the ones TheGem ships on the institute site.
 
 ### Hierarchy
-Responsive steps are listed with their breakpoint; tablet is 1100px and below, phone is 767px and below.
-- **Display** (700, 36px/53px, 1.8px tracking, uppercase; phone 24px/36px at 1.2px): the page title in the dark title bar, right-aligned, white.
-- **Headline** (700, 28px/42px, 1.4px tracking, uppercase; tablet 24px/36px at 1.2px; phone 22px/32px at 1.1px): a top-level tool title in its row, balanced wrapping.
-- **Title** (700, 19px/30px, 0.95px tracking, uppercase; sub-items 17px/26px at phone): sub-item, links-band, and dialog headings.
-- **Footer Title** (UltraLight, 19px/30px, 0.95px tracking, uppercase, white): footer section headings only.
-- **Lead** (300, 24px/37px, max 40em; phone 20px/29px): the single introductory paragraph; bold spans inside it switch to Heading Ink 700.
-- **Body Large** (400, 17px/27px, max 34em): tool descriptions; 16px/25px in sub-items and at phone.
-- **Body** (400, 16px/25px): default text and links-band links.
-- **Host** (400, 15px/25px): the plain hostname or lock line beside a launch button; also the inline form error.
-- **Caption** (400, 14px/21px, Caption Slate): the line under each links-band link.
-- **Small** (400, 13px/24px, max 460px): footer disclaimer text.
-- **Legal** (400, 12px/25px): the footer copyright line.
-- **Label** (Montserrat 700, uppercase): nav 14px untracked (13px at phone); buttons 14px at 0.04em (dialog buttons 13px); status 11px/18px at 0.08em; field labels 12px at 0.06em.
+Breakpoints are 1180px (tablet), 1000px (menu folds), 900px (sidebar drops below) and 767px (phone).
+- **Title excerpt** (300, 24px/37px, white; phone 20px/30px): the "INVITE Institute" line in the title bar.
+- **Display** (700, 28px/42px, 1.4px tracking, uppercase, white; phone 24px/36px at 1.2px): the page title.
+- **Headline** (700, 24px/36px, 1.2px tracking, uppercase; phone 22px/32px at 1.1px): a tool name.
+- **Title** (700, 19px/30px, 0.95px tracking, uppercase): sidebar and dialog headings.
+- **Footer Title** (UltraLight, 19px/30px, 0.95px tracking, uppercase, white): footer headings.
+- **Lead** (300, 24px/37px; phone 20px/31px): the intro paragraph. Bold spans switch to Heading Ink 700.
+- **Launch link** (300, 24px/37px, cyan; phone 21px/32px): the ► link under each tool.
+- **Body Large** (400, 17px/27px; phone 16px/25px): tool descriptions.
+- **Body** (400, 16px/25px): sidebar links and default text.
+- **Host** (400, 15px): the hostname or lock line under a launch link, and sidebar notes.
+- **Legal** (400, 12px/25px): the footer disclaimer and copyright line.
+- **Label** (Montserrat 700, uppercase): nav 14px untracked, status 11px/18px at 0.08em, dialog labels 12px at 0.06em.
 
 ### Named Rules
-**The Five-Percent Tracking Rule.** Every uppercase Montserrat heading tracks at exactly 5% of its font size (36px gets 1.8px, 28px gets 1.4px, 24px gets 1.2px, 22px gets 1.1px, 19px gets 0.95px). Labels use their own smaller em values; nav is untracked.
-
-**The One Light Paragraph Rule.** Weight 300 is reserved for the lead paragraph. Everything else in Source Sans Pro is 400 or 700.
+**The Five-Percent Tracking Rule.** Every uppercase Montserrat heading tracks at 5% of its font size. Nav and labels use their own values.
 
 ## Layout
 
-A TheGem inner-page template. The header is full-bleed, 91px tall with 37px side padding (70px and 21px at phone), logo left at 132px wide (112px at phone) and nav right. The title bar is a full-bleed strip with 15px vertical padding (12px at phone) and the title right-aligned, with 62px right padding (34px at phone) clearing the cyan tab.
+The homepage's full-width template. The header is 91px tall with 37px side padding, logo left at 132px, menu right. Each menu item has 15px padding inside 3px, and the search icon closes the row. At 1000px and below the header drops to 70px, the logo to 112px, and the menu folds behind a toggle into a white drop-down.
 
-Content lives in a 1212px max-width container with 21px gutters. The body block is padded 50px top and 80px bottom (34px/60px at phone). The lead sits first; the rows start 30px below it (18px at phone).
+The title bar is full-bleed with 25px vertical padding. The excerpt and the title sit at x=40, 15px apart. The cyan tab is 18px wide, 34px from the top and 45px from the bottom of the bar (12px wide and 30px from both at 900px and below).
 
-Each top-level tool is a row: a two-column grid of equal halves, photo in one and the tool body in the other, vertically centered, with a 60px gap (36px at tablet) and 26px top and bottom padding. Odd rows put the photo first, even rows put it second. Rows are separated by whitespace, not rules. At phone the row collapses to one column with a 14px gap and 18px/26px padding; the photo always comes first and runs full-bleed by pulling out through the gutters.
+The body block is padded 50px top and 120px bottom. The content row runs edge to edge with 40px left and 19px right padding, a 2/3 main column and a 1/3 sidebar with a 21px gap. In the main column, each tool starts 40px below the one before it, after a 1px Rule Gray rule and 40px of padding. A tool is two equal columns, screenshot and body, with a 40px gap. At 1180px and below the screenshot stacks above the body. At 900px and below the sidebar drops under the tools.
 
-Inside a tool body, the top-level head stacks the headline above its status label (10px apart). Description follows 8px below; the action line follows 22px below and wraps with 12px by 22px gaps, pairing the launch button with a host line. At phone the action line stacks, button first and host line beneath (10px apart). A tool with sub-items lists them below its head, each preceded by a 1px Rule Gray line with 18px above and below; sub-item heads keep the title and status inline (8px by 18px gaps), and their action line sits 16px below.
-
-The links band closes the content 44px below the last row (30px at phone): full container width, two columns at 1fr to 1.3fr with 30px by 60px gaps and 32px 40px 36px padding; equal columns with 30px 32px 34px padding at tablet; one column with a 28px gap and 26px 22px 28px padding at phone.
-
-The footer is a three-column grid (funding, partner wall, connect) with 40px by 70px gaps, collapsing to two columns at tablet (connect spans below) and to one centered column at phone.
-
-### Named Rules
-**The Alternating Photo Rule.** Every top-level tool gets exactly one institute photo at half the row, and the photo's side alternates row by row. At phone the photo leads, full-bleed.
+The footer is a 1212px grid of 6, 4 and 2 parts: funding (logos, heading, disclaimer, padded 77px left and 78px right), the partner wall (71px squares, 10px gaps, 4 across) and a centered search and connect column. The copyright line sits 70px below, centered. At 1180px the search column moves under the other two, and at 767px everything stacks and centers.
 
 ## Elevation & Depth
 
-Flat. Depth comes from tonal grounds (white page, dark textured title bar, Panel Gray links band, deep teal footer), 1px hairlines, and the photographs themselves, not shadows. The only shadow in the system belongs to the modal dialog, which floats above a deep-teal scrim at 60% opacity.
-
-### Shadow Vocabulary
-- **Modal lift** (`box-shadow: 0 18px 50px rgba(24, 24, 40, .28)`): the password dialog only.
-
-### Named Rules
-**The Ruled Not Raised Rule.** Separate content with whitespace, 1px Rule Gray lines, and tonal grounds. A shadow is permitted only on a modal that sits above a scrim.
+Flat, like the original. Depth comes from tonal grounds and 1px rules. Two shadows exist. The modal dialog has `0 18px 50px rgba(24, 24, 40, .28)` over a 60% deep teal scrim, and the folded phone menu has `0 12px 24px rgba(28, 57, 71, .12)`.
 
 ## Shapes
 
-Square corners everywhere (0px): buttons, inputs, status labels, the links band, the dialog, partner logos. The only curves are the 6px status dots and the rounded ends of icon strokes. Borders come in two weights: 1px hairlines for structure and fields, 2px for the launch button, dialog buttons, the active nav box, and the focus ring. The title bar's cyan tab is a signature slab: 18px wide (12px at phone), flush to the right edge, inset 28px top and bottom from the bar (21px at phone).
-
-The one irregular silhouette is the photo: the institute's torn paper edge and hex network line art live inside the raster on a near-white ground, so the photo sits on the white page with no frame, radius, mask, or shadow.
-
-### Named Rules
-**The Edge Lives in the Raster Rule.** Photo edges and overlays come baked into the institute's own images (800w and 1200w WebP). CSS never masks, clips, rounds, frames, or shadows a photo.
+Square corners everywhere, except the footer search field, which keeps the original's 3px radius. Screenshots have a 1px Rule Gray border and nothing else. The status dot is the only circle.
 
 ## Components
 
-### Buttons
-Outlined, uppercase, and quiet until touched.
-- **Shape:** square (0px), 44px tall, 2px Signal Cyan border.
-- **Launch (primary):** transparent over white, Heading Ink label (14px Montserrat 700, 0.04em), followed by a 16px up-right arrow stroke icon with a 10px gap. This is a deliberate accessibility adaptation of TheGem's cyan-text outline button.
-- **Hover / Focus:** Signal Cyan fills from the left (background-size 0% to 100% over 0.45s on cubic-bezier(.16, 1, .3, 1)) while the arrow translates 2px up and right on the same curve. Label stays Heading Ink. This is the only authored motion in the system.
-- **Solid (dialog confirm):** Heading Ink fill, white label, 40px tall, 13px label; on hover fills Signal Cyan with Heading Ink text (0.2s color transition).
-- **Quiet (dialog cancel):** white fill, 2px Rule Gray border, Body Slate label; on hover the border shifts to Quiet Steel and the label to Heading Ink.
+### Launch Links
+A ► mark in Body Slate, then the link in cyan at the lead's size and weight, the way the homepage sets "Read more about our mission". Hover and focus turn the link Heading Ink. The host line sits under it, indented to line up with the link text.
 
 ### Status Labels
-- **Style:** square, 3px by 10px padding, 11px uppercase Montserrat 700 at 0.08em, led by a 6px round dot in the label color.
-- **Live:** Live Lime fill, Heading Ink text and dot.
-- **Coming Soon:** Subtle Wash fill, 1px Rule Gray border, Body Slate text, Muted Mist dot.
+Square, 3px by 10px padding, 11px uppercase Montserrat 700 at 0.08em, led by a 6px round dot. Live is Live Lime with Heading Ink text.
 
-### Tool Rows (Signature)
-- **Structure:** photo half and body half, alternating sides, as set out in Layout. Not a card: no ground, border, radius, or shadow.
-- **Photo:** an institute carousel raster, full column width, served at 800w and 1200w.
-- **Head:** top-level heads stack Headline over status; sub-item heads keep Title and status on one line.
-- **Sub-items:** divided by a 1px Rule Gray line; descriptions drop to 16px/25px.
-- **Action line:** launch button plus a Body Slate host line (15px); a gated tool swaps the hostname for a 13px Muted Mist lock stroke icon and "Password required". Stacks at phone.
+### Tool Rows
+Screenshot and body, as set out in Layout. No card, ground or shadow. The body stacks the Headline, the Live label (10px below), the description (12px below), the launch link (14px below) and the host line.
 
-### Links Band
-- **Style:** Panel Gray ground, square, full container width, two columns, Title-role headings.
-- **Lists:** each item is indented 18px behind a Muted Mist » marker, TheGem's own list convention, with 10px between items. Links are Heading Ink with a 1px Signal Cyan underline at 4px offset, thickening to 2px on hover (0.15s), the accessibility adaptation of TheGem's cyan links.
-- **Captioned list:** a Caption Slate line under each link.
-- **Inline list:** items flow on one wrapping line with 10px by 30px gaps, each keeping its » marker.
-
-### Inputs / Fields
-- **Style:** square, 44px tall, 1px Rule Gray border, Subtle Wash fill, Heading Ink text, cyan caret, 14px horizontal padding. Label above in 12px uppercase Montserrat 700.
-- **Focus:** border turns Signal Cyan and fill turns white (0.15s); no outline ring on the input itself.
-- **Error:** message below in Error Red at 15px.
+### Sidebar
+Panel Gray, 20px padding, a Title heading, then a » list. Each item is indented 19px behind a Body Slate » with 11px between items. Links are cyan, with a Caption Slate note under each.
 
 ### Navigation
-- **Style:** uppercase Montserrat 700 at 14px (13px at phone), Heading Ink, 15px horizontal padding (2px at phone), 6px between items.
-- **States:** hover turns the label Signal Cyan (0.2s); the current page is boxed by a 2px Heading Ink border and does not change color on hover. At phone the current-page item is hidden, leaving only outbound links.
+Uppercase Montserrat 700 at 14px (13px at tablet), Heading Ink, cyan on hover. The search icon links to the footer search form.
 
-### Title Bar (Signature)
-Full-bleed dark lined texture over Title-Bar Plum, white Display title right-aligned, and the Signal Cyan tab at the right edge. Every page opens with it.
+### Footer
+Footer Deep Teal ground. NSF and IES logos, the "Funding and Disclaimer" heading and the verbatim disclaimer at 12px/25px in Muted Mist with cyan links. The partner wall. A "Search" heading over a 162px search field that submits to invite.illinois.edu, then "Connect" over white 20px social icons that turn cyan on hover.
 
-### Footer (Signature)
-Footer Deep Teal ground, Muted Mist small text, cyan links underlined on hover, white Footer Title headings, funder logos, a grid of 73px square partner logos (64px at phone) with 10px gaps, and white 20px social icons that turn cyan on hover.
+### Inputs and Dialog
+The password dialog keeps its square 44px field (Rule Gray border, Subtle Wash fill, cyan caret, cyan border on focus), Error Red message, a solid Heading Ink confirm button and a quiet cancel button.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** track every uppercase Montserrat heading at 5% of its font size.
-- **Do** pair each top-level tool with one institute photo at half the row, alternating sides, and lead with the photo full-bleed at phone.
-- **Do** use the institute's own photos with their torn edges and hex overlay baked into the raster.
-- **Do** separate sub-items with 1px Rule Gray hairlines and keep every corner square (0px).
+- **Do** check every change against a screenshot of invite.illinois.edu at the same width.
+- **Do** track uppercase Montserrat headings at 5% of the font size.
 - **Do** reserve Live Lime for statuses that are actually live.
-- **Do** keep Signal Cyan to borders, tabs, underlines, focus rings, and fills behind Heading Ink; on white, text stays Heading Ink or Body Slate.
 - **Do** show focus with the 2px Signal Cyan outline at 3px offset.
-- **Do** open every page with the white header and the textured title bar with its cyan tab, and close it with the deep teal footer.
-- **Do** keep text at 4.5:1 contrast or better against its actual ground; on Panel Gray, secondary text is Caption Slate.
+- **Do** use screenshots of the real tools, with synthetic data where students would show.
 
 ### Don't:
-- **Don't** use rounded tiles, pill badges, or shadowed cards; tools are photo-paired rows, not boxes.
-- **Don't** mask, clip, round, frame, or shadow a photo in CSS; the edge treatment belongs to the raster.
-- **Don't** add motion beyond the launch-button fill and arrow nudge; other state changes are color-only.
-- **Don't** set cyan text on white or light grounds.
-- **Don't** use weight 300 outside the lead paragraph.
-- **Don't** add shadows outside the modal dialog.
+- **Don't** add the homepage slider or other heavy pieces the user did not ask for.
+- **Don't** use rounded tiles, pill badges or shadowed cards.
+- **Don't** add motion. Hover states change color only.
+- **Don't** use cyan text for anything that is not a link.

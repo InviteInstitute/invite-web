@@ -31,18 +31,18 @@ It is the software arm of an existing institute, not a separate product. It shou
 
 - Plain static HTML and CSS served by nginx from `public/`. No build step, no framework, no runtime. Deploy is `git pull`, and Cloudflare sits in front.
 - Assets (logos, partner logos, textures, fonts) are self-hosted under `public/`, copied from the institute site's WordPress backup, not hotlinked.
-- Header keeps only the INVITE logo: no institute menu. The page is a standalone tools index.
+- The header carries the institute site's own menu (About, People, Research, Open Studies, INVITE Alliance, Publications) and a search link, all pointing to invite.illinois.edu. The page mirrors that site's homepage layout.
 
 ## Brand Commitments
 
-- Visual identity is the institute site's: the INVITE logo, TheGem theme tokens (Montserrat headings, Source Sans Pro body, `#3c3950` headings, `#5f727f` body, `#00bcd4` accent, `#e7ff89` highlight), the dark lined title bar, and the `#1c3947` footer with funding disclaimer and partner logos.
+- Visual identity is the institute site's: the INVITE logo, TheGem theme tokens (Montserrat headings, Source Sans Pro body, `#3c3950` headings, `#5f727f` body, `#00bcd4` accent, `#e7ff89` highlight), the dark lined title bar, the gray sidebar, and the `#1c3947` footer with funding disclaimer, partner logos, search and social links.
 - Funding disclaimer text (NSF and IES, Grant #2229612) must appear verbatim.
 
 ## Evidence on Hand
 
 - The three tools, their descriptions, and their live/soon status are in `public/index.html`.
 - Institute assets from the WordPress backup (`~/backup-20aug26/uploads/`): INVITE logo, NSF and IES logos, partner logos (Illinois, UF, NJIT, ETS, Oregon, VEX Robotics, Balance Studios), and the title-bar texture.
-- There are no usage numbers, testimonials, or screenshots of the tools yet. Do not fabricate them.
+- Each tool has a screenshot of its real UI. The dashboard one shows synthetic students, never real ones. There are no usage numbers or testimonials. Do not fabricate them.
 
 ## Product Principles
 

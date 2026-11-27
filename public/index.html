@@ -11,9 +11,11 @@
 <link rel="preload" href="/assets/fonts/source-sans-pro-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="/styles.css?v=2026-09-25f">
+<link rel="stylesheet" href="/styles.css?v=2026-11-27a">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="header-main">
@@ -21,9 +23,15 @@
       <img src="/assets/img/invite-logo.png" srcset="/assets/img/invite-logo.png 1x, /assets/img/invite-logo@2x.png 2x, /assets/img/invite-logo@3x.png 3x" width="132" height="31" alt="INVITE Institute">
     </a>
     <nav class="primary-nav" aria-label="Primary">
-      <ul>
-        <li class="is-current"><a href="/" aria-current="page">Research Software</a></li>
-        <li><a href="https://invite.illinois.edu/">INVITE Institute</a></li>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <ul id="primary-menu">
+        <li><a href="https://invite.illinois.edu/about/">About</a></li>
+        <li><a href="https://invite.illinois.edu/people/">People</a></li>
+        <li><a href="https://invite.illinois.edu/research/">Research</a></li>
+        <li><a href="https://invite.illinois.edu/recruit/">Open Studies</a></li>
+        <li><a href="https://invite.illinois.edu/alliance/">INVITE Alliance</a></li>
+        <li><a href="https://invite.illinois.edu/publications/">Publications</a></li>
+        <li class="menu-search"><a href="#search" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6.5 6.5"/></svg></a></li>
       </ul>
     </nav>
   </div>
@@ -31,87 +39,62 @@
 
 <div class="page-title">
   <div class="page-title-inner">
+    <p class="page-title-excerpt">INVITE Institute</p>
     <h1>Research Software</h1>
   </div>
 </div>
 
-<main class="block-content">
-  <div class="container">
-    <p class="lead">Research software built and run by the <strong>INVITE</strong> Institute, the NSF-IES National AI Institute for Innovative Intelligent Technologies for Education. Each tool opens where it runs.</p>
-  </div>
+<main class="block-content" id="main">
+  <div class="content-row">
+    <div class="content-main">
+      <p class="lead">The <strong>INVITE</strong> Institute (<strong>IN</strong>novati<strong>V</strong>e <strong>I</strong>ntelligent <strong>T</strong>echnologies for <strong>E</strong>ducation) builds and runs the research software below. Each tool opens where it runs.</p>
 
-  <div class="container tools">
-    <article class="tool" aria-labelledby="dashboard-title">
-      <figure class="tool-photo">
-        <img src="/assets/img/photos/dashboard-1200.webp?v=4" srcset="/assets/img/photos/dashboard-800.webp?v=4 800w, /assets/img/photos/dashboard-1200.webp?v=4 1200w, /assets/img/photos/dashboard-1600.webp?v=4 1600w" sizes="(max-width: 767px) calc(100vw - 42px), 585px" width="1600" height="941" alt="The Learner Modeling Dashboard: two tracked students, one flagged in red as wheel-spinning after 16 runs, the other marked OK">
-      </figure>
-      <div class="tool-body">
-        <div class="tool-head">
+      <article class="tool" aria-labelledby="dashboard-title">
+        <figure class="tool-photo">
+          <img src="/assets/img/photos/dashboard-1200.webp?v=5" srcset="/assets/img/photos/dashboard-800.webp?v=5 800w, /assets/img/photos/dashboard-1200.webp?v=5 1200w, /assets/img/photos/dashboard-1600.webp?v=5 1600w" sizes="(max-width: 767px) calc(100vw - 42px), (max-width: 1180px) 60vw, 430px" width="1600" height="941" alt="The Learner Modeling Dashboard: eight student cards with their runs and episodes, five of them flagged as wheel-spinning, step-by-step, inactive, resilience and explorer, and the Needs Intervention column that lists those five alerts">
+        </figure>
+        <div class="tool-body">
           <h2 class="tool-title" id="dashboard-title">Learner Modeling Dashboard</h2>
           <span class="status status-live">Live</span>
+          <p class="tool-desc">In real time, surfaces which students need help in VEXcode VR.</p>
+          <p class="tool-link"><span aria-hidden="true">►</span> <a href="https://dashboard.inviteai.org" target="_blank" rel="noopener">Open the Dashboard</a></p>
+          <p class="tool-host">dashboard.inviteai.org</p>
         </div>
-        <p class="tool-desc">In real time, surfaces which students need help in VEXcode VR.</p>
-        <div class="tool-foot">
-          <a class="btn" href="https://dashboard.inviteai.org" target="_blank" rel="noopener">Open Dashboard<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M17 7H8M17 7v9"/></svg></a>
-          <span class="tool-host">dashboard.inviteai.org</span>
-        </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="tool" aria-labelledby="agent-title">
-      <figure class="tool-photo">
-        <img src="/assets/img/photos/agent-1200.webp?v=12" srcset="/assets/img/photos/agent-800.webp?v=12 800w, /assets/img/photos/agent-1200.webp?v=12 1200w, /assets/img/photos/agent-1600.webp?v=12 1600w" sizes="(max-width: 767px) calc(100vw - 42px), 585px" width="1600" height="941" alt="ZANY with the Castle Crasher+ playground open, a 3D animated tutor, and the INVITE Agent chat beside its tab on the screen's edge" loading="lazy">
-      </figure>
-      <div class="tool-body">
-        <div class="tool-head">
+      <article class="tool" aria-labelledby="agent-title">
+        <figure class="tool-photo">
+          <img src="/assets/img/photos/agent-1200.webp?v=12" srcset="/assets/img/photos/agent-800.webp?v=12 800w, /assets/img/photos/agent-1200.webp?v=12 1200w, /assets/img/photos/agent-1600.webp?v=12 1600w" sizes="(max-width: 767px) calc(100vw - 42px), (max-width: 1180px) 60vw, 430px" width="1600" height="941" alt="ZANY with the Castle Crasher+ playground open, the 3D pedagogical agent, and the INVITE Agent chat beside its tab on the screen's edge" loading="lazy">
+        </figure>
+        <div class="tool-body">
           <h2 class="tool-title" id="agent-title">INVITE Agent</h2>
           <span class="status status-live">Live</span>
+          <p class="tool-desc">The chat agent and the pedagogical agent in one. It chats with students as they code in VEXcode VR and ZANY, checks in when they’re stuck, and talks them through it out loud as a 3D pedagogical agent.</p>
+          <p class="tool-link"><span aria-hidden="true">►</span> <a href="https://agent.inviteai.org" target="_blank" rel="noopener">Open the Agent</a></p>
+          <p class="tool-host">agent.inviteai.org</p>
         </div>
-        <p class="tool-desc">Chats with students as they code in VEXcode VR and ZANY, checks in when they’re stuck, and talks them through it out loud as a 3D tutor.</p>
-        <div class="tool-foot">
-          <a class="btn" href="https://agent.inviteai.org" target="_blank" rel="noopener">Open Agent<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M17 7H8M17 7v9"/></svg></a>
-          <span class="tool-host">agent.inviteai.org</span>
-        </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="tool" aria-labelledby="patk-title">
-      <figure class="tool-photo">
-        <img src="/assets/img/photos/patk-1200.webp?v=3" srcset="/assets/img/photos/patk-800.webp?v=3 800w, /assets/img/photos/patk-1200.webp?v=3 1200w, /assets/img/photos/patk-1600.webp?v=3 1600w" sizes="(max-width: 767px) calc(100vw - 42px), 585px" width="1600" height="941" alt="The Pedagogical Agent Toolkit agent creator: a customization menu, a 3D agent in a wheelchair, and a shoe picker" loading="lazy">
-      </figure>
-      <div class="tool-body">
-        <div class="tool-head">
+      <article class="tool" aria-labelledby="patk-title">
+        <figure class="tool-photo">
+          <img src="/assets/img/photos/patk-1200.webp?v=3" srcset="/assets/img/photos/patk-800.webp?v=3 800w, /assets/img/photos/patk-1200.webp?v=3 1200w, /assets/img/photos/patk-1600.webp?v=3 1600w" sizes="(max-width: 767px) calc(100vw - 42px), (max-width: 1180px) 60vw, 430px" width="1600" height="941" alt="The Pedagogical Agent Toolkit agent creator: a customization menu, a 3D agent in a wheelchair, and a shoe picker" loading="lazy">
+        </figure>
+        <div class="tool-body">
           <h2 class="tool-title" id="patk-title">Pedagogical Agent Toolkit</h2>
           <span class="status status-live">Live</span>
+          <p class="tool-desc">Tools for pedagogical agent design and testing.</p>
+          <p class="tool-link"><span aria-hidden="true">►</span> <a id="patk-link" href="https://patk.inviteai.org" target="_blank" rel="noopener">Open the Toolkit</a></p>
+          <p class="tool-host"><svg class="lock" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password required</p>
         </div>
-        <p class="tool-desc">Tools for pedagogical agent design and testing.</p>
-        <div class="tool-foot">
-          <a class="btn" id="patk-link" href="https://patk.inviteai.org" target="_blank" rel="noopener">Open Toolkit<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M17 7H8M17 7v9"/></svg></a>
-          <span class="tool-host"><svg class="lock" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password required</span>
-        </div>
-      </div>
-    </article>
-  </div>
+      </article>
+    </div>
 
-  <div class="container">
-    <aside class="more" aria-label="More from INVITE">
-      <div class="more-col">
-        <h2 class="panel-heading">Source Code</h2>
-        <ul class="repo-list">
-          <li><a class="repo" href="https://github.com/InviteInstitute/lm-dashboard" target="_blank" rel="noopener"><svg class="repo-mark" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg><span class="repo-text"><span class="repo-name">lm-dashboard</span><span class="repo-tool">Learner Modeling Dashboard</span></span><svg class="repo-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M17 7H8M17 7v9"/></svg></a></li>
-          <li><a class="repo" href="https://github.com/InviteInstitute/agent" target="_blank" rel="noopener"><svg class="repo-mark" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg><span class="repo-text"><span class="repo-name">agent</span><span class="repo-tool">INVITE Agent</span></span><svg class="repo-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M17 7H8M17 7v9"/></svg></a></li>
-        </ul>
-      </div>
-      <nav class="more-col" aria-label="The Institute">
-        <h2 class="panel-heading">The Institute</h2>
-        <ul class="inst-links">
-          <li><a href="https://invite.illinois.edu/about/">About</a></li>
-          <li><a href="https://invite.illinois.edu/people/">People</a></li>
-          <li><a href="https://invite.illinois.edu/research/">Research</a></li>
-          <li><a href="https://invite.illinois.edu/alliance/">INVITE Alliance</a></li>
-          <li><a href="https://invite.illinois.edu/publications/">Publications</a></li>
-        </ul>
-      </nav>
+    <aside class="content-side" aria-labelledby="source-title">
+      <h2 class="side-heading" id="source-title">Source Code</h2>
+      <ul class="arrow-list">
+        <li><a href="https://github.com/InviteInstitute/lm-dashboard" target="_blank" rel="noopener">InviteInstitute/lm-dashboard</a><span class="arrow-note">Learner Modeling Dashboard</span></li>
+        <li><a href="https://github.com/InviteInstitute/agent" target="_blank" rel="noopener">InviteInstitute/agent</a><span class="arrow-note">INVITE Agent</span></li>
+      </ul>
     </aside>
   </div>
 </main>
@@ -131,7 +114,7 @@
 </dialog>
 
 <footer class="site-footer">
-  <div class="container footer-grid">
+  <div class="footer-grid">
     <div class="footer-funding">
       <div class="funder-logos">
         <a href="https://www.nsf.gov/" target="_blank" rel="noopener"><img src="/assets/img/nsf.png" width="90" height="90" alt="National Science Foundation" loading="lazy"></a>
@@ -151,7 +134,12 @@
       <li><a href="https://www.balancestudios.com/" target="_blank" rel="noopener"><img src="/assets/img/partners/balance.png" width="73" height="73" alt="Balance Studios" loading="lazy"></a></li>
     </ul>
 
-    <div class="footer-connect">
+    <div class="footer-side">
+      <h2 class="footer-heading">Search</h2>
+      <form class="searchform" id="search" role="search" action="https://invite.illinois.edu/" method="get">
+        <input type="search" name="s" aria-label="Search the INVITE Institute site">
+        <button type="submit" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6.5 6.5"/></svg></button>
+      </form>
       <h2 class="footer-heading">Connect</h2>
       <div class="socials">
         <a href="https://www.linkedin.com/company/invite-institute/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28z"/></svg></a>
@@ -162,12 +150,21 @@
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="container">&copy; 2026 INVITE Institute &middot; <a href="https://invite.illinois.edu/">invite.illinois.edu</a></div>
-  </div>
+  <p class="footer-bottom">&copy;2026 | INVITE Institute | <a href="https://invite.illinois.edu/">invite.illinois.edu</a></p>
 </footer>
 
 <script>
+(function () {
+  var toggle = document.querySelector(".menu-toggle");
+  var menu = document.getElementById("primary-menu");
+  if (!toggle || !menu) return;
+  toggle.addEventListener("click", function () {
+    var open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(open));
+    menu.classList.toggle("is-open", open);
+  });
+})();
+
 (function () {
   var PASSWORD = "conrad";
   var SESSION_KEY = "patk-unlocked";
