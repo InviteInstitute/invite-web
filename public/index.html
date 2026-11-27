@@ -11,7 +11,7 @@
 <link rel="preload" href="/assets/fonts/source-sans-pro-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="/styles.css?v=2026-11-27a">
+<link rel="stylesheet" href="/styles.css?v=2026-11-27c">
 </head>
 <body>
 
@@ -37,65 +37,83 @@
   </div>
 </header>
 
-<div class="page-title">
-  <div class="page-title-inner">
-    <p class="page-title-excerpt">INVITE Institute</p>
-    <h1>Research Software</h1>
-  </div>
-</div>
-
-<main class="block-content" id="main">
-  <div class="content-row">
-    <div class="content-main">
-      <p class="lead">The <strong>INVITE</strong> Institute (<strong>IN</strong>novati<strong>V</strong>e <strong>I</strong>ntelligent <strong>T</strong>echnologies for <strong>E</strong>ducation) builds and runs the research software below. Each tool opens where it runs.</p>
-
-      <article class="tool" aria-labelledby="dashboard-title">
-        <figure class="tool-photo">
-          <img src="/assets/img/photos/dashboard-1200.webp?v=5" srcset="/assets/img/photos/dashboard-800.webp?v=5 800w, /assets/img/photos/dashboard-1200.webp?v=5 1200w, /assets/img/photos/dashboard-1600.webp?v=5 1600w" sizes="(max-width: 767px) calc(100vw - 42px), (max-width: 1180px) 60vw, 430px" width="1600" height="941" alt="The Learner Modeling Dashboard: eight student cards with their runs and episodes, five of them flagged as wheel-spinning, step-by-step, inactive, resilience and explorer, and the Needs Intervention column that lists those five alerts">
-        </figure>
-        <div class="tool-body">
-          <h2 class="tool-title" id="dashboard-title">Learner Modeling Dashboard</h2>
-          <span class="status status-live">Live</span>
-          <p class="tool-desc">In real time, surfaces which students need help in VEXcode VR.</p>
-          <p class="tool-link"><span aria-hidden="true">►</span> <a href="https://dashboard.inviteai.org" target="_blank" rel="noopener">Open the Dashboard</a></p>
-          <p class="tool-host">dashboard.inviteai.org</p>
-        </div>
-      </article>
-
-      <article class="tool" aria-labelledby="agent-title">
-        <figure class="tool-photo">
-          <img src="/assets/img/photos/agent-1200.webp?v=12" srcset="/assets/img/photos/agent-800.webp?v=12 800w, /assets/img/photos/agent-1200.webp?v=12 1200w, /assets/img/photos/agent-1600.webp?v=12 1600w" sizes="(max-width: 767px) calc(100vw - 42px), (max-width: 1180px) 60vw, 430px" width="1600" height="941" alt="ZANY with the Castle Crasher+ playground open, the 3D pedagogical agent, and the INVITE Agent chat beside its tab on the screen's edge" loading="lazy">
-        </figure>
-        <div class="tool-body">
-          <h2 class="tool-title" id="agent-title">INVITE Agent</h2>
-          <span class="status status-live">Live</span>
-          <p class="tool-desc">The chat agent and the pedagogical agent in one. It chats with students as they code in VEXcode VR and ZANY, checks in when they’re stuck, and talks them through it out loud as a 3D pedagogical agent.</p>
-          <p class="tool-link"><span aria-hidden="true">►</span> <a href="https://agent.inviteai.org" target="_blank" rel="noopener">Open the Agent</a></p>
-          <p class="tool-host">agent.inviteai.org</p>
-        </div>
-      </article>
-
-      <article class="tool" aria-labelledby="patk-title">
-        <figure class="tool-photo">
-          <img src="/assets/img/photos/patk-1200.webp?v=3" srcset="/assets/img/photos/patk-800.webp?v=3 800w, /assets/img/photos/patk-1200.webp?v=3 1200w, /assets/img/photos/patk-1600.webp?v=3 1600w" sizes="(max-width: 767px) calc(100vw - 42px), (max-width: 1180px) 60vw, 430px" width="1600" height="941" alt="The Pedagogical Agent Toolkit agent creator: a customization menu, a 3D agent in a wheelchair, and a shoe picker" loading="lazy">
-        </figure>
-        <div class="tool-body">
-          <h2 class="tool-title" id="patk-title">Pedagogical Agent Toolkit</h2>
-          <span class="status status-live">Live</span>
-          <p class="tool-desc">Tools for pedagogical agent design and testing.</p>
-          <p class="tool-link"><span aria-hidden="true">►</span> <a id="patk-link" href="https://patk.inviteai.org" target="_blank" rel="noopener">Open the Toolkit</a></p>
-          <p class="tool-host"><svg class="lock" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password required</p>
-        </div>
-      </article>
+<main class="layout" id="main">
+  <aside class="rail" aria-labelledby="rail-title">
+    <div class="rail-inner">
+      <h1 class="rail-title" id="rail-title">Research Software</h1>
+      <p class="rail-intro">The <strong>INVITE</strong> Institute builds and runs these tools. Each one opens where it runs.</p>
+      <ol class="rail-tools" aria-label="Tools">
+        <li class="rail-tool is-current" data-section="dashboard">
+          <a class="rail-name" href="#dashboard" aria-current="location">Learner Modeling Dashboard</a>
+          <p class="rail-job">Shows which students need help in VEXcode VR, in real time.</p>
+          <p class="rail-launch"><a class="btn" href="https://dashboard.inviteai.org" target="_blank" rel="noopener">Open<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="visually-hidden"> Learner Modeling Dashboard (opens in a new tab)</span></a><span class="rail-host">dashboard.inviteai.org</span></p>
+        </li>
+        <li class="rail-tool" data-section="agent">
+          <a class="rail-name" href="#agent">INVITE Agent</a>
+          <p class="rail-job">Chats with students in VEXcode VR and ZANY and talks them through it as a 3D agent.</p>
+          <p class="rail-launch"><a class="btn" href="https://agent.inviteai.org" target="_blank" rel="noopener">Open<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="visually-hidden"> INVITE Agent (opens in a new tab)</span></a><span class="rail-host">agent.inviteai.org</span></p>
+        </li>
+        <li class="rail-tool" data-section="patk">
+          <a class="rail-name" href="#patk">Pedagogical Agent Toolkit</a>
+          <p class="rail-job">Tools for pedagogical agent design and testing.</p>
+          <p class="rail-launch"><a class="btn js-patk" href="https://patk.inviteai.org" target="_blank" rel="noopener">Open<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="visually-hidden"> Pedagogical Agent Toolkit (opens in a new tab)</span></a><span class="rail-host"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password required</span></p>
+        </li>
+      </ol>
+      <div class="rail-source">
+        <h2 class="rail-source-title">Source code</h2>
+        <ul>
+          <li><a href="https://github.com/InviteInstitute/lm-dashboard" target="_blank" rel="noopener">InviteInstitute/lm-dashboard</a></li>
+          <li><a href="https://github.com/InviteInstitute/agent" target="_blank" rel="noopener">InviteInstitute/agent</a></li>
+        </ul>
+      </div>
     </div>
+  </aside>
 
-    <aside class="content-side" aria-labelledby="source-title">
-      <h2 class="side-heading" id="source-title">Source Code</h2>
-      <ul class="arrow-list">
-        <li><a href="https://github.com/InviteInstitute/lm-dashboard" target="_blank" rel="noopener">InviteInstitute/lm-dashboard</a><span class="arrow-note">Learner Modeling Dashboard</span></li>
-        <li><a href="https://github.com/InviteInstitute/agent" target="_blank" rel="noopener">InviteInstitute/agent</a><span class="arrow-note">INVITE Agent</span></li>
-      </ul>
-    </aside>
+  <div class="shots">
+    <section class="shot" id="dashboard" aria-labelledby="dashboard-title">
+      <figure class="shot-frame">
+        <img src="/assets/img/photos/dashboard-1200.webp?v=5" srcset="/assets/img/photos/dashboard-800.webp?v=5 800w, /assets/img/photos/dashboard-1200.webp?v=5 1200w, /assets/img/photos/dashboard-1600.webp?v=5 1600w" sizes="(max-width: 900px) calc(100vw - 42px), calc(100vw - 472px)" width="1600" height="941" alt="The Learner Modeling Dashboard: eight student cards with their runs and episodes, five of them flagged as wheel-spinning, step-by-step, inactive, resilience and explorer, and the Needs Intervention column that lists those five alerts">
+      </figure>
+      <div class="shot-text">
+        <div class="shot-head">
+          <h2 class="shot-title" id="dashboard-title">Learner Modeling Dashboard</h2>
+          <span class="status status-live">Live</span>
+        </div>
+        <p class="shot-desc">In real time, surfaces which students need help in VEXcode VR. It flags students who are wheel-spinning, inactive or working step by step, and lists them in a Needs Intervention column. The screenshot shows sample students, not real ones.</p>
+        <p class="shot-link"><a href="https://dashboard.inviteai.org" target="_blank" rel="noopener">dashboard.inviteai.org<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></p>
+        
+      </div>
+    </section>
+
+    <section class="shot" id="agent" aria-labelledby="agent-title">
+      <figure class="shot-frame">
+        <img src="/assets/img/photos/agent-1200.webp?v=12" srcset="/assets/img/photos/agent-800.webp?v=12 800w, /assets/img/photos/agent-1200.webp?v=12 1200w, /assets/img/photos/agent-1600.webp?v=12 1600w" sizes="(max-width: 900px) calc(100vw - 42px), calc(100vw - 472px)" width="1600" height="941" alt="ZANY with the Castle Crasher+ playground open, the 3D pedagogical agent, and the INVITE Agent chat beside its tab on the screen’s edge" loading="lazy">
+      </figure>
+      <div class="shot-text">
+        <div class="shot-head">
+          <h2 class="shot-title" id="agent-title">INVITE Agent</h2>
+          <span class="status status-live">Live</span>
+        </div>
+        <p class="shot-desc">The chat agent and the pedagogical agent in one. It chats with students as they code in VEXcode VR and ZANY, checks in when they’re stuck, and talks them through it out loud as a 3D pedagogical agent.</p>
+        <p class="shot-link"><a href="https://agent.inviteai.org" target="_blank" rel="noopener">agent.inviteai.org<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></p>
+        
+      </div>
+    </section>
+
+    <section class="shot" id="patk" aria-labelledby="patk-title">
+      <figure class="shot-frame">
+        <img src="/assets/img/photos/patk-1200.webp?v=3" srcset="/assets/img/photos/patk-800.webp?v=3 800w, /assets/img/photos/patk-1200.webp?v=3 1200w, /assets/img/photos/patk-1600.webp?v=3 1600w" sizes="(max-width: 900px) calc(100vw - 42px), calc(100vw - 472px)" width="1600" height="941" alt="The Pedagogical Agent Toolkit agent creator: a customization menu, a 3D agent in a wheelchair, and a shoe picker" loading="lazy">
+      </figure>
+      <div class="shot-text">
+        <div class="shot-head">
+          <h2 class="shot-title" id="patk-title">Pedagogical Agent Toolkit</h2>
+          <span class="status status-live">Live</span>
+        </div>
+        <p class="shot-desc">Tools for pedagogical agent design and testing. Its agent creator builds a 3D agent’s face, body, hair, eyes, outfit, accessories and shoes.</p>
+        <p class="shot-link"><a class="js-patk" href="https://patk.inviteai.org" target="_blank" rel="noopener">patk.inviteai.org<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></p>
+        <p class="shot-gate"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password required</p>
+      </div>
+    </section>
   </div>
 </main>
 
@@ -168,19 +186,20 @@
 (function () {
   var PASSWORD = "conrad";
   var SESSION_KEY = "patk-unlocked";
-  var link = document.getElementById("patk-link");
+  var links = document.querySelectorAll(".js-patk");
+  var href = "https://patk.inviteai.org";
   var dialog = document.getElementById("patk-gate");
   var form = document.getElementById("patk-gate-form");
   var input = document.getElementById("patk-password");
   var error = document.getElementById("patk-gate-error");
   var cancel = document.getElementById("patk-gate-cancel");
-  if (!link || !dialog || !form || !input) return;
+  if (!links.length || !dialog || !form || !input) return;
 
   function openPatk() {
-    window.open(link.href, "_blank", "noopener");
+    window.open(href, "_blank", "noopener");
   }
 
-  link.addEventListener("click", function (event) {
+  function gate(event) {
     event.preventDefault();
     if (sessionStorage.getItem(SESSION_KEY) === "1") {
       openPatk();
@@ -190,7 +209,8 @@
     input.value = "";
     dialog.showModal();
     input.focus();
-  });
+  }
+  links.forEach(function (link) { link.addEventListener("click", gate); });
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -213,6 +233,23 @@
     error.hidden = true;
     input.value = "";
   });
+})();
+
+(function () {
+  var items = document.querySelectorAll(".rail-tool");
+  if (!items.length || !("IntersectionObserver" in window)) return;
+  function mark(id) {
+    items.forEach(function (item) {
+      var on = item.getAttribute("data-section") === id;
+      item.classList.toggle("is-current", on);
+      var name = item.querySelector(".rail-name");
+      if (on) name.setAttribute("aria-current", "location"); else name.removeAttribute("aria-current");
+    });
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) { if (entry.isIntersecting) mark(entry.target.id); });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  document.querySelectorAll(".shot").forEach(function (section) { observer.observe(section); });
 })();
 </script>
 </body>
