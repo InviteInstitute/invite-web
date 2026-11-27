@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-27T02:55:51Z",
+  "generatedAt": "2026-11-27T03:08:35Z",
   "title": "Design System: INVITE Research Software",
   "extensions": {
     "colorMeta": {
@@ -80,7 +80,7 @@
           "#43daf2",
           "#cff7ff"
         ],
-        "note": "As text it appears only on Footer Deep Teal (5.3:1), plus the header menu hover."
+        "note": "As text it appears only on Footer Deep Teal (5.3:1), plus the header menu hover. On white it is a fill, tab, underline or focus ring."
       },
       "live-lime": {
         "role": "secondary",
@@ -95,23 +95,8 @@
           "#96aa2f",
           "#bbd15b",
           "#e4fc86"
-        ]
-      },
-      "button-ink": {
-        "role": "neutral",
-        "displayName": "Button Ink",
-        "canonical": "#10202a",
-        "tonalRamp": [
-          "#080c0e",
-          "#1f262b",
-          "#39444b",
-          "#55646d",
-          "#738592",
-          "#98a8b2",
-          "#bfcbd3",
-          "#e7f0f6"
         ],
-        "note": "Open button text and arrow. 7.3:1 on Signal Cyan, 15.1:1 on Live Lime."
+        "note": "Skip link, text selection and the rail focus ring only."
       },
       "footer-deep-teal": {
         "role": "neutral",
@@ -126,7 +111,8 @@
           "#84a4b5",
           "#a9cadb",
           "#dcf2fe"
-        ]
+        ],
+        "note": "Rail and footer ground, and the Open button text (on white and on cyan)."
       },
       "rail-name": {
         "role": "neutral",
@@ -158,7 +144,7 @@
           "#c3cacf",
           "#eaeff2"
         ],
-        "note": "8.2:1 on Footer Deep Teal."
+        "note": "8.2:1 on Footer Deep Teal. The rail intro."
       },
       "rail-caption": {
         "role": "neutral",
@@ -275,7 +261,7 @@
       },
       "rail-name": {
         "displayName": "Rail Name",
-        "purpose": "Tool name in the rail, uppercase, white when current or hovered."
+        "purpose": "Tool name in the rail, sentence case, white when current or hovered."
       },
       "footer-title": {
         "displayName": "Footer Title",
@@ -283,7 +269,7 @@
       },
       "intro": {
         "displayName": "Intro",
-        "purpose": "Rail intro, light 300, 17/26 at phone, hidden on short screens."
+        "purpose": "The rail's one-line intro."
       },
       "body-large": {
         "displayName": "Body Large",
@@ -295,19 +281,19 @@
       },
       "link-host": {
         "displayName": "Link Host",
-        "purpose": "Underlined hostname link under a screenshot description."
+        "purpose": "The underlined hostname in the \"Live at\" line."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Default text and dialog copy."
+        "purpose": "Default text, dialog copy and the \"Live at\" words."
       },
       "body-small": {
         "displayName": "Body Small",
-        "purpose": "Rail tool job, source links, password note, form error."
+        "purpose": "Source links and the form error."
       },
       "caption": {
         "displayName": "Caption",
-        "purpose": "Host line beside an Open button."
+        "purpose": "Host line beside an Open button, the screenshot caption and the \"Source code\" label."
       },
       "legal": {
         "displayName": "Legal",
@@ -319,15 +305,7 @@
       },
       "label-button": {
         "displayName": "Label Button",
-        "purpose": "Open button label at 0.08em, dialog buttons use 0.04em."
-      },
-      "label-section": {
-        "displayName": "Label Section",
-        "purpose": "The rail's \"Source code\" label, Rail Caption."
-      },
-      "label-status": {
-        "displayName": "Label Status",
-        "purpose": "Live chip, uppercase."
+        "purpose": "The Open button, sentence case."
       }
     },
     "tints": [
@@ -376,14 +354,9 @@
         "purpose": "The current rail entry wash."
       },
       {
-        "name": "arrow-nudge",
-        "value": "transform .25s cubic-bezier(.16, 1, .3, 1), translate(2px, -2px)",
-        "purpose": "The Open button arrow on hover."
-      },
-      {
         "name": "color-fade",
         "value": "0.2s ease",
-        "purpose": "Color-only hover changes on nav, rail names, buttons, host links and social icons."
+        "purpose": "Color-only hover changes on nav, rail names, the Open button, host links, source links and social icons."
       },
       {
         "name": "field-fade",
@@ -422,10 +395,6 @@
       {
         "name": "phone",
         "value": "767px"
-      },
-      {
-        "name": "short-screen",
-        "value": "(min-width: 901px) and (max-height: 860px)"
       }
     ]
   },
@@ -434,33 +403,25 @@
       "name": "Open Button",
       "kind": "button",
       "refersTo": "button-open",
-      "description": "Solid cyan launch button with dark ink in each rail entry; lime on hover, the arrow nudges up and right.",
-      "html": "<div class=\"ds-railbg\"><a class=\"ds-btn-open\" href=\"#\">Open<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></div>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-railbg{padding:16px;background:var(--footer);} .ds-btn-open{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px 0 16px;color:var(--ink);background:var(--accent);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background-color .2s ease,color .2s ease;} .ds-btn-open:hover{background:var(--lime);} .ds-btn-open svg{transition:transform .25s var(--ease-out);} .ds-btn-open:hover svg{transform:translate(2px,-2px);} .ds-btn-open:focus-visible{outline:2px solid var(--lime);outline-offset:3px;}"
+      "description": "Plain white launch button with deep teal text in each rail entry, cyan on hover, no icon.",
+      "html": "<div class=\"ds-railbg\"><a class=\"ds-btn-open\" href=\"#\">Open</a></div>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-railbg{padding:16px;background:var(--footer);} .ds-btn-open{display:inline-flex;align-items:center;height:36px;padding:0 18px;color:var(--footer);background:var(--white);font-family:var(--font-body);font-size:15px;font-weight:700;text-decoration:none;transition:background-color .2s ease;} .ds-btn-open:hover{background:var(--accent);} .ds-btn-open:focus-visible{outline:2px solid var(--lime);outline-offset:3px;}"
     },
     {
       "name": "Rail Tool Entry",
       "kind": "custom",
       "refersTo": "rail-tool",
-      "description": "One tool in the deep teal rail: name, one-line job, Open button and host line. The current entry gets a white 5% wash and the 8px cyan tab on the right edge.",
-      "html": "<ol class=\"ds-rail\"><li class=\"ds-tool is-current\"><a class=\"ds-name\" href=\"#\">Learner Modeling Dashboard</a><p class=\"ds-job\">Shows which students need help in VEXcode VR, in real time.</p><p class=\"ds-launch\"><a class=\"ds-btn-open\" href=\"#\">Open<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a><span class=\"ds-host\">dashboard.inviteai.org</span></p></li><li class=\"ds-tool\"><a class=\"ds-name\" href=\"#\">INVITE Agent</a><p class=\"ds-job\">Chats with students in VEXcode VR and ZANY.</p><p class=\"ds-launch\"><a class=\"ds-btn-open\" href=\"#\">Open<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a><span class=\"ds-host\">agent.inviteai.org</span></p></li></ol>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-rail{margin:0;padding:0;list-style:none;width:380px;color:var(--rail-body);background:var(--footer);font-family:var(--font-body);border-top:1px solid rgba(255,255,255,.1);} .ds-tool{position:relative;padding:22px 40px 24px;border-bottom:1px solid rgba(255,255,255,.1);transition:background-color .3s var(--ease-out);} .ds-tool::after{content:\"\";position:absolute;top:0;right:0;bottom:0;width:0;background:var(--accent);transition:width .35s var(--ease-out);} .ds-tool.is-current{background:rgba(255,255,255,.05);} .ds-tool.is-current::after{width:8px;} .ds-name{display:block;color:var(--rail-name);font-family:var(--font-heading);font-size:16px;font-weight:700;line-height:24px;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:color .2s ease;} .ds-tool.is-current .ds-name,.ds-name:hover{color:var(--white);} .ds-job{margin:4px 0 0;font-size:15px;line-height:22px;} .ds-launch{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;} .ds-host{color:var(--rail-caption);font-size:14px;} .ds-btn-open{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px 0 16px;color:var(--ink);background:var(--accent);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background-color .2s ease;} .ds-btn-open:hover{background:var(--lime);} .ds-rail :focus-visible{outline:2px solid var(--lime);outline-offset:3px;}"
+      "description": "One tool in the deep teal rail, a name and a launch row with the Open button and host line. The current entry gets a white 5% wash and the 8px cyan tab on the right edge.",
+      "html": "<ol class=\"ds-rail\"><li class=\"ds-tool is-current\"><a class=\"ds-name\" href=\"#\">Learner Modeling Dashboard</a><p class=\"ds-launch\"><a class=\"ds-btn-open\" href=\"#\">Open</a><span class=\"ds-host\">dashboard.inviteai.org</span></p></li><li class=\"ds-tool\"><a class=\"ds-name\" href=\"#\">Pedagogical Agent Toolkit</a><p class=\"ds-launch\"><a class=\"ds-btn-open\" href=\"#\">Open</a><span class=\"ds-host\">Password required</span></p></li></ol>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-rail{margin:0;padding:0;list-style:none;width:380px;color:var(--rail-body);background:var(--footer);font-family:var(--font-body);border-top:1px solid rgba(255,255,255,.1);} .ds-tool{position:relative;padding:22px 40px 24px;border-bottom:1px solid rgba(255,255,255,.1);transition:background-color .3s var(--ease-out);} .ds-tool::after{content:\"\";position:absolute;top:0;right:0;bottom:0;width:0;background:var(--accent);transition:width .35s var(--ease-out);} .ds-tool.is-current{background:rgba(255,255,255,.05);} .ds-tool.is-current::after{width:8px;} .ds-name{display:block;color:var(--rail-name);font-family:var(--font-heading);font-size:17px;font-weight:700;line-height:24px;text-decoration:none;transition:color .2s ease;} .ds-tool.is-current .ds-name,.ds-name:hover{color:var(--white);} .ds-launch{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:12px 0 0;} .ds-host{color:var(--rail-caption);font-size:14px;} .ds-rail :focus-visible{outline:2px solid var(--lime);outline-offset:3px;} .ds-btn-open{display:inline-flex;align-items:center;height:36px;padding:0 18px;color:var(--footer);background:var(--white);font-family:var(--font-body);font-size:15px;font-weight:700;text-decoration:none;transition:background-color .2s ease;} .ds-btn-open:hover{background:var(--accent);} .ds-btn-open:focus-visible{outline:2px solid var(--lime);outline-offset:3px;}"
     },
     {
       "name": "Screenshot Section",
       "kind": "card",
       "refersTo": "link-host",
-      "description": "Full-width screenshot in a 1px Rule Gray frame, then the title and Live chip row, the description and the underlined host link.",
-      "html": "<section class=\"ds-shot\"><div class=\"ds-frame\"></div><div class=\"ds-head\"><h2>Learner Modeling Dashboard</h2><span class=\"ds-status\">Live</span></div><p class=\"ds-desc\">In real time, surfaces which students need help in VEXcode VR.</p><p class=\"ds-link\"><a href=\"#\">dashboard.inviteai.org<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></p></section>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-shot{max-width:720px;font-family:var(--font-body);color:var(--body);} .ds-frame{aspect-ratio:16/10;border:1px solid var(--border);background:var(--subtle);} .ds-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;margin-top:26px;} .ds-head h2{margin:0;color:var(--heading);font-family:var(--font-heading);font-size:24px;font-weight:700;line-height:34px;letter-spacing:1.2px;text-transform:uppercase;} .ds-status{display:inline-flex;align-items:center;gap:7px;padding:3px 10px;color:var(--heading);background:var(--lime);font-family:var(--font-heading);font-size:11px;font-weight:700;line-height:18px;letter-spacing:.08em;text-transform:uppercase;} .ds-status::before{content:\"\";width:6px;height:6px;border-radius:50%;background:currentColor;} .ds-desc{max-width:66ch;margin:10px 0 0;font-size:18px;line-height:29px;} .ds-link{margin:14px 0 0;font-size:17px;} .ds-link a{display:inline-flex;align-items:center;gap:6px;color:var(--heading);font-weight:700;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:5px;transition:color .2s ease;} .ds-link a:hover{color:var(--footer);text-decoration-color:var(--heading);} .ds-link a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
-    },
-    {
-      "name": "Status Label",
-      "kind": "chip",
-      "refersTo": "status-live",
-      "description": "Lime Live label under a tool name.",
-      "html": "<span class=\"ds-status\">Live</span>",
-      "css": ".ds-status { display: inline-flex; align-items: center; gap: 7px; padding: 3px 10px; color: #3c3950; background: #e7ff89; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; line-height: 18px; letter-spacing: .08em; text-transform: uppercase; } .ds-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }"
+      "description": "Full-width screenshot in a 1px Rule Gray frame with an optional caption, then the title, the description and the \"Live at\" line with the underlined host.",
+      "html": "<section class=\"ds-shot\"><figure class=\"ds-fig\"><div class=\"ds-frame\"></div><figcaption>Sample students, not real ones.</figcaption></figure><div class=\"ds-text\"><h2>Learner Modeling Dashboard</h2><p class=\"ds-desc\">In real time, surfaces which students need help in VEXcode VR.</p><p class=\"ds-link\">Live at <a href=\"#\">dashboard.inviteai.org</a></p></div></section>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-shot{max-width:720px;font-family:var(--font-body);color:var(--body);} .ds-fig{margin:0;} .ds-frame{aspect-ratio:16/10;border:1px solid var(--border);background:var(--subtle);} .ds-fig figcaption{margin-top:8px;color:var(--caption);font-size:14px;} .ds-text{max-width:66ch;margin-top:22px;} .ds-text h2{margin:0;color:var(--heading);font-family:var(--font-heading);font-size:24px;font-weight:700;line-height:34px;letter-spacing:1.2px;text-transform:uppercase;text-wrap:balance;} .ds-desc{margin:10px 0 0;font-size:18px;line-height:29px;} .ds-link{margin:14px 0 0;font-size:17px;} .ds-link a{color:var(--heading);font-weight:700;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:4px;transition:color .2s ease;} .ds-link a:hover{color:var(--footer);text-decoration-color:var(--heading);} .ds-link a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
     },
     {
       "name": "Solid Button",
@@ -468,7 +429,7 @@
       "refersTo": "button-solid",
       "description": "Dialog confirm action: Heading Ink fill, turns cyan with ink text on hover.",
       "html": "<button class=\"ds-btn-solid\" type=\"button\">Continue</button>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-solid{height:40px;padding:0 20px;border:2px solid transparent;border-radius:0;color:var(--white);background:var(--heading);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease;} .ds-btn-solid:hover{color:var(--heading);background:var(--accent);} .ds-btn-solid:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-solid{height:40px;padding:0 20px;border:2px solid transparent;border-radius:0;color:var(--white);background:var(--heading);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease;} .ds-btn-solid:hover{color:var(--heading);background:var(--accent);} .ds-btn-solid:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
     },
     {
       "name": "Quiet Button",
@@ -476,7 +437,7 @@
       "refersTo": "button-quiet",
       "description": "Dialog cancel action: white with a gray hairline border.",
       "html": "<button class=\"ds-btn-quiet\" type=\"button\">Cancel</button>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-quiet{height:40px;padding:0 20px;border:2px solid var(--border);border-radius:0;color:var(--body);background:var(--white);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:border-color .2s ease,color .2s ease;} .ds-btn-quiet:hover{border-color:var(--button-quiet);color:var(--heading);} .ds-btn-quiet:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-quiet{height:40px;padding:0 20px;border:2px solid var(--border);border-radius:0;color:var(--body);background:var(--white);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:border-color .2s ease,color .2s ease;} .ds-btn-quiet:hover{border-color:var(--button-quiet);color:var(--heading);} .ds-btn-quiet:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
     },
     {
       "name": "Text Field",
@@ -484,7 +445,7 @@
       "refersTo": "input-text",
       "description": "Square washed field with an uppercase Montserrat label; cyan border and white fill on focus.",
       "html": "<label class=\"ds-label\" for=\"ds-pw\">Password</label><input class=\"ds-input\" id=\"ds-pw\" type=\"password\">",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-label{display:block;margin-bottom:6px;color:var(--heading);font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;} .ds-input{width:100%;height:44px;padding:0 14px;border:1px solid var(--border);border-radius:0;color:var(--heading);background:var(--subtle);font-family:var(--font-body);font-size:16px;caret-color:var(--accent);transition:border-color .15s ease,background-color .15s ease;} .ds-input:focus{border-color:var(--accent);background:var(--white);outline:none;}"
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-label{display:block;margin-bottom:6px;color:var(--heading);font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;} .ds-input{width:100%;height:44px;padding:0 14px;border:1px solid var(--border);border-radius:0;color:var(--heading);background:var(--subtle);font-family:var(--font-body);font-size:16px;caret-color:var(--accent);transition:border-color .15s ease,background-color .15s ease;} .ds-input:focus{border-color:var(--accent);background:var(--white);outline:none;}"
     },
     {
       "name": "Footer Search",
@@ -505,19 +466,19 @@
   ],
   "narrative": {
     "northStar": "The Tool Rail",
-    "overview": "The page is a launcher first. A sticky deep teal rail on the left holds every tool with its Open button, so all of them stay on screen while the right column scrolls through big screenshots. The rail is the footer's own deep teal carried up the page, which makes the shell one committed color that runs into the footer at the bottom.\n\nThe tokens come from invite.illinois.edu, the institute's WordPress site on the TheGem theme. Its header menu and its footer stay as they are, Montserrat 700 sets the uppercase headings, Source Sans Pro sets the text, and the institute's cyan tab now sits on the rail's right edge beside the tool in view. Corners are square, depth is flat, and color is sparse. Cyan is the action color, lime marks only what is live.\n\nMotion is small and functional. The cyan tab grows in beside the tool in view, the Open arrow nudges on hover, and clicking a rail name scrolls smoothly to its screenshot. All of it goes static under reduced motion.",
+    "overview": "The page is a launcher first. A sticky deep teal rail on the left holds every tool with its Open button, so all of them stay on screen while the right column scrolls through big screenshots. The rail is the footer's own deep teal carried up the page, which makes the shell one committed color that runs into the footer at the bottom.\n\nThe tokens come from invite.illinois.edu, the institute's WordPress site on the TheGem theme. Its header menu and its footer stay as they are, Montserrat 700 sets the uppercase headings, Source Sans Pro sets the text, and the institute's cyan tab now sits on the rail's right edge beside the tool in view. Corners are square, depth is flat, and color is sparse. Cyan marks where you are and what you can follow. Lime is only the text selection and the skip link.\n\nMotion is small and functional. The cyan tab grows in beside the tool in view, the Open button turns cyan on hover, and clicking a rail name scrolls smoothly to its screenshot. All of it goes static under reduced motion.",
     "keyCharacteristics": [
       "The institute's own white header menu, linked to invite.illinois.edu, with a search link.",
-      "A sticky 380px Footer Deep Teal rail with the page title, a short intro, one entry per tool and the source code links at the bottom.",
-      "A solid cyan Open button with dark ink in every rail entry.",
+      "A sticky 380px Footer Deep Teal rail with the page title, a short intro, one entry per tool and the source code links under the list.",
+      "A plain white Open button with deep teal text in every rail entry.",
       "An 8px cyan tab on the rail's right edge that follows the screenshot in view.",
-      "Full-width screenshots in a 1px Rule Gray frame, each followed by its title, a Live chip, a description and an underlined host link.",
+      "Full-width screenshots in a 1px Rule Gray frame, each followed by its title, a description and a \"Live at\" line with the underlined host.",
       "The deep teal footer, with funder logos, the disclaimer, the partner wall, a search box and social links."
     ],
     "rules": [
       {
-        "name": "The Lime Means Live Rule",
-        "body": "Lime fills a status that is actually live, the hover state of an Open button, and text selection. It is never a decorative fill.",
+        "name": "The No Badge Rule",
+        "body": "Every tool on the page is live, so no tool wears a status badge. The \"Live at\" line says it in words. Add a status label only when tools differ in status.",
         "section": "colors"
       },
       {
@@ -532,15 +493,15 @@
       },
       {
         "name": "The Every Button Fits Rule",
-        "body": "Above 900px wide, all Open buttons must be on screen without scrolling the rail. When the viewport is 860px tall or less, the rail tightens to fit. The top padding drops to 28px, the intro hides, the list starts 22px down, entries pad 14px top and 16px bottom, jobs go to 14px/20px, the launch row sits 10px down, and the source block starts 22px down.",
+        "body": "Above 900px wide, all Open buttons must be on screen without scrolling the rail, down to a 1280x720 screen. Rail entries carry only a name and a launch row so they fit without a special short-screen layout.",
         "section": "layout"
       }
     ],
     "dos": [
-      "**Do** keep every Open button on screen in the rail at desktop widths, including short 860px-tall screens.",
+      "**Do** keep every Open button on screen in the rail at desktop widths, down to 1280x720.",
       "**Do** carry Footer Deep Teal as the only dark ground, on the rail and the footer.",
       "**Do** track uppercase Montserrat headings at 5% of the font size.",
-      "**Do** reserve Live Lime for live statuses, the Open button hover and selection.",
+      "**Do** keep icons, badges and arrows off the launch controls. The words carry it.",
       "**Do** show focus with a 2px outline at 3px offset, cyan on white and lime on the rail.",
       "**Do** use screenshots of the real tools, with synthetic data where students would show."
     ],
@@ -549,7 +510,7 @@
       "**Don't** shrink screenshots into thumbnails beside text. They take the full column.",
       "**Don't** use rounded tiles, pill badges or shadowed cards.",
       "**Don't** set cyan text on white outside the header menu's hover state.",
-      "**Don't** add motion beyond the tab, the arrow nudge, color fades and smooth scrolling, and keep all of it off under reduced motion."
+      "**Don't** add motion beyond the tab, color fades and smooth scrolling, and keep all of it off under reduced motion."
     ]
   }
 }

@@ -16,7 +16,7 @@ World: the institute's TheGem tokens (Montserrat, Source Sans, #3c3950, #00bcd4,
 
 THESIS: A tool rail beside big screenshots. All three launch buttons stay on screen the whole time, and the screenshots get room to be read. Refuses the stacked list of small thumbnails beside text.
 
-OWN-WORLD: White ground. A sticky 380px left rail in the footer's #1c3947 deep teal holds the tools, so the shell is one committed color that runs into the footer. Each tool has a Montserrat name, a one-line job and a solid #00bcd4 Open button with dark ink. The tool in view gets the institute's cyan tab (an 8px #00bcd4 bar) on the rail's right edge, where the title bar carried it. Detail column: screenshots at full column width in a 1px #dfe5e8 frame, no shadow, uppercase tracked Montserrat titles, Source Sans body. The #1c3947 footer stays as is.
+OWN-WORLD: White ground. A sticky 380px left rail in the footer's #1c3947 deep teal holds the tools, so the shell is one committed color that runs into the footer. Each tool has a sentence-case Montserrat name and a plain white Open button with teal text, no icons. The tool in view gets the institute's cyan tab (an 8px #00bcd4 bar) on the rail's right edge. Detail column: screenshots at full column width in a 1px #dfe5e8 frame, uppercase tracked Montserrat titles, Source Sans body, and a "Live at" line with the underlined host. No badges, no arrows. The #1c3947 footer stays as is.
 
 STORY: Insiders see three Open buttons in the first viewport and leave in one click. Evaluators scroll the right column and read what each tool does from a screenshot they can actually see.
 
