@@ -75,7 +75,6 @@ a { color: var(--accent); text-decoration: none; }
 /* Layout: a sticky tool rail beside the screenshots */
 html { scroll-behavior: smooth; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.icon { flex: none; display: block; }
 .layout {
   display: grid;
   grid-template-columns: 380px minmax(0, 1fr);
@@ -108,8 +107,7 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   text-wrap: balance;
 }
-.rail-intro { margin-top: 12px; padding: 0 40px; font-size: 18px; font-weight: 300; line-height: 28px; }
-.rail-intro strong { color: var(--white); font-weight: 700; }
+.rail-intro { margin-top: 8px; padding: 0 40px; font-size: 17px; line-height: 26px; }
 
 .rail-tools { margin-top: 36px; list-style: none; border-top: 1px solid rgba(255, 255, 255, .1); }
 .rail-tool {
@@ -134,47 +132,35 @@ html { scroll-behavior: smooth; }
   display: block;
   color: #e6eaf0;
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: .8px;
-  text-transform: uppercase;
   transition: color .2s ease;
 }
 .rail-tool.is-current .rail-name, .rail-name:hover { color: var(--white); }
-.rail-job { margin-top: 4px; font-size: 15px; line-height: 22px; }
-.rail-launch { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; margin-top: 14px; }
-.rail-host { display: inline-flex; align-items: center; gap: 6px; color: #9fb3bd; font-size: 14px; }
+.rail-launch { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; }
+.rail-host { color: #9fb3bd; font-size: 14px; }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  height: 38px;
-  padding: 0 14px 0 16px;
-  color: #10202a;
-  background: var(--accent);
-  font-family: var(--font-heading);
-  font-size: 13px;
+  height: 36px;
+  padding: 0 18px;
+  color: var(--footer);
+  background: var(--white);
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease;
 }
-.btn:hover { background: var(--lime); }
-.btn .icon { transition: transform .25s var(--ease-out); }
-.btn:hover .icon { transform: translate(2px, -2px); }
+.btn:hover { background: var(--accent); }
 .rail :focus-visible { outline-color: var(--lime); }
 
-.rail-source { margin-top: auto; padding: 36px 40px 0; }
+.rail-source { margin-top: 8px; padding: 32px 40px 0; }
 .rail-source-title {
   color: #9fb3bd;
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 20px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
 }
 .rail-source ul { margin-top: 6px; list-style: none; }
 .rail-source li + li { margin-top: 2px; }
@@ -186,8 +172,8 @@ html { scroll-behavior: smooth; }
 .shot { max-width: 1100px; scroll-margin-top: 32px; }
 .shot + .shot { margin-top: 64px; padding-top: 64px; border-top: 1px solid var(--border); }
 .shot-frame img { width: 100%; border: 1px solid var(--border); }
-.shot-text { margin-top: 26px; }
-.shot-head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
+.shot-frame figcaption { margin-top: 8px; color: var(--caption); font-size: 14px; }
+.shot-text { max-width: 66ch; margin-top: 22px; }
 .shot-title {
   color: var(--heading);
   font-family: var(--font-heading);
@@ -201,36 +187,15 @@ html { scroll-behavior: smooth; }
 .shot-desc { max-width: 66ch; margin-top: 10px; font-size: 18px; line-height: 29px; }
 .shot-link { margin-top: 14px; font-size: 17px; }
 .shot-link a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   color: var(--heading);
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: var(--accent);
   text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
+  text-underline-offset: 4px;
   transition: color .2s ease;
 }
 .shot-link a:hover { color: var(--footer); text-decoration-color: var(--heading); }
-.shot-gate { display: flex; align-items: center; gap: 6px; margin-top: 6px; color: var(--caption); font-size: 15px; }
-
-/* Status labels */
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 3px 10px;
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-.status-live { color: var(--heading); background: var(--lime); }
 
 /* Password gate */
 .gate-dialog {
@@ -388,17 +353,6 @@ html { scroll-behavior: smooth; }
   .primary-nav li { padding: 0; }
   .primary-nav a, .primary-nav .menu-search a { height: auto; padding: 10px 21px; font-size: 14px; }
   .primary-nav .menu-search { display: none; }
-}
-
-/* Short laptop screens: tighten the rail so every Open button fits */
-@media (min-width: 901px) and (max-height: 860px) {
-  .rail-inner { padding-top: 28px; }
-  .rail-intro { display: none; }
-  .rail-tools { margin-top: 22px; }
-  .rail-tool { padding-top: 14px; padding-bottom: 16px; }
-  .rail-job { font-size: 14px; line-height: 20px; }
-  .rail-launch { margin-top: 10px; }
-  .rail-source { padding-top: 22px; }
 }
 
 /* Phone and small tablet: the rail becomes the top block, the screenshots follow */
