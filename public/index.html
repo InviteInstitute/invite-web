@@ -53,7 +53,7 @@
         </li>
         <li class="rail-tool" data-section="patk">
           <a class="rail-name" href="#patk">Pedagogical Agent Toolkit</a>
-          <p class="rail-launch"><a class="btn js-patk" href="https://patk.inviteai.org" target="_blank" rel="noopener">Open<span class="visually-hidden"> Pedagogical Agent Toolkit (opens in a new tab)</span></a><span class="rail-host">Password required</span></p>
+          <p class="rail-launch"><a class="btn" href="https://patk.inviteai.org" target="_blank" rel="noopener">Open<span class="visually-hidden"> Pedagogical Agent Toolkit (opens in a new tab)</span></a><span class="rail-host">patk.inviteai.org</span></p>
         </li>
       </ol>
       <div class="rail-source">
@@ -96,25 +96,11 @@
       </figure>
       <div class="shot-text">
         <p class="shot-desc">Tools for pedagogical agent design and testing. Its agent creator builds a 3D agent’s face, body, hair, eyes, outfit, accessories and shoes.</p>
-        <p class="shot-link">Live at <a class="js-patk" href="https://patk.inviteai.org" target="_blank" rel="noopener">patk.inviteai.org</a></p>
+        <p class="shot-link">Live at <a href="https://patk.inviteai.org" target="_blank" rel="noopener">patk.inviteai.org</a></p>
       </div>
     </section>
   </div>
 </main>
-
-<dialog class="gate-dialog" id="patk-gate" aria-labelledby="patk-gate-title">
-  <form method="dialog" id="patk-gate-form">
-    <h2 class="gate-title" id="patk-gate-title">Pedagogical Agent Toolkit</h2>
-    <p class="gate-desc">Enter the access password to continue.</p>
-    <label class="gate-label" for="patk-password">Password</label>
-    <input class="gate-input" id="patk-password" type="password" name="password" autocomplete="current-password" required>
-    <p class="gate-error" id="patk-gate-error" role="alert" hidden>Incorrect password. Try again.</p>
-    <div class="gate-actions">
-      <button type="button" class="gate-btn gate-btn-secondary" id="patk-gate-cancel">Cancel</button>
-      <button type="submit" class="gate-btn gate-btn-primary">Continue</button>
-    </div>
-  </form>
-</dialog>
 
 <footer class="site-footer">
   <div class="footer-grid">
@@ -165,58 +151,6 @@
     var open = toggle.getAttribute("aria-expanded") !== "true";
     toggle.setAttribute("aria-expanded", String(open));
     menu.classList.toggle("is-open", open);
-  });
-})();
-
-(function () {
-  var PASSWORD = "conrad";
-  var SESSION_KEY = "patk-unlocked";
-  var links = document.querySelectorAll(".js-patk");
-  var href = "https://patk.inviteai.org";
-  var dialog = document.getElementById("patk-gate");
-  var form = document.getElementById("patk-gate-form");
-  var input = document.getElementById("patk-password");
-  var error = document.getElementById("patk-gate-error");
-  var cancel = document.getElementById("patk-gate-cancel");
-  if (!links.length || !dialog || !form || !input) return;
-
-  function openPatk() {
-    window.open(href, "_blank", "noopener");
-  }
-
-  function gate(event) {
-    event.preventDefault();
-    if (sessionStorage.getItem(SESSION_KEY) === "1") {
-      openPatk();
-      return;
-    }
-    error.hidden = true;
-    input.value = "";
-    dialog.showModal();
-    input.focus();
-  }
-  links.forEach(function (link) { link.addEventListener("click", gate); });
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (input.value === PASSWORD) {
-      sessionStorage.setItem(SESSION_KEY, "1");
-      error.hidden = true;
-      dialog.close();
-      openPatk();
-      return;
-    }
-    error.hidden = false;
-    input.select();
-  });
-
-  cancel.addEventListener("click", function () {
-    dialog.close();
-  });
-
-  dialog.addEventListener("close", function () {
-    error.hidden = true;
-    input.value = "";
   });
 })();
 

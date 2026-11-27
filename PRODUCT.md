@@ -25,7 +25,6 @@ It is the software arm of an existing institute, not a separate product. It shou
 
 - Tools run on their own subdomains: dashboard.inviteai.org, agent.inviteai.org, patk.inviteai.org.
 - The dashboard is used alongside VEXcode VR in classrooms, and the INVITE Agent alongside VEXcode VR and ZANY.
-- The Pedagogical Agent Toolkit link sits behind a client-side password prompt (session-remembered).
 
 ## Capabilities and Constraints
 
