@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-25T12:00:00Z",
+  "generatedAt": "2026-11-27T01:34:53Z",
   "title": "Design System: INVITE Research Software",
   "extensions": {
     "colorMeta": {
@@ -220,7 +220,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Page title in the dark title bar, right-aligned, white, uppercase."
+        "purpose": "Page title in the dark title bar, left-aligned at 40px, white, uppercase."
       },
       "display-phone": {
         "displayName": "Display (phone)",
@@ -228,23 +228,23 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Top-level tool title in its row, uppercase, balanced wrapping."
+        "purpose": "Tool name in its row, uppercase, balanced wrapping."
       },
       "headline-tablet": {
         "displayName": "Headline (tablet)",
-        "purpose": "Tool title at 1100px and below."
+        "purpose": "Same as Headline. Kept for the token scale."
       },
       "headline-phone": {
         "displayName": "Headline (phone)",
-        "purpose": "Tool title at 767px and below."
+        "purpose": "Tool name at 767px and below."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Sub-item, links-band, and dialog headings, uppercase."
+        "purpose": "Sidebar and dialog headings, uppercase."
       },
       "title-phone": {
         "displayName": "Title (phone)",
-        "purpose": "Sub-item headings at 767px and below."
+        "purpose": "Unused since the sub-items were removed."
       },
       "footer-title": {
         "displayName": "Footer Title",
@@ -252,7 +252,7 @@
       },
       "lead": {
         "displayName": "Lead",
-        "purpose": "The single light introductory paragraph, max 40em."
+        "purpose": "The intro paragraph and the ► launch links, light 300."
       },
       "lead-phone": {
         "displayName": "Lead (phone)",
@@ -260,39 +260,39 @@
       },
       "body-large": {
         "displayName": "Body Large",
-        "purpose": "Tool descriptions, max 34em; 16/25 in sub-items and at phone."
+        "purpose": "Tool descriptions; 16/25 at phone."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Default running text and links-band links."
+        "purpose": "Default running text and sidebar links."
       },
       "body-host": {
         "displayName": "Host",
-        "purpose": "Hostname or lock line beside a launch button; inline form error."
+        "purpose": "Hostname or lock line under a launch link, sidebar notes, inline form error."
       },
       "caption": {
         "displayName": "Caption",
-        "purpose": "Caption Slate line under each links-band link."
+        "purpose": "Unused since the links band was removed."
       },
       "small": {
         "displayName": "Small",
-        "purpose": "Footer disclaimer text, max 460px."
+        "purpose": "Unused since the footer disclaimer moved to 12px."
       },
       "legal": {
         "displayName": "Legal",
-        "purpose": "Footer copyright line."
+        "purpose": "Footer disclaimer and copyright line."
       },
       "label-nav": {
         "displayName": "Nav Label",
-        "purpose": "Primary navigation, uppercase, untracked; 13px at phone."
+        "purpose": "Institute menu, uppercase, untracked; 13px at tablet."
       },
       "label-button": {
         "displayName": "Button Label",
-        "purpose": "Launch button label, uppercase; dialog buttons use 13px."
+        "purpose": "Dialog button labels at 13px."
       },
       "label-status": {
         "displayName": "Status Label",
-        "purpose": "Live and Coming Soon labels, uppercase."
+        "purpose": "Live label, uppercase."
       }
     },
     "shadows": [
@@ -300,23 +300,23 @@
         "name": "modal-lift",
         "value": "0 18px 50px rgba(24, 24, 40, .28)",
         "purpose": "Password dialog only, over a rgba(28, 57, 71, .6) scrim."
+      },
+      {
+        "name": "menu-drop",
+        "value": "0 12px 24px rgba(28, 57, 71, .12)",
+        "purpose": "The folded menu drop-down at 1000px and below."
       }
     ],
     "motion": [
       {
-        "name": "ease-out",
-        "value": "cubic-bezier(.16, 1, .3, 1)",
-        "purpose": "Launch-button fill and arrow nudge, 0.45s."
-      },
-      {
         "name": "color-fade",
         "value": "0.2s ease",
-        "purpose": "Color-only hover changes on nav, social icons, dialog buttons."
+        "purpose": "Color-only hover changes on nav, launch links, sidebar links and social icons."
       },
       {
         "name": "field-fade",
         "value": "0.15s ease",
-        "purpose": "Input focus border/fill and links-band link underline thickness."
+        "purpose": "Dialog input focus border and fill."
       },
       {
         "name": "reduced-motion",
@@ -327,7 +327,15 @@
     "breakpoints": [
       {
         "name": "tablet",
-        "value": "1100px"
+        "value": "1180px"
+      },
+      {
+        "name": "menu-fold",
+        "value": "1000px"
+      },
+      {
+        "name": "sidebar-drop",
+        "value": "900px"
       },
       {
         "name": "phone",
@@ -337,12 +345,12 @@
   },
   "components": [
     {
-      "name": "Launch Button",
-      "kind": "button",
-      "refersTo": "button-launch",
-      "description": "Outlined cyan-bordered launch link; fills cyan from the left on hover and focus while the arrow nudges. The system's only authored motion.",
-      "html": "<a class=\"ds-btn-launch\" href=\"#\">Open Dashboard<svg class=\"ds-btn-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M17 7H8M17 7v9\"/></svg></a>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-launch{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 22px 0 24px;border:2px solid var(--accent);border-radius:0;color:var(--heading);background:linear-gradient(var(--accent),var(--accent)) left/0% 100% no-repeat;font-family:var(--font-heading);font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:background-size .45s var(--ease-out);} .ds-btn-launch:hover,.ds-btn-launch:focus-visible{background-size:100% 100%;} .ds-btn-launch:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-btn-arrow{flex:none;transition:transform .45s var(--ease-out);} .ds-btn-launch:hover .ds-btn-arrow,.ds-btn-launch:focus-visible .ds-btn-arrow{transform:translate(2px,-2px);}"
+      "name": "Launch Link",
+      "kind": "custom",
+      "refersTo": "link-arrow",
+      "description": "The ► link under each tool that opens it, set like the homepage's own ► links.",
+      "html": "<p class=\"ds-launch\"><span aria-hidden=\"true\">►</span> <a href=\"#\">Open the Dashboard</a></p><p class=\"ds-host\">dashboard.inviteai.org</p>",
+      "css": ".ds-launch { margin: 0; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 300; line-height: 37px; } .ds-launch span { color: #5f727f; font-size: 20px; } .ds-launch a { color: #00bcd4; text-decoration: none; transition: color .2s ease; } .ds-launch a:hover, .ds-launch a:focus-visible { color: #3c3950; } .ds-launch a:focus-visible { outline: 2px solid #00bcd4; outline-offset: 3px; } .ds-host { margin: 2px 0 0; padding-left: 26px; color: #5a6c79; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 15px; }"
     },
     {
       "name": "Solid Button",
@@ -361,12 +369,12 @@
       "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-quiet{height:40px;padding:0 20px;border:2px solid var(--border);border-radius:0;color:var(--body);background:var(--white);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:border-color .2s ease,color .2s ease;} .ds-btn-quiet:hover{border-color:var(--button-quiet);color:var(--heading);} .ds-btn-quiet:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
     },
     {
-      "name": "Status Labels",
+      "name": "Status Label",
       "kind": "chip",
       "refersTo": "status-live",
-      "description": "Square uppercase status labels with a leading dot; lime for Live, washed gray for Coming Soon.",
-      "html": "<span class=\"ds-status ds-status-live\">Live</span> <span class=\"ds-status ds-status-soon\">Coming Soon</span>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-status{display:inline-flex;align-items:center;gap:7px;padding:3px 10px;border:1px solid transparent;border-radius:0;font-family:var(--font-heading);font-size:11px;font-weight:700;line-height:18px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;} .ds-status::before{content:\"\";width:6px;height:6px;border-radius:50%;background:currentColor;} .ds-status-live{color:var(--heading);background:var(--lime);} .ds-status-soon{border-color:var(--border);color:var(--body);background:var(--subtle);} .ds-status-soon::before{background:var(--muted);}"
+      "description": "Lime Live label under a tool name.",
+      "html": "<span class=\"ds-status\">Live</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 7px; padding: 3px 10px; color: #3c3950; background: #e7ff89; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; line-height: 18px; letter-spacing: .08em; text-transform: uppercase; } .ds-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }"
     },
     {
       "name": "Text Field",
@@ -377,109 +385,77 @@
       "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-label{display:block;margin-bottom:6px;color:var(--heading);font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;} .ds-input{width:100%;height:44px;padding:0 14px;border:1px solid var(--border);border-radius:0;color:var(--heading);background:var(--subtle);font-family:var(--font-body);font-size:16px;caret-color:var(--accent);transition:border-color .15s ease,background-color .15s ease;} .ds-input:focus{border-color:var(--accent);background:var(--white);outline:none;}"
     },
     {
+      "name": "Footer Search",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "The footer search field that submits to invite.illinois.edu.",
+      "html": "<form class=\"ds-search\" role=\"search\"><input type=\"search\" aria-label=\"Search\"><button type=\"submit\" aria-label=\"Search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.8\"><circle cx=\"10\" cy=\"10\" r=\"6.5\"/><path d=\"m15 15 6.5 6.5\"/></svg></button></form>",
+      "css": ".ds-search { position: relative; width: 162px; padding: 16px; background: #1c3947; } .ds-search input { width: 100%; height: 39px; padding: 6px 44px 6px 10px; border: 1px solid #dfe5e8; border-radius: 3px; color: #3c3950; background: #f4f6f7; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 16px; caret-color: #00bcd4; appearance: none; box-sizing: border-box; } .ds-search input:focus { border-color: #00bcd4; outline: none; } .ds-search button { position: absolute; top: 16px; right: 16px; display: grid; place-items: center; width: 43px; height: 39px; border: 0; color: #00bcd4; background: none; cursor: pointer; }"
+    },
+    {
       "name": "Primary Navigation",
       "kind": "nav",
       "refersTo": "nav-link",
-      "description": "Uppercase Montserrat menu; current page boxed in a 2px ink border, other links turn cyan on hover.",
-      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link is-current\" href=\"#\" aria-current=\"page\">Research Software</a><a class=\"ds-nav-link\" href=\"#\">INVITE Institute</a></nav>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-nav{display:flex;align-items:center;gap:6px;} .ds-nav-link{display:block;padding:0 15px;border:2px solid transparent;color:var(--heading);font-family:var(--font-heading);font-size:14px;font-weight:700;line-height:25px;text-transform:uppercase;text-decoration:none;transition:color .2s ease;} .ds-nav-link:hover{color:var(--accent);} .ds-nav-link.is-current{border-color:var(--heading);} .ds-nav-link.is-current:hover{color:var(--heading);} .ds-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+      "description": "The institute menu, uppercase Montserrat, cyan on hover, with a search icon.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">About</a><a href=\"#\">People</a><a href=\"#\">Research</a><a href=\"#\">Open Studies</a><a href=\"#\">INVITE Alliance</a><a href=\"#\">Publications</a><a href=\"#\" aria-label=\"Search\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\"><circle cx=\"10\" cy=\"10\" r=\"6.5\"/><path d=\"m15 15 6.5 6.5\"/></svg></a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; } .ds-nav a { display: flex; align-items: center; height: 25px; padding: 0 15px; margin: 0 3px; color: #3c3950; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 25px; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: color .2s ease; } .ds-nav a:hover { color: #00bcd4; } .ds-nav a:focus-visible { outline: 2px solid #00bcd4; outline-offset: 3px; }"
     },
     {
-      "name": "Tool Row",
+      "name": "Sidebar",
       "kind": "custom",
-      "refersTo": "tool-row",
-      "description": "A photo-paired tool row: institute photo in one half, stacked headline and status, description, and launch action in the other. Rows alternate the photo side. The photo is a neutral stand-in here; the real raster carries the torn edge.",
-      "html": "<article class=\"ds-row\"><div class=\"ds-row-photo\" role=\"img\" aria-label=\"Institute photo\"></div><div class=\"ds-row-body\"><div class=\"ds-row-head\"><h2 class=\"ds-row-title\">PA Toolkit</h2><span class=\"ds-status\">Live</span></div><p class=\"ds-row-desc\">Tools for pedagogical agent design and testing.</p><div class=\"ds-row-foot\"><a class=\"ds-btn-launch\" href=\"#\">Open PA Toolkit<svg class=\"ds-btn-arrow\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M17 7H8M17 7v9\"/></svg></a><span class=\"ds-row-host\">patk.inviteai.org</span></div></div></article>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:60px;padding:26px 0;color:var(--body);font-family:var(--font-body);font-size:16px;line-height:25px;} .ds-row-photo{aspect-ratio:1200/577;background:var(--subtle);} .ds-row-head{display:flex;flex-direction:column;align-items:flex-start;gap:10px;} .ds-row-title{margin:0;color:var(--heading);font-family:var(--font-heading);font-size:28px;font-weight:700;line-height:42px;letter-spacing:1.4px;text-transform:uppercase;text-wrap:balance;} .ds-status{display:inline-flex;align-items:center;gap:7px;padding:3px 10px;color:var(--heading);background:var(--lime);font-family:var(--font-heading);font-size:11px;font-weight:700;line-height:18px;letter-spacing:.08em;text-transform:uppercase;} .ds-status::before{content:\"\";width:6px;height:6px;border-radius:50%;background:currentColor;} .ds-row-desc{max-width:34em;margin:8px 0 0;font-size:17px;line-height:27px;} .ds-row-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:22px;} .ds-row-host{font-size:15px;} .ds-btn-launch{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 22px 0 24px;border:2px solid var(--accent);color:var(--heading);background:linear-gradient(var(--accent),var(--accent)) left/0% 100% no-repeat;font-family:var(--font-heading);font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:background-size .45s var(--ease-out);} .ds-btn-launch:hover,.ds-btn-launch:focus-visible{background-size:100% 100%;} .ds-btn-launch:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-btn-arrow{flex:none;transition:transform .45s var(--ease-out);} .ds-btn-launch:hover .ds-btn-arrow,.ds-btn-launch:focus-visible .ds-btn-arrow{transform:translate(2px,-2px);}"
-    },
-    {
-      "name": "Links Band",
-      "kind": "custom",
-      "refersTo": "links-band",
-      "description": "Full-width Panel Gray band closing the content: two columns, tracked uppercase headings, marker-led ink links with a cyan underline, captioned or inline.",
-      "html": "<aside class=\"ds-band\"><div><h2 class=\"ds-band-heading\">Source Code</h2><ul class=\"ds-band-list\"><li><a href=\"#\">lm-dashboard</a><span>Learner Modeling Dashboard</span></li><li><a href=\"#\">vex-agent-integration</a><span>Pedagogical AI Agent</span></li></ul></div><div><h2 class=\"ds-band-heading\">The Institute</h2><ul class=\"ds-band-list ds-band-inline\"><li><a href=\"#\">About</a></li><li><a href=\"#\">People</a></li><li><a href=\"#\">Research</a></li></ul></div></aside>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-band{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:30px 60px;padding:32px 40px 36px;border-radius:0;background:var(--panel);font-family:var(--font-body);font-size:16px;line-height:25px;} .ds-band-heading{margin:0;color:var(--heading);font-family:var(--font-heading);font-size:19px;font-weight:700;line-height:30px;letter-spacing:.95px;text-transform:uppercase;} .ds-band-list{margin:12px 0 0;padding:0;list-style:none;} .ds-band-list li{position:relative;padding-left:18px;} .ds-band-list li+li{margin-top:10px;} .ds-band-list li::before{content:\"\\00BB\";position:absolute;left:0;top:-1px;color:var(--muted);} .ds-band-list a{color:var(--heading);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-thickness .15s ease;} .ds-band-list a:hover{text-decoration-thickness:2px;} .ds-band-list a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;} .ds-band-list span{display:block;color:var(--caption);font-size:14px;line-height:21px;} .ds-band-inline{display:flex;flex-wrap:wrap;gap:10px 30px;} .ds-band-inline li+li{margin-top:0;}"
+      "refersTo": "sidebar",
+      "description": "The Panel Gray box beside the tools, a Title heading over a » list, like the homepage's In the News.",
+      "html": "<aside class=\"ds-side\"><h2>Source Code</h2><ul><li><a href=\"#\">InviteInstitute/lm-dashboard</a><span>Learner Modeling Dashboard</span></li><li><a href=\"#\">InviteInstitute/agent</a><span>INVITE Agent</span></li></ul></aside>",
+      "css": ".ds-side { padding: 20px 20px 30px; background: #ededed; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 16px; line-height: 25px; color: #5f727f; } .ds-side h2 { margin: 0; padding-bottom: 10px; color: #3c3950; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 19px; font-weight: 700; line-height: 30px; letter-spacing: .95px; text-transform: uppercase; } .ds-side ul { margin: 0; padding: 0; list-style: none; } .ds-side li { position: relative; margin-bottom: 11px; padding-left: 19px; } .ds-side li::before { content: '»'; position: absolute; left: 2px; top: 0; } .ds-side a { color: #00bcd4; text-decoration: none; } .ds-side a:hover { color: #3c3950; } .ds-side span { display: block; color: #5a6c79; font-size: 15px; line-height: 22px; }"
     },
     {
       "name": "Title Bar",
       "kind": "custom",
-      "description": "Full-bleed dark title strip, right-aligned tracked white title, 18px cyan tab at the right edge. The texture image is omitted here; the base color stands in.",
-      "html": "<div class=\"ds-title-bar\"><div class=\"ds-title-inner\"><h1 class=\"ds-title\">Research Software</h1></div></div>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-title-bar{position:relative;padding:15px 0;background:#222431;} .ds-title-inner{padding:0 62px 0 21px;text-align:right;} .ds-title-bar::after{content:\"\";position:absolute;top:28px;right:0;width:18px;height:calc(100% - 58px);background:var(--accent);} .ds-title{margin:0;color:var(--white);font-family:var(--font-heading);font-size:36px;font-weight:700;line-height:53px;letter-spacing:1.8px;text-transform:uppercase;}"
+      "refersTo": "title-bar",
+      "description": "Dark lined bar with a light excerpt over the uppercase title, left-aligned, and the cyan tab at the right edge.",
+      "html": "<div class=\"ds-title\"><p>INVITE Institute</p><h1>Research Software</h1></div>",
+      "css": ".ds-title { position: relative; padding: 25px 60px 25px 40px; color: #fff; background: #222431; } .ds-title::after { content: ''; position: absolute; top: 34px; right: 0; bottom: 45px; width: 18px; background: #00bcd4; } .ds-title p { margin: 0 0 15px; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 300; line-height: 37px; } .ds-title h1 { margin: 0; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 28px; font-weight: 700; line-height: 42px; letter-spacing: 1.4px; text-transform: uppercase; }"
     }
   ],
   "narrative": {
-    "northStar": "A Page From the Institute's Own Site",
-    "overview": "This system is a faithful port of invite.illinois.edu, the INVITE Institute's WordPress site on the TheGem theme. Every surface should read as one more inner page of that site: a white header with the logo and a short uppercase menu, a dark lined title bar with a right-aligned title and a cyan tab, a white body of photo-paired rows closed by a full-width gray links band, and a deep teal footer carrying funding and partner logos. Trust transfers from the institute site because nothing here looks like a separate product.\n\nThe grammar is documentary, not app-like. Each top-level item sits in a two-column row beside one of the institute homepage's own carousel photos, whose torn paper edges and hex network overlay are baked into the raster; rows alternate the photo's side. Headings are uppercase Montserrat 700 with tracking, body is Source Sans Pro in slate gray, and the single lead paragraph is set light (300) and large. Corners are square everywhere, depth is flat, and color is sparse: cyan marks interaction and structure (button borders, the title tab, focus rings, link underlines), lime marks only what is live.\n\nMotion is nearly absent by design. The one authored movement is the launch button filling cyan from the left while its arrow nudges up and right; everything else changes color at most.",
+    "northStar": "The Institute Homepage, With the Tools in It",
+    "overview": "The page mirrors the homepage of invite.illinois.edu, the INVITE Institute's WordPress site on the TheGem theme. It keeps that page's header menu, its two-line title bar, its wide text column beside a gray sidebar, and its footer. The homepage's photo slider is left out on purpose, because the user asked for a light touch. Trust transfers from the institute site because the page looks like one more page of it.\n\nHeadings are uppercase Montserrat 700 with tracking, body text is Source Sans Pro in slate gray, and the lead paragraph and launch links are set light (300) and large, the way the homepage sets its intro and its ► links. Corners are square, depth is flat, and color is sparse. Cyan is the link color, lime marks only what is live.\n\nThere is no authored motion. Links and icons change color on hover, nothing moves.",
     "keyCharacteristics": [
-      "White ground, photo-paired rows that alternate sides, square corners, no cards.",
-      "Institute carousel photos with torn edges baked into the raster, never masked in CSS.",
-      "Uppercase Montserrat 700 headings, letter-spacing equal to 5% of the font size.",
-      "Cyan as the interaction and structure accent; lime reserved for \"live\" status and text selection.",
-      "Dark textured title bar with an 18px cyan tab at the right edge.",
-      "Full-width Panel Gray links band above a deep teal footer with Montserrat UltraLight headings and a square partner-logo wall.",
-      "One motion: the launch-button fill."
+      "The institute's own header menu, linked to invite.illinois.edu, with a search link.",
+      "A dark textured title bar with a light \"INVITE Institute\" line over the uppercase title, both left-aligned at 40px, and an 18px cyan tab at the right edge.",
+      "A 2/3 text column with the lead and the tools, beside a Panel Gray sidebar with » lists.",
+      "Each tool is a screenshot beside its name, Live label, description and ► launch link, with 1px rules between tools.",
+      "The deep teal footer, with funder logos, the disclaimer, the partner wall, a search box and social links."
     ],
     "rules": [
       {
         "name": "The Lime Means Live Rule",
-        "body": "Lime fills only a status that is actually live (and text selection). It is never decoration and never a second accent.",
+        "body": "Lime fills only a status that is actually live, and text selection. It is never decoration.",
         "section": "colors"
       },
       {
-        "name": "The Cyan Is Structure Rule",
-        "body": "Cyan appears as borders, tabs, underlines, rings, and fills behind dark ink. Text on white stays Heading Ink or Body Slate; cyan text belongs only on the dark footer.",
-        "section": "colors"
-      },
-      {
-        "name": "The Gray Ground Caption Rule",
-        "body": "Secondary text on Panel Gray is Caption Slate, never Body Slate. Every text color is checked against the ground it actually sits on.",
+        "name": "The Inherited Link Rule",
+        "body": "Cyan link text on white (2.3:1) and on Panel Gray (2.0:1) is below WCAG AA. The institute site sets its links this way, and this page mirrors it on purpose. Do not spread cyan text to anything that is not a link.",
         "section": "colors"
       },
       {
         "name": "The Five-Percent Tracking Rule",
-        "body": "Every uppercase Montserrat heading tracks at exactly 5% of its font size (36px gets 1.8px, 28px gets 1.4px, 24px gets 1.2px, 22px gets 1.1px, 19px gets 0.95px). Labels use their own smaller em values; nav is untracked.",
+        "body": "Every uppercase Montserrat heading tracks at 5% of its font size. Nav and labels use their own values.",
         "section": "typography"
-      },
-      {
-        "name": "The One Light Paragraph Rule",
-        "body": "Weight 300 is reserved for the lead paragraph. Everything else in Source Sans Pro is 400 or 700.",
-        "section": "typography"
-      },
-      {
-        "name": "The Alternating Photo Rule",
-        "body": "Every top-level tool gets exactly one institute photo at half the row, and the photo's side alternates row by row. At phone the photo leads, full-bleed.",
-        "section": "layout"
-      },
-      {
-        "name": "The Ruled Not Raised Rule",
-        "body": "Separate content with whitespace, 1px Rule Gray lines, and tonal grounds. A shadow is permitted only on a modal that sits above a scrim.",
-        "section": "elevation"
-      },
-      {
-        "name": "The Edge Lives in the Raster Rule",
-        "body": "Photo edges and overlays come baked into the institute's own images (800w and 1200w WebP). CSS never masks, clips, rounds, frames, or shadows a photo.",
-        "section": "shapes"
       }
     ],
     "dos": [
-      "**Do** track every uppercase Montserrat heading at 5% of its font size.",
-      "**Do** pair each top-level tool with one institute photo at half the row, alternating sides, and lead with the photo full-bleed at phone.",
-      "**Do** use the institute's own photos with their torn edges and hex overlay baked into the raster.",
-      "**Do** separate sub-items with 1px Rule Gray hairlines and keep every corner square (0px).",
+      "**Do** check every change against a screenshot of invite.illinois.edu at the same width.",
+      "**Do** track uppercase Montserrat headings at 5% of the font size.",
       "**Do** reserve Live Lime for statuses that are actually live.",
-      "**Do** keep Signal Cyan to borders, tabs, underlines, focus rings, and fills behind Heading Ink; on white, text stays Heading Ink or Body Slate.",
       "**Do** show focus with the 2px Signal Cyan outline at 3px offset.",
-      "**Do** open every page with the white header and the textured title bar with its cyan tab, and close it with the deep teal footer.",
-      "**Do** keep text at 4.5:1 contrast or better against its actual ground; on Panel Gray, secondary text is Caption Slate."
+      "**Do** use screenshots of the real tools, with synthetic data where students would show."
     ],
     "donts": [
-      "**Don't** use rounded tiles, pill badges, or shadowed cards; tools are photo-paired rows, not boxes.",
-      "**Don't** mask, clip, round, frame, or shadow a photo in CSS; the edge treatment belongs to the raster.",
-      "**Don't** add motion beyond the launch-button fill and arrow nudge; other state changes are color-only.",
-      "**Don't** set cyan text on white or light grounds.",
-      "**Don't** use weight 300 outside the lead paragraph.",
-      "**Don't** add shadows outside the modal dialog."
+      "**Don't** add the homepage slider or other heavy pieces the user did not ask for.",
+      "**Don't** use rounded tiles, pill badges or shadowed cards.",
+      "**Don't** add motion. Hover states change color only.",
+      "**Don't** use cyan text for anything that is not a link."
     ]
   }
 }
