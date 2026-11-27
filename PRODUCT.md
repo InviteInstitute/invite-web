@@ -10,12 +10,12 @@ web
 
 Two audiences, weighted equally:
 
-- **Insiders launching a tool.** INVITE researchers and partner-school teachers who arrive to open the Learner Modeling Dashboard, the INVITE Agent, or the Pedagogical Agent Toolkit and leave. Getting to the right link fast matters most.
-- **Outside evaluators.** NSF/IES reviewers, peer AI institutes, and the public checking what INVITE has built. A clear, credible account of each tool and its status matters most.
+- **Insiders launching a tool.** INVITE researchers and partner-school teachers who arrive to open the Learner Modeling Dashboard, the INVITE Pedagogical Agent, or the Pedagogical Agent Toolkit and leave. Getting to the right link fast matters most.
+- **Outside evaluators.** NSF/IES reviewers, peer AI institutes, and the public checking what INVITE has built. A clear, credible account of each tool matters most.
 
 ## Product Purpose
 
-inviteai.org is the front door to the research software built and run by the INVITE Institute (NSF-IES National AI Institute for Innovative Intelligent Technologies for Education). It indexes each tool with a short description and a Live or Coming Soon status, and links out to the subdomain where it runs. Success is an insider reaching their tool in one click and an evaluator understanding what exists and what is live.
+inviteai.org is the front door to the research software built and run by the INVITE Institute (NSF-IES National AI Institute for Innovative Intelligent Technologies for Education). It shows each tool with a screenshot and a short description, and links out to the subdomain where it runs. Success is an insider reaching their tool in one click and an evaluator understanding what exists.
 
 ## Positioning
 
@@ -24,12 +24,12 @@ It is the software arm of an existing institute, not a separate product. It shou
 ## Operating Context
 
 - Tools run on their own subdomains: dashboard.inviteai.org, agent.inviteai.org, patk.inviteai.org.
-- The dashboard is used alongside VEXcode VR in classrooms, and the INVITE Agent alongside VEXcode VR and ZANY.
+- The dashboard is used alongside VEXcode VR in classrooms, and the INVITE Pedagogical Agent alongside VEXcode VR and ZANY.
 
 ## Capabilities and Constraints
 
 - Plain static HTML and CSS served by nginx from `public/`. No build step, no framework, no runtime. Deploy is `git pull`, and Cloudflare sits in front.
-- Assets (logos, partner logos, textures, fonts) are self-hosted under `public/`, copied from the institute site's WordPress backup, not hotlinked.
+- Assets (logos, partner logos, fonts) are self-hosted under `public/`, copied from the institute site's WordPress backup, not hotlinked.
 - The header carries the institute site's own menu (About, People, Research, Open Studies, INVITE Alliance, Publications) and a search link, all pointing to invite.illinois.edu. Below it, a sticky tool rail with every Open button sits beside full-width screenshots.
 
 ## Brand Commitments
@@ -39,13 +39,13 @@ It is the software arm of an existing institute, not a separate product. It shou
 
 ## Evidence on Hand
 
-- The three tools, their descriptions, and their live/soon status are in `public/index.html`.
-- Institute assets from the WordPress backup (`~/backup-20aug26/uploads/`): INVITE logo, NSF and IES logos, partner logos (Illinois, UF, NJIT, ETS, Oregon, VEX Robotics, Balance Studios), and the title-bar texture.
+- The three tools and their descriptions are in `public/index.html`.
+- Institute assets from the WordPress backup (`~/backup-20aug26/uploads/`): INVITE logo, NSF and IES logos, and partner logos (Illinois, UF, NJIT, ETS, Oregon, VEX Robotics, Balance Studios).
 - Each tool has a screenshot of its real UI. The dashboard one shows synthetic students, never real ones. There are no usage numbers or testimonials. Do not fabricate them.
 
 ## Product Principles
 
-1. One click to the tool: status and link come before anything decorative.
+1. One click to the tool. The Open button comes before anything decorative.
 2. Indistinguishable in feel from invite.illinois.edu, so trust transfers.
-3. Say only what is true: status badges reflect reality, and there are no invented claims.
-4. Stay trivially maintainable: hand-editable static files.
+3. Say only what is true, with no invented claims.
+4. Stay easy to maintain, as hand-editable static files.
