@@ -172,7 +172,6 @@ html { scroll-behavior: smooth; }
 .shot { max-width: 1100px; scroll-margin-top: 32px; }
 .shot + .shot { margin-top: 64px; padding-top: 64px; border-top: 1px solid var(--border); }
 .shot-frame img { width: 100%; border: 1px solid var(--border); }
-.shot-frame figcaption { margin-top: 8px; color: var(--caption); font-size: 14px; }
 .shot-text { max-width: 66ch; margin-top: 22px; }
 .shot-title {
   color: var(--heading);

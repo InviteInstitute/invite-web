@@ -290,7 +290,7 @@ The entry whose screenshot is in view gets a white 5% wash and an 8px Signal Cya
 Solid Paper White, 36px tall, square, with Footer Deep Teal text in Source Sans 700 at 15px. It says "Open" and nothing else, with no icon. Hover fills it Signal Cyan. Focus inside the rail is a 2px lime outline at 3px offset.
 
 ### Screenshot
-The real tool at full column width in a 1px Rule Gray frame, with an optional 14px Caption Slate caption 8px under it (the dashboard says its students are sample data). The Headline sits 22px under the figure, the description 10px under that, then the "Live at" line 14px under it. The text block stops at 66ch.
+The real tool at full column width in a 1px Rule Gray frame. The Headline sits 22px under the figure, the description 10px under that, then the "Live at" line 14px under it. The text block stops at 66ch.
 
 ### Host Link
 The line reads "Live at" in Body Slate, then the hostname in Heading Ink 700 at 17px with a 2px Signal Cyan underline at 4px offset, and no icon. For the Toolkit it adds "It asks for a password." Hover turns the text Footer Deep Teal and the underline Heading Ink.
