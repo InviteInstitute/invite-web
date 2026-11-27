@@ -31,11 +31,11 @@ It is the software arm of an existing institute, not a separate product. It shou
 
 - Plain static HTML and CSS served by nginx from `public/`. No build step, no framework, no runtime. Deploy is `git pull`, and Cloudflare sits in front.
 - Assets (logos, partner logos, textures, fonts) are self-hosted under `public/`, copied from the institute site's WordPress backup, not hotlinked.
-- The header carries the institute site's own menu (About, People, Research, Open Studies, INVITE Alliance, Publications) and a search link, all pointing to invite.illinois.edu. The page mirrors that site's homepage layout.
+- The header carries the institute site's own menu (About, People, Research, Open Studies, INVITE Alliance, Publications) and a search link, all pointing to invite.illinois.edu. Below it, a sticky tool rail with every Open button sits beside full-width screenshots.
 
 ## Brand Commitments
 
-- Visual identity is the institute site's: the INVITE logo, TheGem theme tokens (Montserrat headings, Source Sans Pro body, `#3c3950` headings, `#5f727f` body, `#00bcd4` accent, `#e7ff89` highlight), the dark lined title bar, the gray sidebar, and the `#1c3947` footer with funding disclaimer, partner logos, search and social links.
+- Visual identity is the institute site's: the INVITE logo, TheGem theme tokens (Montserrat headings, Source Sans Pro body, `#3c3950` headings, `#5f727f` body, `#00bcd4` accent, `#e7ff89` highlight), the `#1c3947` deep teal of the footer and tool rail, the cyan tab, and the footer with funding disclaimer, partner logos, search and social links.
 - Funding disclaimer text (NSF and IES, Grant #2229612) must appear verbatim.
 
 ## Evidence on Hand

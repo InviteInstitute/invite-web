@@ -40,12 +40,13 @@ Edit `public/index.html` or `public/styles.css`. Then refresh the page to see th
 
 ## What You Get
 
-- The look of the [INVITE Institute](https://invite.illinois.edu/) homepage. The page copies its
-  header menu, lined title bar, text column with a gray sidebar, and footer, so the page reads as
-  part of that site.
-- A **tool list**. Each tool has a screenshot, a name, a one-line description, a **Live** badge,
-  and a ► link that opens the tool on its own subdomain.
-- A gray sidebar that points to the source code of the tools.
+- The look of the [INVITE Institute](https://invite.illinois.edu/) site. The page keeps its header
+  menu, fonts, colors and footer, so the page reads as part of that site.
+- A **tool rail** on the left. It lists every tool with a one-line description and an **Open**
+  button, and it stays on screen as you scroll. A cyan tab marks the tool you are looking at.
+- A large **screenshot** of each tool on the right, with its name, a **Live** badge, a description
+  and a link to its subdomain.
+- Links to the source code of the tools, at the bottom of the rail.
 - The Institute footer, with the NSF and IES funding disclaimer (Grant #2229612), partner logos, a
   search box for invite.illinois.edu and social links.
 

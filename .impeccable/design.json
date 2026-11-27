@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-27T01:34:53Z",
+  "generatedAt": "2026-11-27T02:55:51Z",
   "title": "Design System: INVITE Research Software",
   "extensions": {
     "colorMeta": {
@@ -34,6 +34,22 @@
           "#dff2fe"
         ]
       },
+      "caption-slate": {
+        "role": "neutral",
+        "displayName": "Caption Slate",
+        "canonical": "#5a6c79",
+        "tonalRamp": [
+          "#010c15",
+          "#13232e",
+          "#2d3e4a",
+          "#4a5c69",
+          "#697c89",
+          "#8a9eab",
+          "#afc3d1",
+          "#dceffc"
+        ],
+        "note": "5.45:1 on white. Used for the password note under a host link."
+      },
       "muted-mist": {
         "role": "neutral",
         "displayName": "Muted Mist",
@@ -47,7 +63,8 @@
           "#91a1ad",
           "#b6c7d3",
           "#e0f1fe"
-        ]
+        ],
+        "note": "Institute footer text color, accepted as a brand commitment. 5.0:1 on Footer Deep Teal."
       },
       "signal-cyan": {
         "role": "primary",
@@ -62,7 +79,8 @@
           "#1eb1c7",
           "#43daf2",
           "#cff7ff"
-        ]
+        ],
+        "note": "As text it appears only on Footer Deep Teal (5.3:1), plus the header menu hover."
       },
       "live-lime": {
         "role": "secondary",
@@ -78,6 +96,85 @@
           "#bbd15b",
           "#e4fc86"
         ]
+      },
+      "button-ink": {
+        "role": "neutral",
+        "displayName": "Button Ink",
+        "canonical": "#10202a",
+        "tonalRamp": [
+          "#080c0e",
+          "#1f262b",
+          "#39444b",
+          "#55646d",
+          "#738592",
+          "#98a8b2",
+          "#bfcbd3",
+          "#e7f0f6"
+        ],
+        "note": "Open button text and arrow. 7.3:1 on Signal Cyan, 15.1:1 on Live Lime."
+      },
+      "footer-deep-teal": {
+        "role": "neutral",
+        "displayName": "Footer Deep Teal",
+        "canonical": "#1c3947",
+        "tonalRamp": [
+          "#000d16",
+          "#0a2835",
+          "#274452",
+          "#446272",
+          "#648292",
+          "#84a4b5",
+          "#a9cadb",
+          "#dcf2fe"
+        ]
+      },
+      "rail-name": {
+        "role": "neutral",
+        "displayName": "Rail Name",
+        "canonical": "#e6eaf0",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242527",
+          "#404245",
+          "#5f6166",
+          "#7f8388",
+          "#a2a5aa",
+          "#c7c9cd",
+          "#edeef1"
+        ],
+        "note": "10.1:1 on Footer Deep Teal."
+      },
+      "rail-body": {
+        "role": "neutral",
+        "displayName": "Rail Body",
+        "canonical": "#c9d6dd",
+        "tonalRamp": [
+          "#090b0d",
+          "#212628",
+          "#3c4347",
+          "#5a6368",
+          "#79848b",
+          "#9da7ac",
+          "#c3cacf",
+          "#eaeff2"
+        ],
+        "note": "8.2:1 on Footer Deep Teal."
+      },
+      "rail-caption": {
+        "role": "neutral",
+        "displayName": "Rail Caption",
+        "canonical": "#9fb3bd",
+        "tonalRamp": [
+          "#080c0d",
+          "#1f262a",
+          "#394449",
+          "#55646b",
+          "#73868f",
+          "#98a8b0",
+          "#bfcbd2",
+          "#e7f0f4"
+        ],
+        "note": "5.6:1 on Footer Deep Teal."
       },
       "rule-gray": {
         "role": "neutral",
@@ -109,37 +206,6 @@
           "#edeff0"
         ]
       },
-      "panel-gray": {
-        "role": "neutral",
-        "displayName": "Panel Gray",
-        "canonical": "#ededed",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#242424",
-          "#404040",
-          "#5d5d5d",
-          "#7d7d7d",
-          "#9e9e9e",
-          "#c4c4c4",
-          "#eeeeee"
-        ]
-      },
-      "caption-slate": {
-        "role": "neutral",
-        "displayName": "Caption Slate",
-        "canonical": "#5a6c79",
-        "tonalRamp": [
-          "#010c15",
-          "#13232e",
-          "#2d3e4a",
-          "#4a5c69",
-          "#697c89",
-          "#8a9eab",
-          "#afc3d1",
-          "#dceffc"
-        ],
-        "note": "Body Slate darkened for Panel Gray: 4.65:1 on #ededed, where Body Slate gives 4.27:1."
-      },
       "quiet-steel": {
         "role": "neutral",
         "displayName": "Quiet Steel",
@@ -153,37 +219,6 @@
           "#92a2a5",
           "#b8c8cb",
           "#e1f2f5"
-        ]
-      },
-      "title-bar-plum": {
-        "role": "neutral",
-        "displayName": "Title-Bar Plum",
-        "canonical": "#333144",
-        "tonalRamp": [
-          "#0b0818",
-          "#232133",
-          "#3f3d51",
-          "#5d5b70",
-          "#7c7a90",
-          "#9d9bb3",
-          "#c3c1d9",
-          "#edecfe"
-        ],
-        "note": "Base color under the lined title texture image; the rendered bar reads near #222431."
-      },
-      "footer-deep-teal": {
-        "role": "neutral",
-        "displayName": "Footer Deep Teal",
-        "canonical": "#1c3947",
-        "tonalRamp": [
-          "#000d16",
-          "#0a2835",
-          "#274452",
-          "#446272",
-          "#648292",
-          "#84a4b5",
-          "#a9cadb",
-          "#dcf2fe"
         ]
       },
       "paper-white": {
@@ -220,81 +255,103 @@
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Page title in the dark title bar, left-aligned at 40px, white, uppercase."
+        "purpose": "Rail title, white, uppercase."
       },
       "display-phone": {
-        "displayName": "Display (phone)",
-        "purpose": "Title-bar title at 767px and below."
+        "displayName": "Display Phone",
+        "purpose": "Rail title at 767px and below."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Tool name in its row, uppercase, balanced wrapping."
-      },
-      "headline-tablet": {
-        "displayName": "Headline (tablet)",
-        "purpose": "Same as Headline. Kept for the token scale."
+        "purpose": "Screenshot title, uppercase, balanced wrapping."
       },
       "headline-phone": {
-        "displayName": "Headline (phone)",
-        "purpose": "Tool name at 767px and below."
+        "displayName": "Headline Phone",
+        "purpose": "Screenshot title at 767px and below."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Sidebar and dialog headings, uppercase."
+        "purpose": "Password dialog heading, uppercase."
       },
-      "title-phone": {
-        "displayName": "Title (phone)",
-        "purpose": "Unused since the sub-items were removed."
+      "rail-name": {
+        "displayName": "Rail Name",
+        "purpose": "Tool name in the rail, uppercase, white when current or hovered."
       },
       "footer-title": {
         "displayName": "Footer Title",
         "purpose": "Footer section headings only, white, uppercase, Montserrat UltraLight."
       },
-      "lead": {
-        "displayName": "Lead",
-        "purpose": "The intro paragraph and the ► launch links, light 300."
-      },
-      "lead-phone": {
-        "displayName": "Lead (phone)",
-        "purpose": "Lead paragraph at 767px and below."
+      "intro": {
+        "displayName": "Intro",
+        "purpose": "Rail intro, light 300, 17/26 at phone, hidden on short screens."
       },
       "body-large": {
         "displayName": "Body Large",
-        "purpose": "Tool descriptions; 16/25 at phone."
+        "purpose": "Screenshot descriptions, 66ch max."
+      },
+      "body-large-phone": {
+        "displayName": "Body Large Phone",
+        "purpose": "Screenshot descriptions at 767px and below."
+      },
+      "link-host": {
+        "displayName": "Link Host",
+        "purpose": "Underlined hostname link under a screenshot description."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Default running text and sidebar links."
+        "purpose": "Default text and dialog copy."
       },
-      "body-host": {
-        "displayName": "Host",
-        "purpose": "Hostname or lock line under a launch link, sidebar notes, inline form error."
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Rail tool job, source links, password note, form error."
       },
       "caption": {
         "displayName": "Caption",
-        "purpose": "Unused since the links band was removed."
-      },
-      "small": {
-        "displayName": "Small",
-        "purpose": "Unused since the footer disclaimer moved to 12px."
+        "purpose": "Host line beside an Open button."
       },
       "legal": {
         "displayName": "Legal",
         "purpose": "Footer disclaimer and copyright line."
       },
       "label-nav": {
-        "displayName": "Nav Label",
-        "purpose": "Institute menu, uppercase, untracked; 13px at tablet."
+        "displayName": "Label Nav",
+        "purpose": "Institute menu, uppercase, untracked, 13px at tablet."
       },
       "label-button": {
-        "displayName": "Button Label",
-        "purpose": "Dialog button labels at 13px."
+        "displayName": "Label Button",
+        "purpose": "Open button label at 0.08em, dialog buttons use 0.04em."
+      },
+      "label-section": {
+        "displayName": "Label Section",
+        "purpose": "The rail's \"Source code\" label, Rail Caption."
       },
       "label-status": {
-        "displayName": "Status Label",
-        "purpose": "Live label, uppercase."
+        "displayName": "Label Status",
+        "purpose": "Live chip, uppercase."
       }
     },
+    "tints": [
+      {
+        "name": "rail-hairline",
+        "value": "rgba(255, 255, 255, .1)",
+        "purpose": "Rules between rail entries."
+      },
+      {
+        "name": "rail-current-wash",
+        "value": "rgba(255, 255, 255, .05)",
+        "purpose": "Ground of the rail entry whose screenshot is in view."
+      },
+      {
+        "name": "source-underline",
+        "value": "rgba(0, 188, 212, .6)",
+        "purpose": "Underline under rail source links at rest."
+      },
+      {
+        "name": "rail-scrollbar",
+        "value": "#3d5f6e",
+        "purpose": "Thin rail scrollbar thumb."
+      }
+    ],
     "shadows": [
       {
         "name": "modal-lift",
@@ -309,9 +366,24 @@
     ],
     "motion": [
       {
+        "name": "tab-grow",
+        "value": "width .35s cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "The 8px cyan tab growing in beside the current rail entry."
+      },
+      {
+        "name": "current-wash",
+        "value": "background-color .3s cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "The current rail entry wash."
+      },
+      {
+        "name": "arrow-nudge",
+        "value": "transform .25s cubic-bezier(.16, 1, .3, 1), translate(2px, -2px)",
+        "purpose": "The Open button arrow on hover."
+      },
+      {
         "name": "color-fade",
         "value": "0.2s ease",
-        "purpose": "Color-only hover changes on nav, launch links, sidebar links and social icons."
+        "purpose": "Color-only hover changes on nav, rail names, buttons, host links and social icons."
       },
       {
         "name": "field-fade",
@@ -319,11 +391,21 @@
         "purpose": "Dialog input focus border and fill."
       },
       {
+        "name": "smooth-scroll",
+        "value": "scroll-behavior: smooth",
+        "purpose": "Rail name clicks scroll to their screenshot."
+      },
+      {
         "name": "reduced-motion",
-        "value": "transition-duration: .01ms",
-        "purpose": "All transitions collapse under prefers-reduced-motion: reduce."
+        "value": "transition-duration: .01ms; scroll-behavior: auto",
+        "purpose": "All transitions and smooth scrolling collapse under prefers-reduced-motion: reduce."
       }
     ],
+    "scrollSpy": {
+      "api": "IntersectionObserver",
+      "rootMargin": "-45% 0px -50% 0px",
+      "purpose": "Marks the rail entry whose screenshot crosses the middle of the viewport as current, with aria-current=\"location\"."
+    },
     "breakpoints": [
       {
         "name": "tablet",
@@ -334,39 +416,43 @@
         "value": "1000px"
       },
       {
-        "name": "sidebar-drop",
+        "name": "rail-stack",
         "value": "900px"
       },
       {
         "name": "phone",
         "value": "767px"
+      },
+      {
+        "name": "short-screen",
+        "value": "(min-width: 901px) and (max-height: 860px)"
       }
     ]
   },
   "components": [
     {
-      "name": "Launch Link",
+      "name": "Open Button",
+      "kind": "button",
+      "refersTo": "button-open",
+      "description": "Solid cyan launch button with dark ink in each rail entry; lime on hover, the arrow nudges up and right.",
+      "html": "<div class=\"ds-railbg\"><a class=\"ds-btn-open\" href=\"#\">Open<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></div>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-railbg{padding:16px;background:var(--footer);} .ds-btn-open{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px 0 16px;color:var(--ink);background:var(--accent);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background-color .2s ease,color .2s ease;} .ds-btn-open:hover{background:var(--lime);} .ds-btn-open svg{transition:transform .25s var(--ease-out);} .ds-btn-open:hover svg{transform:translate(2px,-2px);} .ds-btn-open:focus-visible{outline:2px solid var(--lime);outline-offset:3px;}"
+    },
+    {
+      "name": "Rail Tool Entry",
       "kind": "custom",
-      "refersTo": "link-arrow",
-      "description": "The ► link under each tool that opens it, set like the homepage's own ► links.",
-      "html": "<p class=\"ds-launch\"><span aria-hidden=\"true\">►</span> <a href=\"#\">Open the Dashboard</a></p><p class=\"ds-host\">dashboard.inviteai.org</p>",
-      "css": ".ds-launch { margin: 0; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 300; line-height: 37px; } .ds-launch span { color: #5f727f; font-size: 20px; } .ds-launch a { color: #00bcd4; text-decoration: none; transition: color .2s ease; } .ds-launch a:hover, .ds-launch a:focus-visible { color: #3c3950; } .ds-launch a:focus-visible { outline: 2px solid #00bcd4; outline-offset: 3px; } .ds-host { margin: 2px 0 0; padding-left: 26px; color: #5a6c79; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 15px; }"
+      "refersTo": "rail-tool",
+      "description": "One tool in the deep teal rail: name, one-line job, Open button and host line. The current entry gets a white 5% wash and the 8px cyan tab on the right edge.",
+      "html": "<ol class=\"ds-rail\"><li class=\"ds-tool is-current\"><a class=\"ds-name\" href=\"#\">Learner Modeling Dashboard</a><p class=\"ds-job\">Shows which students need help in VEXcode VR, in real time.</p><p class=\"ds-launch\"><a class=\"ds-btn-open\" href=\"#\">Open<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a><span class=\"ds-host\">dashboard.inviteai.org</span></p></li><li class=\"ds-tool\"><a class=\"ds-name\" href=\"#\">INVITE Agent</a><p class=\"ds-job\">Chats with students in VEXcode VR and ZANY.</p><p class=\"ds-launch\"><a class=\"ds-btn-open\" href=\"#\">Open<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a><span class=\"ds-host\">agent.inviteai.org</span></p></li></ol>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-rail{margin:0;padding:0;list-style:none;width:380px;color:var(--rail-body);background:var(--footer);font-family:var(--font-body);border-top:1px solid rgba(255,255,255,.1);} .ds-tool{position:relative;padding:22px 40px 24px;border-bottom:1px solid rgba(255,255,255,.1);transition:background-color .3s var(--ease-out);} .ds-tool::after{content:\"\";position:absolute;top:0;right:0;bottom:0;width:0;background:var(--accent);transition:width .35s var(--ease-out);} .ds-tool.is-current{background:rgba(255,255,255,.05);} .ds-tool.is-current::after{width:8px;} .ds-name{display:block;color:var(--rail-name);font-family:var(--font-heading);font-size:16px;font-weight:700;line-height:24px;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:color .2s ease;} .ds-tool.is-current .ds-name,.ds-name:hover{color:var(--white);} .ds-job{margin:4px 0 0;font-size:15px;line-height:22px;} .ds-launch{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;} .ds-host{color:var(--rail-caption);font-size:14px;} .ds-btn-open{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px 0 16px;color:var(--ink);background:var(--accent);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background-color .2s ease;} .ds-btn-open:hover{background:var(--lime);} .ds-rail :focus-visible{outline:2px solid var(--lime);outline-offset:3px;}"
     },
     {
-      "name": "Solid Button",
-      "kind": "button",
-      "refersTo": "button-solid",
-      "description": "Dialog confirm action: Heading Ink fill, turns cyan with ink text on hover.",
-      "html": "<button class=\"ds-btn-solid\" type=\"button\">Continue</button>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-solid{height:40px;padding:0 20px;border:2px solid transparent;border-radius:0;color:var(--white);background:var(--heading);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease;} .ds-btn-solid:hover{color:var(--heading);background:var(--accent);} .ds-btn-solid:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
-    },
-    {
-      "name": "Quiet Button",
-      "kind": "button",
-      "refersTo": "button-quiet",
-      "description": "Dialog cancel action: white with a gray hairline border.",
-      "html": "<button class=\"ds-btn-quiet\" type=\"button\">Cancel</button>",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-quiet{height:40px;padding:0 20px;border:2px solid var(--border);border-radius:0;color:var(--body);background:var(--white);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:border-color .2s ease,color .2s ease;} .ds-btn-quiet:hover{border-color:var(--button-quiet);color:var(--heading);} .ds-btn-quiet:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+      "name": "Screenshot Section",
+      "kind": "card",
+      "refersTo": "link-host",
+      "description": "Full-width screenshot in a 1px Rule Gray frame, then the title and Live chip row, the description and the underlined host link.",
+      "html": "<section class=\"ds-shot\"><div class=\"ds-frame\"></div><div class=\"ds-head\"><h2>Learner Modeling Dashboard</h2><span class=\"ds-status\">Live</span></div><p class=\"ds-desc\">In real time, surfaces which students need help in VEXcode VR.</p><p class=\"ds-link\"><a href=\"#\">dashboard.inviteai.org<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></p></section>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-shot{max-width:720px;font-family:var(--font-body);color:var(--body);} .ds-frame{aspect-ratio:16/10;border:1px solid var(--border);background:var(--subtle);} .ds-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;margin-top:26px;} .ds-head h2{margin:0;color:var(--heading);font-family:var(--font-heading);font-size:24px;font-weight:700;line-height:34px;letter-spacing:1.2px;text-transform:uppercase;} .ds-status{display:inline-flex;align-items:center;gap:7px;padding:3px 10px;color:var(--heading);background:var(--lime);font-family:var(--font-heading);font-size:11px;font-weight:700;line-height:18px;letter-spacing:.08em;text-transform:uppercase;} .ds-status::before{content:\"\";width:6px;height:6px;border-radius:50%;background:currentColor;} .ds-desc{max-width:66ch;margin:10px 0 0;font-size:18px;line-height:29px;} .ds-link{margin:14px 0 0;font-size:17px;} .ds-link a{display:inline-flex;align-items:center;gap:6px;color:var(--heading);font-weight:700;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:5px;transition:color .2s ease;} .ds-link a:hover{color:var(--footer);text-decoration-color:var(--heading);} .ds-link a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
     },
     {
       "name": "Status Label",
@@ -377,12 +463,28 @@
       "css": ".ds-status { display: inline-flex; align-items: center; gap: 7px; padding: 3px 10px; color: #3c3950; background: #e7ff89; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; line-height: 18px; letter-spacing: .08em; text-transform: uppercase; } .ds-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }"
     },
     {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Dialog confirm action: Heading Ink fill, turns cyan with ink text on hover.",
+      "html": "<button class=\"ds-btn-solid\" type=\"button\">Continue</button>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-solid{height:40px;padding:0 20px;border:2px solid transparent;border-radius:0;color:var(--white);background:var(--heading);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease;} .ds-btn-solid:hover{color:var(--heading);background:var(--accent);} .ds-btn-solid:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Dialog cancel action: white with a gray hairline border.",
+      "html": "<button class=\"ds-btn-quiet\" type=\"button\">Cancel</button>",
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-btn-quiet{height:40px;padding:0 20px;border:2px solid var(--border);border-radius:0;color:var(--body);background:var(--white);font-family:var(--font-heading);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:border-color .2s ease,color .2s ease;} .ds-btn-quiet:hover{border-color:var(--button-quiet);color:var(--heading);} .ds-btn-quiet:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}"
+    },
+    {
       "name": "Text Field",
       "kind": "input",
       "refersTo": "input-text",
       "description": "Square washed field with an uppercase Montserrat label; cyan border and white fill on focus.",
       "html": "<label class=\"ds-label\" for=\"ds-pw\">Password</label><input class=\"ds-input\" id=\"ds-pw\" type=\"password\">",
-      "css": ":host{--heading:#3c3950;--body:#5f727f;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--border:#dfe5e8;--subtle:#f4f6f7;--panel:#ededed;--caption:#5a6c79;--button-quiet:#b6c6c9;--footer:#1c3947;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-thin:\"Montserrat UltraLight\",\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-label{display:block;margin-bottom:6px;color:var(--heading);font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;} .ds-input{width:100%;height:44px;padding:0 14px;border:1px solid var(--border);border-radius:0;color:var(--heading);background:var(--subtle);font-family:var(--font-body);font-size:16px;caret-color:var(--accent);transition:border-color .15s ease,background-color .15s ease;} .ds-input:focus{border-color:var(--accent);background:var(--white);outline:none;}"
+      "css": ":host{--heading:#3c3950;--body:#5f727f;--caption:#5a6c79;--muted:#99a9b5;--accent:#00bcd4;--lime:#e7ff89;--ink:#10202a;--footer:#1c3947;--rail-name:#e6eaf0;--rail-body:#c9d6dd;--rail-caption:#9fb3bd;--border:#dfe5e8;--subtle:#f4f6f7;--button-quiet:#b6c6c9;--white:#fff;--error:#c62828;--font-heading:\"Montserrat\",\"Helvetica Neue\",Arial,sans-serif;--font-body:\"Source Sans Pro\",\"Helvetica Neue\",Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);} .ds-label{display:block;margin-bottom:6px;color:var(--heading);font-family:var(--font-heading);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;} .ds-input{width:100%;height:44px;padding:0 14px;border:1px solid var(--border);border-radius:0;color:var(--heading);background:var(--subtle);font-family:var(--font-body);font-size:16px;caret-color:var(--accent);transition:border-color .15s ease,background-color .15s ease;} .ds-input:focus{border-color:var(--accent);background:var(--white);outline:none;}"
     },
     {
       "name": "Footer Search",
@@ -399,63 +501,55 @@
       "description": "The institute menu, uppercase Montserrat, cyan on hover, with a search icon.",
       "html": "<nav class=\"ds-nav\"><a href=\"#\">About</a><a href=\"#\">People</a><a href=\"#\">Research</a><a href=\"#\">Open Studies</a><a href=\"#\">INVITE Alliance</a><a href=\"#\">Publications</a><a href=\"#\" aria-label=\"Search\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\"><circle cx=\"10\" cy=\"10\" r=\"6.5\"/><path d=\"m15 15 6.5 6.5\"/></svg></a></nav>",
       "css": ".ds-nav { display: flex; align-items: center; } .ds-nav a { display: flex; align-items: center; height: 25px; padding: 0 15px; margin: 0 3px; color: #3c3950; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 25px; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: color .2s ease; } .ds-nav a:hover { color: #00bcd4; } .ds-nav a:focus-visible { outline: 2px solid #00bcd4; outline-offset: 3px; }"
-    },
-    {
-      "name": "Sidebar",
-      "kind": "custom",
-      "refersTo": "sidebar",
-      "description": "The Panel Gray box beside the tools, a Title heading over a » list, like the homepage's In the News.",
-      "html": "<aside class=\"ds-side\"><h2>Source Code</h2><ul><li><a href=\"#\">InviteInstitute/lm-dashboard</a><span>Learner Modeling Dashboard</span></li><li><a href=\"#\">InviteInstitute/agent</a><span>INVITE Agent</span></li></ul></aside>",
-      "css": ".ds-side { padding: 20px 20px 30px; background: #ededed; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 16px; line-height: 25px; color: #5f727f; } .ds-side h2 { margin: 0; padding-bottom: 10px; color: #3c3950; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 19px; font-weight: 700; line-height: 30px; letter-spacing: .95px; text-transform: uppercase; } .ds-side ul { margin: 0; padding: 0; list-style: none; } .ds-side li { position: relative; margin-bottom: 11px; padding-left: 19px; } .ds-side li::before { content: '»'; position: absolute; left: 2px; top: 0; } .ds-side a { color: #00bcd4; text-decoration: none; } .ds-side a:hover { color: #3c3950; } .ds-side span { display: block; color: #5a6c79; font-size: 15px; line-height: 22px; }"
-    },
-    {
-      "name": "Title Bar",
-      "kind": "custom",
-      "refersTo": "title-bar",
-      "description": "Dark lined bar with a light excerpt over the uppercase title, left-aligned, and the cyan tab at the right edge.",
-      "html": "<div class=\"ds-title\"><p>INVITE Institute</p><h1>Research Software</h1></div>",
-      "css": ".ds-title { position: relative; padding: 25px 60px 25px 40px; color: #fff; background: #222431; } .ds-title::after { content: ''; position: absolute; top: 34px; right: 0; bottom: 45px; width: 18px; background: #00bcd4; } .ds-title p { margin: 0 0 15px; font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size: 24px; font-weight: 300; line-height: 37px; } .ds-title h1 { margin: 0; font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 28px; font-weight: 700; line-height: 42px; letter-spacing: 1.4px; text-transform: uppercase; }"
     }
   ],
   "narrative": {
-    "northStar": "The Institute Homepage, With the Tools in It",
-    "overview": "The page mirrors the homepage of invite.illinois.edu, the INVITE Institute's WordPress site on the TheGem theme. It keeps that page's header menu, its two-line title bar, its wide text column beside a gray sidebar, and its footer. The homepage's photo slider is left out on purpose, because the user asked for a light touch. Trust transfers from the institute site because the page looks like one more page of it.\n\nHeadings are uppercase Montserrat 700 with tracking, body text is Source Sans Pro in slate gray, and the lead paragraph and launch links are set light (300) and large, the way the homepage sets its intro and its ► links. Corners are square, depth is flat, and color is sparse. Cyan is the link color, lime marks only what is live.\n\nThere is no authored motion. Links and icons change color on hover, nothing moves.",
+    "northStar": "The Tool Rail",
+    "overview": "The page is a launcher first. A sticky deep teal rail on the left holds every tool with its Open button, so all of them stay on screen while the right column scrolls through big screenshots. The rail is the footer's own deep teal carried up the page, which makes the shell one committed color that runs into the footer at the bottom.\n\nThe tokens come from invite.illinois.edu, the institute's WordPress site on the TheGem theme. Its header menu and its footer stay as they are, Montserrat 700 sets the uppercase headings, Source Sans Pro sets the text, and the institute's cyan tab now sits on the rail's right edge beside the tool in view. Corners are square, depth is flat, and color is sparse. Cyan is the action color, lime marks only what is live.\n\nMotion is small and functional. The cyan tab grows in beside the tool in view, the Open arrow nudges on hover, and clicking a rail name scrolls smoothly to its screenshot. All of it goes static under reduced motion.",
     "keyCharacteristics": [
-      "The institute's own header menu, linked to invite.illinois.edu, with a search link.",
-      "A dark textured title bar with a light \"INVITE Institute\" line over the uppercase title, both left-aligned at 40px, and an 18px cyan tab at the right edge.",
-      "A 2/3 text column with the lead and the tools, beside a Panel Gray sidebar with » lists.",
-      "Each tool is a screenshot beside its name, Live label, description and ► launch link, with 1px rules between tools.",
+      "The institute's own white header menu, linked to invite.illinois.edu, with a search link.",
+      "A sticky 380px Footer Deep Teal rail with the page title, a short intro, one entry per tool and the source code links at the bottom.",
+      "A solid cyan Open button with dark ink in every rail entry.",
+      "An 8px cyan tab on the rail's right edge that follows the screenshot in view.",
+      "Full-width screenshots in a 1px Rule Gray frame, each followed by its title, a Live chip, a description and an underlined host link.",
       "The deep teal footer, with funder logos, the disclaimer, the partner wall, a search box and social links."
     ],
     "rules": [
       {
         "name": "The Lime Means Live Rule",
-        "body": "Lime fills only a status that is actually live, and text selection. It is never decoration.",
+        "body": "Lime fills a status that is actually live, the hover state of an Open button, and text selection. It is never a decorative fill.",
         "section": "colors"
       },
       {
-        "name": "The Inherited Link Rule",
-        "body": "Cyan link text on white (2.3:1) and on Panel Gray (2.0:1) is below WCAG AA. The institute site sets its links this way, and this page mirrors it on purpose. Do not spread cyan text to anything that is not a link.",
+        "name": "The Cyan On Dark Rule",
+        "body": "Cyan text appears only on deep teal, where it reads at 5.3:1. On white, cyan is a fill, a tab, an underline or a focus ring. The one exception is the header menu's hover color, which the institute site sets that way.",
         "section": "colors"
       },
       {
         "name": "The Five-Percent Tracking Rule",
-        "body": "Every uppercase Montserrat heading tracks at 5% of its font size. Nav and labels use their own values.",
+        "body": "Every uppercase Montserrat heading tracks at 5% of its font size, at every breakpoint. Nav and labels use their own values.",
         "section": "typography"
+      },
+      {
+        "name": "The Every Button Fits Rule",
+        "body": "Above 900px wide, all Open buttons must be on screen without scrolling the rail. When the viewport is 860px tall or less, the rail tightens to fit. The top padding drops to 28px, the intro hides, the list starts 22px down, entries pad 14px top and 16px bottom, jobs go to 14px/20px, the launch row sits 10px down, and the source block starts 22px down.",
+        "section": "layout"
       }
     ],
     "dos": [
-      "**Do** check every change against a screenshot of invite.illinois.edu at the same width.",
+      "**Do** keep every Open button on screen in the rail at desktop widths, including short 860px-tall screens.",
+      "**Do** carry Footer Deep Teal as the only dark ground, on the rail and the footer.",
       "**Do** track uppercase Montserrat headings at 5% of the font size.",
-      "**Do** reserve Live Lime for statuses that are actually live.",
-      "**Do** show focus with the 2px Signal Cyan outline at 3px offset.",
+      "**Do** reserve Live Lime for live statuses, the Open button hover and selection.",
+      "**Do** show focus with a 2px outline at 3px offset, cyan on white and lime on the rail.",
       "**Do** use screenshots of the real tools, with synthetic data where students would show."
     ],
     "donts": [
       "**Don't** add the homepage slider or other heavy pieces the user did not ask for.",
+      "**Don't** shrink screenshots into thumbnails beside text. They take the full column.",
       "**Don't** use rounded tiles, pill badges or shadowed cards.",
-      "**Don't** add motion. Hover states change color only.",
-      "**Don't** use cyan text for anything that is not a link."
+      "**Don't** set cyan text on white outside the header menu's hover state.",
+      "**Don't** add motion beyond the tab, the arrow nudge, color fades and smooth scrolling, and keep all of it off under reduced motion."
     ]
   }
 }
