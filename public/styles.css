@@ -172,8 +172,9 @@ html { scroll-behavior: smooth; }
 .shot { max-width: 1100px; scroll-margin-top: 32px; }
 .shot + .shot { margin-top: 64px; padding-top: 64px; border-top: 1px solid var(--border); }
 .shot-frame img { width: 100%; border: 1px solid var(--border); }
-.shot-text { max-width: 66ch; margin-top: 22px; }
+.shot-text { max-width: 66ch; margin-top: 18px; }
 .shot-title {
+  margin-bottom: 16px;
   color: var(--heading);
   font-family: var(--font-heading);
   font-size: 24px;
@@ -183,7 +184,7 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   text-wrap: balance;
 }
-.shot-desc { max-width: 66ch; margin-top: 10px; font-size: 18px; line-height: 29px; }
+.shot-desc { max-width: 66ch; font-size: 18px; line-height: 29px; }
 .shot-link { margin-top: 14px; font-size: 17px; }
 .shot-link a {
   color: var(--heading);

@@ -193,7 +193,7 @@ Motion is small and functional. The cyan tab grows in beside the tool in view, t
 - A sticky 380px Footer Deep Teal rail with the page title, a short intro, one entry per tool and the source code links under the list.
 - A plain white Open button with deep teal text in every rail entry.
 - An 8px cyan tab on the rail's right edge that follows the screenshot in view.
-- Full-width screenshots in a 1px Rule Gray frame, each followed by its title, a description and a "Live at" line with the underlined host.
+- Full-width screenshots in a 1px Rule Gray frame, each under its title and followed by a description and a "Live at" line with the underlined host.
 - The deep teal footer, with funder logos, the disclaimer, the partner wall, a search box and social links.
 
 ## Colors
@@ -290,7 +290,7 @@ The entry whose screenshot is in view gets a white 5% wash and an 8px Signal Cya
 Solid Paper White, 36px tall, square, with Footer Deep Teal text in Source Sans 700 at 15px. It says "Open" and nothing else, with no icon. Hover fills it Signal Cyan. Focus inside the rail is a 2px lime outline at 3px offset.
 
 ### Screenshot
-The real tool at full column width in a 1px Rule Gray frame. The Headline sits 22px under the figure, the description 10px under that, then the "Live at" line 14px under it. The text block stops at 66ch.
+The real tool at full column width in a 1px Rule Gray frame. The Headline comes first with 16px under it, then the figure, then the description 18px under the figure and the "Live at" line 14px under that. The text block stops at 66ch.
 
 ### Host Link
 The line reads "Live at" in Body Slate, then the hostname in Heading Ink 700 at 17px with a 2px Signal Cyan underline at 4px offset, and no icon. For the Toolkit it adds "It asks for a password." Hover turns the text Footer Deep Teal and the underline Heading Ink.
